@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../../base/css/base.css" />
+<link rel="stylesheet" href="css/photoPkApply.css" />
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/photoPKApply.js"></script>
+<title>照片PK报名</title>
+</head>
+
+<body onload="init()">
+	<div class="container">
+		<p class="time">本期主题：《大自然》&nbsp;活动时间2015-9-10至2015-10-10</p>
+		<div class="intro">
+		<form action = "../../../activeController/saveActiveJoin.do" 
+method="post" enctype="multipart/form-data">
+			<div class="manypic" id="manypic">
+       			<ul>
+       				<li><label for="url3" class="label">添加图片</label><input type="file" id="url3" name="url" onchange="previewImage(this)" style=" display:none;"><label class="lbl" id="img3" for="url3"><img  class="img"></label></li>
+       			</ul>
+       		</div>
+			<div class="div1">
+				作品标题：<input type="text" name = "joinName" class="tit" placeholder="15字以内" /><br /> <span>作品描述&nbsp;:</span>
+				<textarea class="descrip" name = "joinDesc" onkeyup="checkLength()" id="talk" placeholder="请输入作品描述，50字以内"></textarea>
+				<br />
+				<p class="div1_p1" id="wordNumber">0/50</p>
+				<input type = "hidden" name = "activeId" id="activeId"/>
+				<input type = "hidden" name = "successUrl" value ="project/friendTravel/activity/photoPK.html"/>
+				<input type ="submit" value="发表"  />
+			</div>
+			
+			</form>
+		</div>
+
+		<!--奖品-->
+		<div class="reward_container">
+			<p>本期奖品</p>
+			<div class="reward" id="reward">
+				<!-- <div class="img1">
+					<img src="images/photoPK/reward1.png" alt="加载失败">
+						<p>拍立得（颜色随机）</p>
+				</div>
+				<div class="img2">
+					<img src="images/photoPK/reward2.png" alt="加载失败">
+						<p>kindle Paperwhite</p>
+				</div>
+				<div class="img3">
+					<img src="images/photoPK/reward3.jpg" alt="加载失败">
+						<p>手机蓝牙自拍杆</p>
+				</div>
+				<img src="images/photoPK/reward.png" alt="加载失败" class="img" /> -->
+			</div>
+		</div>
+		<!--作品-->
+		<div class="thing_container">
+			<p class="title">关于作品</p>
+			<div class="thing" id="thing">
+				<!-- <li>本季赛事为主题赛<span>《大自然》</span>
+				</li>
+				<li>上传作品的画面中必须是与<span>"花"</span>相关的照片。不符合主题的作品将会被删除。<span>活动时间：2015-9-10至2015-10-10</span>
+				</li>
+				<li>在照片简介中。用50个字以内说明拍摄照片的故事内容。照片简介是否精彩会成为大家投票的标准</li>
+				<li>参赛作品必须是原创作品</li>
+				<li>奖品产生的个税需有获奖用户个人承担</li> -->
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans> 
+	
+	
+	<bean id="loginController"
+		class="com.chinasoft.controller.login.LoginController"
+		autowire="byName">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+	
+	<bean id="userController"
+		class="com.chinasoft.controller.user.UserController"
+		autowire="byName">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+	<bean id="mainController"
+		class="com.chinasoft.controller.main.MainController"
+		autowire="byName">
+		<property name="mainService">
+			<ref bean="mainService" />
+		</property>
+	</bean>
+	<bean id="scienceSpotController"
+		class="com.chinasoft.controller.scienceSpot.ScienceSpotController"
+		autowire="byName">
+		<property name="scienceSpotService">
+			<ref bean="scienceSpotService" />
+		</property>
+	</bean>
+	<bean id="stagtegyController"
+		class="com.chinasoft.controller.stagtegy.StagtegyController"
+		autowire="byName">
+		<property name="stagtegyService">
+			<ref bean="stagtegyService" />
+		</property>
+	</bean>
+	<bean id="activeController"
+		class="com.chinasoft.controller.activity.ActiveController"
+		autowire="byName">
+		<property name="activityService">
+			<ref bean="activityService" />
+		</property>
+	</bean>
+	<bean id="travelDescController"
+		class="com.chinasoft.controller.travelDesc.TravelDescController"
+		autowire="byName">
+		<property name="travelDescService">
+			<ref bean="travelDescService" />
+		</property>
+	</bean>
+	<bean id="commentController"
+		class="com.chinasoft.controller.comment.CommentController"
+		autowire="byName">
+		<property name="commentServive">
+			<ref bean="commentServive" />
+		</property>
+	</bean>
+	<bean id="spotController"
+		class="com.chinasoft.controller.spot.SpotController"
+		autowire="byName">
+		<property name="spotService">
+			<ref bean="spotService" />
+		</property>
+	</bean>
+	<bean id="provinceController"
+		class="com.chinasoft.controller.province.ProvinceController"
+		autowire="byName">
+		<property name="provinceService">
+			<ref bean="provinceService" />
+		</property>
+	</bean>
+	
+</beans>

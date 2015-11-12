@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>XXX个人主页</title>
+		<link rel="stylesheet" type="text/css" href="css/baseN.css" />
+		<link rel="stylesheet" type="text/css" href="css/globalN.css" />
+		<script type="text/javascript" src="js/tab.js"></script>
+
+		<script src="js/members_information_con.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<ul class="information_titCon ">
+			<li id="cntMenu_0" style="border-bottom: 2px solid #FFCC33;" class="information_tit fl tc ml120" onclick="tabNav(0)">个性设置</li>
+			<li id="cntMenu_1" class="information_tit fl tc" onclick="tabNav(1)">实名信息</li>
+			<li id="cntMenu_2" class="information_tit fl tc br" onclick="tabNav(2)">账户安全</li>
+		</ul>
+		<div style="width: 998px;overflow: hidden;margin-top:-5px;">
+
+			<ul class="members_information c0">
+				<li id="cnt_0" class="information_list mb20 clearfloat ">
+					<form action="../../../userController/updateBaseInfor.do" method="post" enctype="multipart/form-data" target="_blank">
+						<input type="hidden" id="theUserId1" name="userId" value="" />
+						<div class="information_img_con ml20 fl">
+							<div id="" class="information_img">
+								<label for="userHeadImg"></label>
+							</div>
+							<input type="file" class="information_img_but cf mt20" name="imageUrl" id="userHeadImg" value="上传照片" />
+						</div>
+						<div id="personalSet" class="information_con fl c0">
+
+							<div class="information_cnt">
+								昵 &nbsp;&nbsp;称：
+								<div id="nickname">ladagagagaga</div>
+							</div>
+							<div id="sex" class="information_c">
+								性&nbsp;&nbsp;&nbsp;别：
+								<input type="radio" name="sex" id="nan" style="display: none;" value="0" />
+								<label class="f12" id="nanL" for="nan">男</label>
+								<input type="radio" name="sex" id="nv" style="display: none;" value="1" />
+								<label id="nvL" style="display: none;" for="nv">女</label>
+
+							</div>
+							<div class="information_cnt">
+								所在地：
+
+								<div id="site">12313212312313</div>
+							</div>
+							<div class="information_cnt">
+								Q&nbsp;&nbsp;&nbsp;&nbsp;Q：
+
+								<div id="qqNum">123456789</div>
+
+							</div>
+							<div class="information_cnt">
+								邮&nbsp;&nbsp;&nbsp;箱：
+
+								<div id="eMail">123456789@qq.com</div>
+							</div>
+							<div class="information_cnt" style="height: 120px;">
+								<p class="fl" style="line-height: 30px;">个性签名:</p>
+								<div id="gexing" class="f14">雷帝雷帝嘎嘎的雷帝雷帝嘎嘎的雷帝雷帝嘎嘎的雷帝雷帝嘎嘎的雷帝雷帝嘎嘎的雷帝雷帝嘎嘎的</div>
+							</div>
+							<a href="#" class="information_saveBut tc cf" onclick="inputShowMode()">修改</a>
+						</div>
+					</form>
+				</li>
+				<li id="cnt_1" class="information_list mb20">
+					<form action="../../../userController/updateAuthInfor.do" method="post" enctype="multipart/form-data">
+						<input type="hidden" id="theUserId2" name="userId" value="" />
+						<div class="information_conT fl" id="realInf">
+							<div class="information_cnt">
+								姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+								<div id="name">123</div>
+							</div>
+							<!-- <div class="information_cnt">
+								出生日期：
+								<div id="birthday">123</div>
+							</div> -->
+							<div class="information_cnt">
+								通讯地址：
+								<div id="address">123</div>
+							</div>
+							<div class="information_cnt">
+								手&nbsp;机&nbsp;号：
+								<div id="phoneNum">123</div>
+							</div>
+							<div class="information_cnt">
+								身份证号:
+								<div id="idCard">123</div>
+							</div>
+						</div>
+						<div class="information_IDImg fr" id="">
+							<h4 class="f20 mt10 mb10 ml100">身份认证</h4>
+							<div class="">
+								<div class="information_IDcard">
+									<input class="information_img_but ml100 mt10 cf" type="file" name="positive" id="" />正面</div>
+								<div class="information_IDcard">
+									<input class="information_img_but ml100 mt10 cf" type="file" name="opposite" id="" />反面</div>
+							</div>
+
+						</div>
+						<div style="clear: both;"></div>
+						<a href="#" class="information_saveBut tc cf" onclick="inputShowMode()">修改</a>
+					</form>
+				</li>
+
+				<li id="cnt_2" class="information_list mb20">
+
+					<div class="information_con c0" id="pwdInf">
+						<div class="information_cnt">
+							旧&nbsp;密&nbsp;码：
+							<div id="oldPwd">123</div>
+						</div>
+						<div class="information_cnt">
+							新&nbsp;密&nbsp;码：
+							<div id="newPwd">123</div>
+						</div>
+						<div class="information_cnt">
+							确认密码：
+							<div id="affPwd">123</div>
+						</div>
+
+						<a href="#" class="information_saveBut tc cf" onclick="inputShowMode()">修改</a>
+
+						<div class="information_c">
+							金币余额：
+							<span id="" class="f20" style="color: #cccccc;">12312312</span>
+						</div>
+						<a href="#">点击进入金币管理</a>
+
+					</div>
+
+				</li>
+
+			</ul>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+.home{ width:1200px; height:2660px; margin:auto;}
+h2{ clear:both; display:inline-block; height:40px; text-align:center; background-color:#ffffff; position:relative; top:3px; left:20px; z-index:0; line-height:40px; padding-left:10px; padding-right:10px; margin-top:20px; font-size:18px; font-weight:700; }
+
+
+.picshow{ width:1200px;height: 750px;}
+.advertImg{ float:left; margin-left:0px;  width:1200px; height:450px; margin-top:0px; overflow: hidden;}
+.advertImg ul li{position:relative;}
+.advertImg ul li img{width:1200px;height:450px;}
+.timetree{ clear:both;}
+
+.timetree hr{ display: inline-block; margin-top: 40px; width: 227px; height: 0px; border:1px solid orange; float: left; }
+.timetree .disc{ float: left; display: inline-block; width: 10px; height: 10px; border:1px solid orangered; background-color: #fff; border-radius: 8px; margin-top: 35px; }
+.hr1{ margin-left: 0; }
+.container1{  width:1200px; height:320px; padding-left:20px; clear:both;}
+.month{ width:60px; height:40px; background-color:#F93; color:#ffffff; position:absolute; top:0px;left:0px; line-height:40px; text-align:center; font-size:18px;}
+.hotScenic{ width:1120px; height:256px; }
+.hotScenic>li{ width:330px; height:200px; float:left; position:relative;  margin-left:40px;}
+.bigImg{ width:330px; height:200px; margin-top:20px;}
+.font{ width:330px; height:40px; background-color:#333; opacity:0.8; position:absolute; top:180px; left:0px;}
+.address{ display:block; width:325px; height:20px; line-height:20px; color:#ffffff; font-size:16px; font-weight:600; margin-left:5px; }
+.view{display:block; width:325px; height:20px; line-height:20px; color:#ffffff; margin-left:5px;}
+
+
+
+.left{ width:900px; height:1700px;  float:left; cursor:default; }
+h2{ font-size:18px; font-weight:800;}
+.strategys{ width:898px; height:1800px;  border:1px solid ##00b38a; border-top:3px solid ##00b38a; background-color:#ffffff; }
+.strategys>p{ width:898ppx; height:30px; line-height:30px; border-bottom:1px dashed #00b38a; position:relative;}
+#more { color: orange; }
+#cityselect{ display: none; position:absolute; top:5px; left:600px; z-index: 00b38a00b38a; }
+.strategys .style{ border-bottom:1px solid #00b38a;}
+.strategys>p>span{ display:inline-block; height:20px; margin-top:5px; padding-left:5px; padding-right:5px; line-height:20px; margin-left:20px; }
+#more { color:orange;}
+.strategys>span{ display:inline-block; height:30px; padding-left:5px; padding-right:5px; color:#F93; margin-left:20px;}
+
+.selected{ background-color:#00b38a;}
+/*搜索条件*/
+#search{display:none;}
+.strategys>p>.condition{border:#00b38a 1px solid; padding-right:0px; margin-left:20px;}
+.condition>span{ background-color:#00b38a; float:right; width:20px; font-size:16px; padding-right:0px; margin-left:5px; text-align:center;}
+
+.strategy_ul{ width:860px; height:1550px; margin-left:20px; }
+.strategy_ul>li{ width:860px; height:150px; border-bottom:1px solid #00b38a; padding-bottom:20px; padding-top:20px;  position:relative;}
+.strategy_ul>li:hover{ background-color:#FCFAE0;}
+.strategy_ul>li>p{ width:640px; height:30px;}
+.photo{ width:200px; height:150px; float:left;  margin-right:20px; } 
+.add{ position:absolute; top:20px; left:0px;}
+.title{ display:inline-block; height:30px; line-height:30px; padding-right:20px; font-size:16px; font-weight:700; }
+.type{ display:inline-block; height:20px; line-height:20px; padding-left:5px; padding-right:5px; 
+ border:1px solid #F00; color:#F00; }
+ .strategy_ul>li>p>span{ display:inline-block; height:30px; line-height:30px; padding-left:5px; padding-right:10px;}
+.detail{ display:inline-block; width:640px;  padding-bottom:10px; padding-top:10px; line-height:20px; }
+
+.fengye{  width:860px; height:40px; text-align:center;}
+.fengye>a{ padding-right:10px;  font-size:16px; font-weight:700;}
+.fengye>span{ padding-right:10px;  font-size:16px; font-weight:700;}
+.yeNum{ width:25px; text-align:center;}
+.countPage{ width:25px; text-align:center; border:none;}
+
+
+.right{ width:270px; height:1500px; background-color:#ffffff; margin-left:30px; float:left;}
+#write{position:relative; width:90px;height:35px; background:orange; display: inline-block; color:#fff; font-size: 20px; font-weight: blod; padding-left:5px; padding-top: 5px; padding-right: 5px; }
+.youji{float: right; width:60px; height:30px; text-align:center;font-size:20px;font-family:'华文行楷';}
+
+.right_div1{ width:270px; height:200px; border:1px solid #dbdbdb; border-radius:5px;  background-color:#ffffff;  margin-top:20px;}
+.right_div1 .div1_header{ width:255px; height:35px;  margin-bottom:10px; border-bottom:1px solid #dbdbdb; padding-left:15px; line-height:30px;  }
+.right_div1 .div1_span1{ display:inline-block; width:190px; height:16px; font-family:"微软雅黑"; font-size:16px; color:black; font-weight:600;}
+.right_div1 .div1_form{ width:255px; height:100px; padding-left:15px; border-bottom:1px solid #dbdbdb; }
+.div1_form>img{ width:100px; height:100px; float:left;}
+.div1_form>span{ display:block; width:150px; height:50px; line-height:50px; text-align:center; float:left;}
+.div1_form>a{ display:block; width:150px; height:50px; line-height:40px; text-align:center; float:left; text-decoration:underline; color:#69F;}
+.right_div1>a{ height:50px; line-height:50px; margin-left:70px;}
+
+.bang{ width:270px; height:400px; clear:both; margin-top:15px; padding:1px; background-color:#ffffff; cursor:pointer;}
+h3{ float:left; font-weight:700; font-size:16px; margin-left:15px; height:30px; height:30px; margin-top:5px;}
+.bang>a{ float:right; color:#CCC; margin-right:15px;}
+.bang_ul{ width:240px; height:340px; border-top:1px solid #00b38a; border-bottom:1px solid #00b38a; margin-left:15px; margin-top:35px;  clear:both;}
+.bang_ul>li{ width:240px; height:40px; border-bottom:1px dashed #CCC; line-height:40px; }
+.bang_ul>li>span{ float:left; margin-right:15px; }
+.bang_ul>li>a{ font-size:14px;width:120px; overflow:hidden; display:inline-block; text-overflow:ellipsis; white-space:nowrap;}
+.bang_ul>li .number{ float:right; margin-right:0px; font-size:12px; color:#00b38a;}
+
+.people{ width:270px; height:380px; clear:both; margin-top:20px; padding:1px; background-color:#ffffff;border:#ccc 1px solid;}
+.daren{ width:270px; height:240px; border-top:1px solid #00b38a; margin-left:0px; margin-top:0px;  clear:both; position:relative;margin-bottom: 100px;}
+.daren>a>img{ width:270px; height:240px;}
+.daren>a:hover p{ display:block;}
+.daren .p2{width:270px; height:40px; position:absolute; bottom:0px; left:0px; background-color:#000; opacity:0.8;}
+.daren>a>p>span{ display:inline-block; width:110px; line-height:10px; padding-left:10px; color:#ffffff; margin-top:15px;}
+.daren .p1{padding-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

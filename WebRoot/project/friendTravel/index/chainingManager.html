@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet"/>
+<link href="../../base/js/easyUI/themes/icon.css" type="text/css" rel="stylesheet"/>
+<link href="../../base/js/easyUI/themes/default/easyui.css" type="text/css" rel="stylesheet"/>
+<link href="css/manager.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.min.js"></script> 
+<script type="text/javascript" src="../../base/js/easyUI/jquery.easyui.min.js"></script>   
+<script type="text/javascript" src="js/indexManager.js"></script>
+</head>
+
+<body>
+<div class="managerSearchbox">
+<input id="ss" class="easyui-searchbox" style="width:300px;" 
+data-options="searcher:qq,prompt:'Please Input Value',menu:'#mm'"></input> 
+
+<div id="mm" style="width:120px"> 
+<div data-options="name:'all',iconCls:'icon-ok'">链接ID</div> 
+<div data-options="name:'sports'">链接名</div> 
+<div data-options="name:'sports'">开始时间</div>
+<div data-options="name:'sports'">结束时间</div>
+</div> 
+
+</div>
+<div class="chainingTable">
+<table id="dg" class="easyui-datagrid" title="链接表格信息" style="width:100%;height:auto"
+			data-options="
+				iconCls: 'icon-edit',
+				singleSelect: true,
+				toolbar: '#tb',
+				url: 'datagrid_data1.json',
+				method: 'get',
+				onClickRow: onClickRow
+			">
+		<thead>
+			<tr>
+            	<th data-options="field:'ck',checkbox:true">选择</th>
+				<th data-options="field:'chainingid',width:80,align:'center'">链接ID</th>
+				<th data-options="field:'chainingname',width:108,align:'center',editor:{type:'numberbox',options:{precision:1}}">链接名</th>
+				<th data-options="field:'chainingurl',width:200,align:'center',editor:'numberbox'">链接路径</th>
+				<th data-options="field:'starttime',width:150,editor:'textbox',align:'center'">开始时间</th>
+                <th data-options="field:'endtime',width:150,editor:'textbox',align:'center'">结束时间</th>
+				
+			</tr>
+		</thead>
+	</table>
+  <div id="tb" style="height:auto">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">添加</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存修改</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">撤消</a>
+	</div>
+ 
+<div class="easyui-panel">
+		<div class="easyui-pagination" data-options="showPageList:false,total:114,buttons:$('#buttons')"></div>
+	</div>
+	<div id="buttons">
+		<table style="border-spacing:0">
+			<tr>
+				<td>
+					<input class="easyui-searchbox" style="width:150px">
+				</td>
+				<td>
+					<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+    <div style="margin:10px 0;">
+		<span>选择方式: </span>
+		<select onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
+			<option value="0">单选</option>
+			<option value="1">多选</option>
+		</select>
+     </div>
+</div>
+</body>
+</html>

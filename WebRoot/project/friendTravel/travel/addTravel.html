@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发表点评</title>
+<link href="css/addTravel.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/_examples/editor_api.js"></script>
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/addtravel.js"></script>
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body onload="init()">
+	<div class="home">
+		<div class="left">
+		<p>发表点评</p>
+		<form action = "../../../travelDescController/saveTravelDesc.do" method="post" enctype="multipart/form-data">
+    		<div class="header">
+				<select class="place" id="place" name="spotId">
+				
+				</select>
+			</div>
+		<div class="manypic" id="manypic">
+       	<ul>
+       		<li><label for="url1" class="label">添加图片</label><input type="file" id="url1" name="url1" onchange="previewImage(this)" style=" display:none;"><label class="lbl" id="img1" for="url1"><img  class="img"></label></li>
+            <li><label for="url2" class="label">添加图片</label><input type="file" id="url2" name="url2" onchange="previewImage(this)" style=" display:none;"><label class="lbl" id="img2" for="url2"><img  class="img"></label></li>
+            <li><label for="url3" class="label">添加图片</label><input type="file" id="url3" name="url3" onchange="previewImage(this)" style=" display:none;"><label class="lbl" id="img3" for="url3"><img  class="img"></label></li>
+       	</ul>
+       </div>
+           
+             <div>
+				<span class="titleFont">标题：</span>
+				<input type="text" class="title" name="descTitle" id="descTitle"/>
+                <p>
+				<span class="titleFont">内容：</span>
+                <script id="editor" type="text/plain" name ="descContent" style="width:810px;"></script>
+                 <script type="text/javascript">
+ 					var editor_a = UE.getEditor('editor',{initialFrameHeight:300});
+				</script>
+                </p>
+			</div>
+			<input type="hidden" name="travelDescId" id="travelDescId" value="">
+			<input type="hidden" name="successUrl" value="project/friendTravel/members2/members_travels.html"/>
+			
+			
+			 <a href="../members2/members_travels.html" class="back">返回网页</a>
+             <input type="submit" value="发表" class="fabiao" id="save"/>
+        </form>
+               
+    </div>
+    </div>
+   
+</body>
+</html>

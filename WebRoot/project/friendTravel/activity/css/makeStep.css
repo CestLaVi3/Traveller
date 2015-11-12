@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+/*烹调步骤*/
+body{width:550px; height:600px;}
+.makeFood{width:550px; height:600px; margin:auto; background-color:white; color:black; background-image:url(../images/deliciousFood/applyBg.gif); font-size:16px;}
+.makeFood img{width:150px; height:100px; margin-left:10px;}
+.closeStep{ font-size:36px; width:36px; height:36px; line-height:30px; text-align:center;font-weight:600; border-radius:18px;border:0px;z-index:1;color:black; position:fixed;  left:62%;top:40%;}
+.makeFood>p{ font-size:40px; font-weight:600; font-family:"华文行楷";}
+.makeFood>ol>li{ width:500px;  margin-top:10px;list-style-type:decimal;}

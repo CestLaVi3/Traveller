@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* CSS Document */
+.home{ width:1200px;height:1800px; margin:auto;}
+.zhinan{width:50px;height:30px;line-height:30px;margin-right:50px;font-size:30px;margin-top:20px;}
+.strategyMenu{ width:1198px; height:50px;  border:1px solid #eaeaea;background-color: lightcyan;}
+.strategyMenu>a{ width:100px; height:50px; display:inline-block; }
+.strategyMenu li{ float:left; width:100px; height:50px; font-size:16px; line-height:50px; text-align:center; background-color:lightcyan;}
+.strategyMenu>a:hover>li{ background-color:#2f9901;}
+.link{ width:100px; height:50px; display:inline-block; float:right;margin-right:50px;text-align:center;line-height:40px;font-size:20px;}
+.strategyMenu>a>img{ float:right; margin-top:10px; margin-right:200px;}
+
+.header{ width:1200px; height:120px; background-color:#FFF9F9; clear:both;}
+.header_left{ width:870px; height:120px; float:left;cursor:pointer;}
+.icon_container{ display:block; width:60px; height:50px; float:left; }
+.biaoqian1{ width:30px; height:20px; font-size:12px; background-color:#0FF; text-align:center; line-height:20px; color:#ffffff; margin-left:20px; }
+.biaoqian2{ width:0px; height:0px; border-width:15px 15px 15px 15px; border-color:#0FF #0FF transparent #0FF; border-style:solid; margin-left:20px;}
+.time{ display:inline-block; width:200px; height:50px; color:#999; float:left; line-height:50px; margin-left:30px;}
+.type{ border:1px solid red; color:#F60; padding-left:5px; padding-right:5px; float:left; margin-top:15px; margin-right:20px;}
+.header_left>h2{ width: 800px; height:70px; font-weight:600; float:left; margin-left:20px; line-height:70px; font-size:16px;}
+.header_right{ width:330px; height:120px; float:left; }
+.header_a1{ display:inline-block; width:40px; height:40px;margin-top:20px; float:left; }
+.header_a1>img{ border-radius:20px;width:40px; height:40px; }
+.header_a2{ display:inline-block; width:250px; height:40px; margin-top:30px; margin-left:10px; float:left;}
+.header_span1{ float:left; width:80px; height:40px; color:#F93;}
+.header_a3{ float:left;width:80px; height:40px; }
+
+
+.left{ width:870px; border:1px solid #eaeaea; float:left}
+.left_icon{ width:400px; height:60px; padding-left:400px; border-bottom:1px solid #eaeaea;}
+.left_icon>a{ width:50px; height:60px; margin-left:30px; line-height:60px; font-size:14px;}
+.left_ul1{ width:830px; height:50px; margin-left:20px; border-bottom:1px solid #eaeaea;}
+.left_ul1>li{ height:50px; line-height:50px; float:left; font-size:14px; padding-right:10px;  }
+.left_travel{ width:830px; padding-left:20px; padding-right:20px; font-size:14px; border-bottom:1px solid #eaeaea; padding-bottom:1px; }
+.left_travel>img{ display:block; width:700px; height:300px; margin-left:65px;}
+.travel_span{ margin-top:-30px;display:block; text-indent:30px; padding-top:20px; padding-bottom:20px; line-height:20px;}
+.picture{ width:870px; height:300px;position:relative;}
+.bgImg{ width:870px; height:320px; float:left;  }
+.lunbo{ width:150px; height:320px;  position:absolute; top:0px; left:720px; background-color:#000; opacity:0.8;}
+.lunbo>img{ width:130px; height:80px; margin-left:10px; margin-right:10px; margin-top:10px;}
+.pictureLink{ display:block; width:130px; height:30px; line-height:30px; margin-left:10px; color:#ffffff;} 
+.daodu{ display:block; text-indent:30px;margin-bottom:20px;margin-top: 40px;font-weight: bold;}
+.talk{ width:810px; height:100px; font-size:14px;  margin-left:20px; margin-top:30px; padding-left:10px; padding-right:10px; border:1px solid #999;}
+.submitTalk{ width:100px; height:50px; margin-top:20px; margin-right:20px; background-color:#9CF; float:right;}
+/*评论*/
+.commentTxt{ position:relative;}
+.commentTxt>span{ position:absolute; left:780px; top:110px;}
+
+.answers{ width:868px; height:600px; clear:both;}
+.answers1{ font-size:16px;font-weight:600; margin-left:30px; float:left;  }
+.allAnswers{float:left; margin-left:10px; color:#999;}
+.answers_ul{ margin-left:30px; width:860px; margin-top:30px; float:left; cursor:pointer;}
+.answers_ul>li{width:800px; clear:both;}
+.answers_img{ width:60px; height:60px; margin-right:20px; margin-top:15px; float:left; border-radius:30px;}
+.userName{ float:left;margin-top:15px; height:30px; line-height:30px;}
+.pubTime{ margin-left:20px;margin-top:15px;color:#999;float:left; height:30px;  line-height:30px;}
+.deleteComment{display:block; float:right; margin-top:15px; height:30px;  line-height:30px;}
+.comment{margin-top:65px;width:720px; line-height:30px; overflow:hidden; white-space:nowrap;text-overflow:ellipsis;}
+.answers_btn{ width:800px; height:30px;  background-color:white;margin-top:15px;float:left; margin-bottom:10px;}
+.img{ float:left; margin-right:10px; }
+.answers_p1{ float:left; margin-top:5px;color:#499fe8; border:#d3edfc 1px solid;  margin-left:20px; }
+.addComment_btn{width:100px; height:30px; border:0px; background-color:white;margin-top:15px; margin-left:30px;float:left;position:relative; }
+.answers_a1{  float:right ;color:#499fe8; margin-right:30px; font-weight:600;}
+.answers_p2{ float:left; margin-left:20px;color:#499fe8;margin-top:5px;}
+.addComment_btn>img{ float:left; margin-left:5px; margin-top:8px;}
+.div1{width:350px; height:150px; position:absolute; top:30px; z-index:1; border:#e2e2e2 1px solid;background-color:white;}
+.p1{ margin-left:20px; margin-top:10px;width:30px;}
+.comment_txt{width:300px; height:50px; margin-left:20px;margin-top:10px;}
+.submitComment{width:50px; height:30px; background-color:white; margin-left:280px; margin-top:20px;}
+.answers_div{ width:700px; height:70px; background-color:peachpuff; clear:both; margin-top:20px; margin-left:80px; border-radius:5px;  }
+.answers_div>img{ border-radius:30px; width:30px; height:30px; margin-top:20px; margin-left:10px; float:left;}
+.div_span1{ display:inline-block; height:30px; line-height:30px; padding-left:10px; padding-right:10px; float:left; margin-top:10px;}
+.div_time1{ display:inline-block; height:30px; line-height:30px; padding-left:10px; padding-right:10px; float:left; margin-top:10px; color:#999;}
+.answers_div>p{  width:620px; line-height:20px; float:left; margin-left:10px; }
+.answers_talk{  float:right; margin-right:15px;margin-top: 10px;}
+.callback{ display:none;}
+.callback>.replaykuang{width: 700px;height:30px;margin-top: 10px;margin-left: 80px;border-color: peachpuff;}
+.callback>.huifu{float: right;margin-right: 15px;margin-top: 10px;}
+
+.right{ width:308px; height:1500px; float:left; margin-left:15px; }
+
+/*美食*/
+.hotel{ width:310px; height:450px; border:1px solid #999; background-color:#ffffff; margin-top:20px;}
+.hotel>p{ font-size:16px; font-weight:700; margin-left:20px; float:left; margin-top:10px;}
+.hotel>a{ float:right; color:#CCC; margin-top:10px; margin-right:20px;}
+.hotel_container{  width:290px; height:410px; margin-left:20px; clear:both; padding:1px;}
+.hotel_container>li{ width:290px; height:130px; margin-top:10px; }
+.hotel_container>li>img{ width:150px; height:120px; float:left;}
+.hotel_p1{ width:120px; height:30px; line-height:30px; float:left; margin-left:20px; font-size:16px; }
+.hotel_p2{ width:120px; height:30px; line-height:30px; float:left; margin-left:20px; color:#999; }
+.hotel_p3{ width:120px; height:40px; line-height:20px; float:left; margin-left:20px;  }
+
+
+/*游记*/
+.travels1{width:310px; margin-top:20px;height:700px; padding:1px; margin-bottom:0px;}
+.travels1>p{ font-size:16px; font-family:"微软雅黑";font-weight:600; float:left;}
+.travels1>a{color:#499fe8;float:right; margin-top:5px;}
+.container_Span{ display:block; width:310px; height:630px; margin-top:30px; background-color:#ffffff; border:1px solid #999; clear:both;   }
+.container_Span .p2{ width:290px; height:100px; margin-top:12px; padding-left:10px;  border-bottom:1px dotted #999; float:left; padding-top:10px;}
+.smallImg{ width:87px; height:100px; float:left;}
+.fontLink1{ display:inline-block; width:190px; height:24px; font-size:12px; float:left; padding-left:5px;margin-left: 100px;margin-top: -60px;}
+.fontLink2{ display:inline-block; width:190px; height:24px; font-size:12px; color:#999;  float:left; padding-left:5px; margin-left: 110px;margin-top: -40px;}
+
+
+/*分页*/
+.fengye{  width:860px; height:40px; text-align:center; cursor:pointer;}
+.fengye>a{ padding-right:10px;  font-size:16px; font-weight:700;}
+.fengye>span{ padding-right:10px;  font-size:16px; font-weight:700;}
+.pageNum{ width:25px; text-align:center;}
+.sumNum{ width:25px; text-align:center; border:none;}
+
+
+/*查看图片*/
+.bigImg_container{width:100%; height:1500px; position:fixed; left:0px; top:0px; background-color:black; opacity:0.8; filter:alpha(opacity=80); display:none; }
+.bigImg{position:fixed; left:14%; top:100px; z-index:1; display:none;}
+.bigImg_container span{width:100px; height:60px;position:fixed; left:90%; background-color:black; cursor:default; line-height:60px; text-align:center; border:0px; font-size:60px; color:white;}
+.left1{ position:relative; width:800px; float:left;}
+.left1 img{width:800px; height:500px;}
+.left1 .last{ position:absolute; width:100px; height:100px; left:0px; top:200px;}
+.left1 .next{ position:absolute; width:100px; height:100px; left:700px; top:200px;}
+
+.smallImg{width:100px; height:80px; position:relative;margin-top:-20px;}
+.smallImg img{width:100px; height:120px; margin-left:px;margin-top: -10px;}
+.smallImg .last{ position:absolute; left:15px; top:0px;}
+.smallImg .next{ position:absolute; left:670px; top:0px;}
+#talk{
+	width: 600px;
+	height: 30px;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 0px;
+	border:1px solid deepskyblue;
+}
+#talkcontent{
+	margin-left: 100px;
+	display: none;
+}
+#showtalk{
+	margin-left: 480px;
+	margin-right: 20;
+	margin-top: 10px;
+	background-color:;
+}
+.left_icons{
+	display: inline-block;
+	margin-left:10px;
+	margin-top: -30px;;
+}
+/*相关攻略*/
+.comMenu{/*公用css*/
+	width:300px;
+	height:30px;
+	}
+.comMenu>p{
+	margin-left:20px;
+	float:left;
+	font-size:18px;
+	}
+.comMenu>a{
+	float:right;
+	color:#CCC;
+	font-size:14px;
+	}
+.stratrgy{
+	cursor:pointer;
+	height:575px;
+	margin-top:15px;
+	width:310px;
+	border:#999 1px solid;
+	}
+.stratrgy>ul{
+	width:300px;
+	}
+.stratrgy>ul>li{
+	width:300px;
+	height:134px;
+	border-bottom:1px dotted #CCC;
+	}
+.stratrgy>ul>li>a>img{
+	margin-left:20px;
+	width:102px;
+	height:81px;
+	margin-top:10px;
+	float:left;
+	}
+.stratrgy>ul>li>a>p{
+	margin-left:10px;
+	width:160px;
+	height:45px;
+	float:left;
+	font-size:12px;
+	margin-top:10px;
+	}
+.stratrgy>ul>li>a>p>span{
+	color:#CCC;
+	margin-top:20px;
+	line-height:20px;
+	}
+.stratrgy>ul>li>div{
+	margin-left:20px;
+	width:290px;
+	height:22px;
+	float:left;
+	margin-top:15px;
+	}
+.stratrgy>ul>li>div>a>img{
+	width:15px;
+	height:15px;
+	margin-right:5px;
+	}
+.stratrgy>ul>li>div>a{
+	color:#000;
+	font-size:14px;
+	margin-right:5px;
+	}
+
+

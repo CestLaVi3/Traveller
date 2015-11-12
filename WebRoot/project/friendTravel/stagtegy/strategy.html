@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>攻略</title>
+<link href="css/strategy.css" type="text/css" rel="stylesheet"/>
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/strategy.js"></script>
+</head>
+
+<body onload="init()">
+	<div class="home">
+    	<ul class="strategyMenu" id="strategyMenu">
+    		<a href="strategyHome.html"><li>返回首页</li></a>
+            <a href="addStrategy.html" class="link">写指南</a>
+    	</ul>
+        <div class="header">
+        	<div class="header_left">
+        		<h2 id="h2"></h2>
+            	<span class="time" id="time"></span>
+            	<p class="left_icon">
+            	<a  id="shoucang" onclick="shoucang()"><img src="../../../upload/strategy/images/shoucang.jpg"/></a>
+                <a id="zan" onclick="zan()"><img src="../../../upload/strategy/images/zan.jpg"/></a>
+                <span id="pinglun"><img src="../../../upload/strategy/images/pinglun.jpg"/></span>
+                <span id="liulan"><img src="../../../upload/strategy/images/liulan.png"/></span>
+                </p>
+            </div>
+        	<div class="header_right">
+				<a href="../members2/members_home.html" class="header_a1"><img id="photo" alt="这是图片"/></a>
+                <a href="../members2/members_home.html" class="header_a2" id="userName"></a>
+            </div>
+       </div>
+       
+       
+       <!--左侧-->
+       <div class="left">
+            <div class="picture" id="picture">
+            	<!--<img src="images/mainImg.jpg" alt="这是图片" class="bgImg"/>
+        		<div class="lunbo">
+        			<a href="#"><img src="images/photo2.jpg"></a>
+            		<a href="#"><img src="images/photo2.jpg"></a>
+            		<a href="#"><img src="images/photo2.jpg"></a>
+                    <a href="#"><img src="images/photo2.jpg"></a>
+        		</div>-->
+            </div>
+            <div class="left_travel">
+            <span class="daodu" id="subComment"></span>
+            <span class="travel_span" id="content"></span> 
+            </div>  
+            
+            <div class="commentTxt">
+            <textarea class="talk" id="comment" onkeyup="count()"></textarea>
+            <span id="count">0/100</span>
+            </div>
+            <input type="button" value="发表评论" class="submitTalk" onclick="comment()"/>
+           <div class="answers">
+ 				<h1 class="answers1">全部评论</h1>
+ 				<p class="allAnswers" id="allAnswers"></p>
+  				<ul class="answers_ul" id="answers_ul"></ul>
+            </div>
+            <!--分页-->
+            <div class="fengye">
+            	<a  onclick="firstPage()">首页</a>
+        		<a  onclick="pastPage()">上一页</a>
+          		<a  onclick="nextPage()">下一页</a>
+                <a  onclick="lastPage()">末页</a>
+           	 	<span>第<input type="text" value="1" class="pageNum" id="nowPage"/>页</span>
+            	<a  onclick="redirect()">跳转</a>
+                <span>共<input type="text"  class="sumNum" readonly="readonly" id="sumPage" />页</span>
+        	</div>
+       </div>
+            
+            <div class="right">
+            <div class="hotel">
+                	<p>酒店服务</p>
+                	<a href="#">更多</a>
+                    <ul class="hotel_container">
+                        <li>
+                            <img src="../../../upload/strategy/images/breakfast.jpg" alt="图片加载失败"/>
+                            <a href="#" class="hotel_p1">供应早餐</a>
+                            <p class="hotel_p2">breakfast</p>
+                        </li>
+                        <li>
+                            <img src="../../../upload/strategy/images/wifi.jpg" alt="图片加载失败"/>
+                            <a href="#" class="hotel_p1">WIFI服务</a>
+                            <p class="hotel_p2">wlan</p>
+                        </li>
+                        <li>
+                            <img src="../../../upload/strategy/images/wash.jpg" alt="图片加载失败"/>
+                            <a href="#" class="hotel_p1">洗浴</a>
+                            <p class="hotel_p2">washing</p>
+                        </li>
+                    </ul>
+                </div>
+                
+          
+        </div>
+    </div>
+</body>
+</html>

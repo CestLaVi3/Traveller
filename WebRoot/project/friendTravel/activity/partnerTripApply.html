@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../../base/css/base.css" />
+<link rel="stylesheet" href="css/partnerTripApply.css" />
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/partnerTripApply.js"></script>
+<script type="text/javascript" src="js/knockout-3.3.0.js"></script>
+<title>限时抢购</title>
+</head>
+
+<body>
+	<div class="topShow">
+        <img id="bigImg" onmouseover="stop()" onmouseout="begin()"/>
+        <div id="right_img">
+            <img src="img/2.png" alt="图片加载失败" class="turnBut" id="topMove" onclick="turnUp()"/>
+             <ul id="smallUl"><li></li><li></li><li class="centerPicture"></li><li></li><li></li></ul>
+             <img src="img/1.png" alt="图片加载失败" class="turnBut" id="downMove" onclick="turnDown()"/>
+        </div>
+    </div>
+    <ul class="link" data-bind="foreach: data">
+		<li data-bind="text: title"></li>
+		<p data-bind="text: content"></p>
+	</ul>
+</body>
+</html>

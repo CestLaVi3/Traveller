@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 定义数据源 -->
+	<bean id="dataSource" 
+		class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@10.0.8.5:1521:orcl"/>
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="user" value="travel"/>
+		<property name="password" value="123"/>
+		<property name="initialPoolSize" value="3"/>
+		<property name="maxPoolSize" value="10"/>
+		<property name="minPoolSize" value="1"/>
+		<property name="acquireIncrement" value="3"/>
+		<property name="maxIdleTime" value="60"/>
+	</bean>
+	
+	
+	<bean id="userDao" class="com.chinasoft.dao.user.UserDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="mainDao" class="com.chinasoft.dao.main.MainDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="scienceSpotDao" class="com.chinasoft.dao.scienceSpot.ScienceSpotDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="stagtegyDao" class="com.chinasoft.dao.stagtegy.StagtegyDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="activityDao" class="com.chinasoft.dao.activity.ActivityDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<bean id="travelDescDao" class="com.chinasoft.dao.travelDesc.TravelDescDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="commentDao" class="com.chinasoft.dao.comments.CommentsDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="spotDao" class="com.chinasoft.dao.spot.SpotDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="provinceDao" class="com.chinasoft.dao.province.ProvinceDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	
+	
+</beans>

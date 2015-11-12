@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加旅游行程</title>
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/_examples/editor_api.js"></script>
+<link rel="stylesheet" href="../../base/css/base.css" />
+<link rel="stylesheet" href="css/addGroupTour.css" />
+<script type="text/javascript" charset="utf-8" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../base/js/validate.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/addGroupTour.js"></script>
+<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/themes/default/easyui.css"/>
+<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/themes/icon.css"/>
+<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/demo/demo.css"/>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.min.js"></script>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.easyui.min.js"></script>
+</head>
+
+<body onload="init()"> 
+<form action = "../../../activeController/saveTeamActive.do" method="post" enctype="multipart/form-data" onsubmit="return check()">
+<div class="home">
+	<div class="left">
+    	<h2>发表结伴</h2>
+    	<p>行程安排</p>
+    	<img src="../../../upload/activity/images/selfActivity/2.png" class="img1" onclick="past()" />
+        <img src="../../../upload/activity/images/selfActivity/3.png" class="img2" onclick="next()"/>
+        <ul id="daysUl"></ul>
+        <ul id="trip"></ul>
+        <span style="display:block;text-align:center;width:390px;margin:auto;margin-top:60px;"><img src="../../../upload/activity/images/selfActivity/1.png" style="width:30px;height:30px; float:left;"/>完善右边个人信息，点击编辑行程，填写行程安排</span>
+    </div>
+    
+   <div class="right">
+    <p>活动信息</p>
+    <div>
+    <div class="photo"><label for="url" class="label">+添加图片</label><input type="file" id="url" name="imageUrl" onchange="previewImage(this)" style=" display:none;"><label class="lbl" for="url"><img/></label></div>
+  Q&nbsp;Q&nbsp;号&nbsp;：<input type="text" id="qq" placeholder="输入QQ号" name="qqNum" onblur="checkQQ()"/><span class="qq"></span><br/>
+    手&nbsp;机&nbsp;号：<input type="text" id="phone" placeholder="输入手机号" name="phoneNum" onblur="checkPhone()"/><span class="phone"></span><br/>
+    微&nbsp;信&nbsp;号：<input type="text" id="weixin" placeholder="输入微信号" name="weixinNum"/><br/>
+ 目&nbsp;的&nbsp;地：<select id="spot" name="spotId"><option value="0" selected="selected">选择目的地</option></select><br/>   
+    活动名称:&nbsp;<input type="text" id="name" placeholder="活动名称" name="activeName"/><br/>
+   活动描述:&nbsp; <textarea placeholder="活动描述" id="desc" name="productDesc"></textarea><br/>
+ <!--真实姓名:&nbsp;&nbsp;<input type="text" placeholder="输入真实姓名" name=""/><br/>-->
+   限制人数:&nbsp;&nbsp;<input name="personNum" id="personNum" class="easyui-numberspinner" style="width:155px;height:30px;margin-bottom:10px;" data-options="min:1,max:20,editable:false"/>
+ <div style="margin-top:10px;"></div> 
+    旅行天数:&nbsp;&nbsp;<input name="travelDays"  id="travelDays" class="easyui-numberspinner" style="width:155px;height:30px;margin-bottom:10px;" data-options="min:1,max:20,editable:false"/><br/> 
+ <div style="margin-top:10px;"></div> 
+  出发日期:&nbsp;&nbsp;<input class="easyui-datebox" name="planDate" id="startTime" data-options="formatter:myformatter,parser:myparser,editable:false" style="width:155px;height:30px;"></input><span id="startDate"></span><br/>
+    <input type="hidden" name="activeType" value="5"/>
+    <input type="hidden" name="successUrl" value="project/friendTravel/activity/groupTour.html"/>
+    <input type="button" onclick="getTrip(0)" value="编辑行程"/>
+    <input type="submit" value="发表结伴"/>
+    </div>
+    </div>
+</div>
+</form>
+<script type="text/javascript">
+		function myformatter(date){
+			var y = date.getFullYear();
+			var m = date.getMonth()+1;
+			var d = date.getDate();
+			return y+'-'+(m<10?('0'+m):m)+'-'+(d<10?('0'+d):d);
+		}
+		function myparser(s){
+			if (!s) return new Date();
+			var ss = (s.split('-'));
+			var y = parseInt(ss[0],10);
+			var m = parseInt(ss[1],10);
+			var d = parseInt(ss[2],10);
+			if (!isNaN(y) && !isNaN(m) && !isNaN(d)){
+				return new Date(y,m-1,d);
+			} else {
+				return new Date();
+			}
+		}
+	</script>
+</body>
+</html>

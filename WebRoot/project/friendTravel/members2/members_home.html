@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>XXX个人主页</title>
+		<link rel="stylesheet" type="text/css" href="css/baseN.css" />
+		<link rel="stylesheet" type="text/css" href="css/globalN.css" />
+		<script src="js/functionAll.js"></script>
+		<script src="../../base/js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/members_home.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tab.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="container" class="container clearfloat ">
+			<!--------------------------------zuo导航------------------------------------>
+			<div class="clearfloat fl mt10" style="width: 150px;">
+
+				<div class="members_favcion clearfloat">
+
+					<div class="members_imgHead fr">
+						<img id="homeHeadImg" class="members_imgHead" src="img/tx.png" alt="用户头像" />
+					</div>
+					<ul class="members_favcion_ul fl f14 ">
+						<li class="members_favcion_menu bb tc cf fl">
+							<a class="c06" href="members_friend.html" target="a ">
+								<p id="attNum">123</p>
+								<p class="c0">关注</p>
+
+							</a>
+						</li>
+						<li class="members_favcion_menu bb tc cf fl">
+							<a class="c06" href="members_friend.html" target="a ">
+								<p id="funsNum">123</p>
+								<p class="c0">粉丝</p>
+
+							</a>
+						</li>
+						<li class="members_favcion_menu bb tc cf fl">
+							<a class="c06" href="members_friend.html" target="a ">
+								<p id="visitNum">123</p>
+								<p class="c0">访客</p>
+
+							</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="menu_ul fl mt10 ">
+					<li id="homeMenu_0" onclick="tabNavHome(0)" class="menu_allLi  tc fb " style="background: #ffcc99;">
+						<a class="c0" href="friendsCircle.html" " target="a ">个人中心</a>
+					</li>
+					<li id="homeMenu_1 " onclick="tabNavHome(1) " class="menu_allLi tc fb ">
+					<a class="c0 " href="members_friend.html " target="a ">侣朋友</a>
+					</li>
+					<li id="homeMenu_2 " onclick="tabNavHome(2) " class="menu_allLi tc fb ">
+					<a class="c0 " href="members_travels.html " target="a ">我的游记</a>
+					</li>
+					<li id="homeMenu_3 " onclick="tabNavHome(3) " class="menu_allLi tc fb ">
+					<a class="c0 " href="members_strategy.html " target="a ">我的攻略</a>
+					</li>
+					
+					<li id="homeMenu_4 " onclick="tabNavHome(4) " class="menu_allLi tc fb ">
+					<a href="../activity/activityRecord/activityRecord.html " target="iframeMain" class="c0 ">我的活动</a>
+					</li>
+					<li id="homeMenu_5 " onclick="tabNavHome(5) " class="menu_allLi tc fb ">
+					<a href="members_information.html " class="c0 " target="a ">个人信息</a>
+					</li>
+					
+					<li id="homeMenu_6 " onclick="tabNavHome(6) " class="menu_allLi tc fb ">
+						<a href="members_collect.html " class="c0 " target="a ">收藏</a>
+					</li>
+			</ul>
+			</div>
+			
+				<iframe class="members_rightContainer fl ml10 mt10 " src="friendsCircle.html " scrolling="no " frameborder="0 " name="a " onload="Javascript:SetWinHeight(this) "></iframe>
+
+		</div>
+	</body>
+
+</html>

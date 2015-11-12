@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="../../../../base/css/base.css" />
+<link rel="stylesheet" href="../../css/addSelfActivity.css" />
+<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/_examples/editor_api.js"></script>
+</head>
+
+<body>
+<div class="home">
+	<div class="left">
+    	<h2>发起结伴</h2>
+    	<span>行程第？天:</span><input type="text" class="day"/>
+        <span>住宿:</span> <input type="text" class="hotel"/>
+    	<span>餐饮:</span> <input type="text" class="food"/><br/>
+        <span>上传图片：</span> <input type="file"/><br/>
+        <span>游览景点:</span>
+        
+        <script id="editor" type="text/plain" style="width:840px;"></script>
+        <input type="button" value="添加下一天"/>
+        <input type="button" value="提交计划" class="submitBut"/>
+    </div>
+    
+    <div class="right">
+    	<p>出发地点：</p>
+        <select name="destination" style="scrollHeight:50px;">
+        	<option selected="selected">请选择省...</option>
+            <option>四川</option>
+            <option>云南</option>
+            <option>广州</option>
+            <option>浙江</option>
+            <option>黑龙江</option>
+            <option>吉林</option>
+            <option>湖南</option>
+            <option>内蒙古</option>
+            <option>陕西</option>
+            <option>山西</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+        </select>省
+        <select name="destination">
+        	 <option>请选择地区...</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+        </select>市
+    	<p>目的地：</p>
+        <select name="destination" style="scrollHeight:50px;">
+        	<option selected="selected">请选择省...</option>
+            <option>四川</option>
+            <option>云南</option>
+            <option>广州</option>
+            <option>浙江</option>
+            <option>黑龙江</option>
+            <option>吉林</option>
+            <option>湖南</option>
+            <option>内蒙古</option>
+            <option>陕西</option>
+            <option>山西</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+            <option>湖北</option>
+        </select>省
+        <select name="destination">
+        	 <option>请选择地区...</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+             <option>成都</option>
+        </select>市
+    	<p>姓名：</p>
+        <input type="text" />
+        <p>联系方式：</p>
+        <input type="text" placeholder="手机/QQ/微信" />
+        <p>活动天数：</p>
+        <input type="text" />
+        <p>招募人数：</p>
+        <input type="text" />
+        <p>活动简介：</p>
+        <textarea class="area">
+        
+        </textarea>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript">
+ 	var editor_a = UE.getEditor('editor',{initialFrameHeight:300});
+</script>
+</html>

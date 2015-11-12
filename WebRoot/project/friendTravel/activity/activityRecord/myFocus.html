@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>已参加活动</title>
+<link type="text/css" rel="stylesheet" href="../css/activityRecord.css"/>
+<link type="text/css" rel="stylesheet" href="../../../base/css/base.css"/>
+<script type="text/javascript" src="../js/myFocus.js">
+</script>
+<script type="text/javascript" src="../../../base/js/easyUI/jquery.min.js">
+</script>
+</head>
+
+<body>
+	<div class="join" id="join">
+     <p>
+      <input type="button" onclick="showNowAcity()" id="now" class="now" value="已关注"/>
+      <input type="button"onclick="showPastAcity()" id="past" class="past" value="已过期"/>
+     </p>
+      <!--活动-->
+      <ul id="activeUl">
+     <!--    <li>
+          <div class="intro">
+           <input type="checkbox">
+            <span class="sp1">2015-09-10</span>
+            <span>至</span>
+            <span class="sp1">2016-01-10</span>
+            <span>活动名称：</span>
+            <span class="sp2">团游</span>
+            <img src="../images/activityRecord/del.png" alt="加载失败">
+          </div>
+          <div class="detail">
+            <a href="../groupTour.html" target="_top"><img src="../images/photoPK/2.jpg" alt="加载失败"></a>
+            <div>
+            <p>
+             <span>目的地：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">欢乐游北京</span></a>
+            </p>
+            <p>
+             <span >简介：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">5日15-20人游，男女不限,5日15-20人游，男女不限，北京欢迎你</span></a>
+            </p>
+            </div>
+          </div>
+           <a href="#">
+            <img src="../images/deliciousFood/heart.jpg" alt="加载失败">
+            <span>取消关注</span>
+          </a>
+          <a href="../groupTourApply.html" target="_top">查看详情</a>
+        </li> 
+            <li>
+          <div class="intro">
+           <input type="checkbox">
+            <span class="sp1">2015-09-10</span>
+            <span>至</span>
+            <span class="sp1">2016-01-10</span>
+            <span>活动名称：</span>
+            <span class="sp2">团游</span>
+            <img src="../images/activityRecord/del.png" alt="加载失败">
+          </div>
+          <div class="detail">
+            <a href="../groupTour.html" target="_top"><img src="../images/photoPK/2.jpg" alt="加载失败"></a>
+            <div>
+            <p>
+             <span>目的地：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">欢乐游北京</span></a>
+            </p>
+            <p>
+             <span >简介：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">5日15-20人游，男女不限,5日15-20人游，男女不限，北京欢迎你</span></a>
+            </p>
+            </div>
+          </div>
+           <a href="#">
+            <img src="../images/deliciousFood/heart.jpg" alt="加载失败">
+            <span>取消关注</span>
+          </a>
+          <a href="../groupTourApply.html" target="_top">查看详情</a>
+        </li> 
+        <li>
+          <div class="intro">
+           <input type="checkbox">
+            <span class="sp1">2015-09-10</span>
+            <span>至</span>
+            <span class="sp1">2016-01-10</span>
+            <span>活动名称：</span>
+            <span class="sp2">团游</span>
+            <img src="../images/activityRecord/del.png" alt="加载失败">
+          </div>
+          <div class="detail">
+            <a href="../groupTourApply.html" target="_top"><img src="../images/photoPK/2.jpg" alt="加载失败"></a>
+            <div>
+            <p>
+             <span>目的地：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">欢乐游北京</span></a>
+            </p>
+            <p>
+             <span >简介：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">5日15-20人游，男女不限,5日15-20人游，男女不限，北京欢迎你</span></a>
+            </p>
+            </div>
+          </div>
+           <a href="#">
+            <img src="../images/deliciousFood/heart.jpg" alt="加载失败">
+            <span>取消关注</span>
+          </a>
+          <a href="../groupTourApply.html" target="_top">查看详情</a>
+        </li>  -->
+      </ul>
+      <div class="changePage">
+       <a href="##" id="firstPage">首页</a>
+       <a href="##" id="previousPage">上一页</a>
+       <a href="##" id="nextPage">下一页</a>
+       <a href="##" id="endPage">尾页</a>
+       
+       <a class="nowPage">第<input type="text" value="1" id="page">页</a>
+       <input type="button" value="跳转" id="btn"/>
+       <a class="totalPage">共<span id="allPage">50</span>页</a> 
+   </div>
+  </div>
+  
+  
+  <!--已过期-->
+<!--   <div class="pastJoin" id="pastJoin">
+     <p>
+      <input type="button" onclick="showNowAcity()" id="now" class="now" value="已关注"/>
+      <input type="button"onclick="showPastAcity()" id="past" class="past" value="已过期"/>
+     </p>
+      活动
+      <ul>
+        <li>
+          <div class="intro">
+           <input type="checkbox">
+            <span class="sp1">2015-09-10</span>
+            <span>至</span>
+            <span class="sp1">2016-01-10</span>
+            <span>活动名称：</span>
+            <span class="sp2">团游</span>
+            <img src="../images/activityRecord/del.png" alt="加载失败">
+          </div>
+          <div class="detail">
+            <a href="../photoPK.html" target="_top"><img src="../images/photoPK/10.jpg" alt="加载失败"></a>
+            <div>
+            <p>
+             <span>目的地：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">欢乐游北京</span></a>
+            </p>
+            <p>
+             <span >简介：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">5日15-20人游，男女不限,5日15-20人游，男女不限，北京欢迎你</span></a>
+            </p>
+            </div>
+          </div>
+           <a href="#">
+            <img src="../images/deliciousFood/heart.jpg" alt="加载失败">
+            <span>取消关注</span>
+          </a>
+          <a href="../groupTourApply.html" target="_top">查看详情</a>
+        </li> 
+            <li>
+          <div class="intro">
+           <input type="checkbox">
+            <span class="sp1">2015-09-10</span>
+            <span>至</span>
+            <span class="sp1">2016-01-10</span>
+            <span>活动名称：</span>
+            <span class="sp2">团游</span>
+            <img src="../images/activityRecord/del.png" alt="加载失败">
+          </div>
+         <div class="detail">
+            <a href="../photoPK.html" target="_top"><img src="../images/photoPK/10.jpg" alt="加载失败"></a>
+            <div>
+            <p>
+             <span>目的地：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">欢乐游北京</span></a>
+            </p>
+            <p>
+             <span >简介：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">5日15-20人游，男女不限,5日15-20人游，男女不限，北京欢迎你</span></a>
+            </p>
+            </div>
+          </div>
+           <a href="#">
+            <img src="../images/deliciousFood/heart.jpg" alt="加载失败">
+            <span>取消关注</span>
+          </a>
+          <a href="../groupTourApply.html" target="_top">查看详情</a>
+        </li> 
+        <li>
+          <div class="intro">
+           <input type="checkbox">
+            <span class="sp1">2015-09-10</span>
+            <span>至</span>
+            <span class="sp1">2016-01-10</span>
+            <span>活动名称：</span>
+            <span class="sp2">团游</span>
+            <img src="../images/activityRecord/del.png" alt="加载失败">
+          </div>
+          <div class="detail">
+            <a href="../photoPK.html" target="_top"><img src="../images/photoPK/10.jpg" alt="加载失败"></a>
+            <div>
+            <p>
+             <span>目的地：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">欢乐游北京</span></a>
+            </p>
+            <p>
+             <span >简介：</span>
+             <a href="../groupTourApply.html" target="_top"><span class="sp1">5日15-20人游，男女不限,5日15-20人游，男女不限，北京欢迎你</span></a>
+            </p>
+            </div>
+          </div>
+           <a href="#">
+            <img src="../images/deliciousFood/heart.jpg" alt="加载失败">
+            <span>取消关注</span>
+          </a>
+          <a href="../groupTourApply.html" target="_top">查看详情</a>
+        </li> 
+      </ul>
+       <div class="changePage">
+       <a href="##">首页</a>
+       <a href="##">上一页</a>
+       <a href="##">下一页</a>
+       <a href="##">尾页</a>
+       
+       <a class="nowPage">第<input type="text" value="1">页</a>
+       <input type="button" value="跳转"/>
+       <a class="totalPage">共<span>50</span>页</a> 
+   </div>
+    </div> -->
+</body>
+</html>

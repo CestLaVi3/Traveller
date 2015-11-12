@@ -1,0 +1,210 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>景点管理</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="easyUI/themes/icon.css" rel="stylesheet" type="text/css">
+<link href="easyUI/themes/gray/easyui.css" rel="stylesheet" type="text/css">
+<script src="easyUI/jquery.min.js"></script>
+<script src="easyUI/jquery.easyui.min.js"></script>
+<script src="js/admin.js"></script>
+<style>
+.myButton {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background: -moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf', GradientType=0);
+	background-color: #ededed;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: #777777;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 6px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background: -moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed', GradientType=0);
+	background-color: #dfdfdf;
+}
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+</style>
+</head>
+<body id="container">
+<ul id="tt" class="easyui-tree"  style="width:240px;float:left;height:700px;overflow-y:scroll;"    animate="true" >
+</ul>
+<script>
+var dataMenu = [];
+var treeidnum = 0;
+$.post("../../../scienceSpotController/findall.do",{},treemenu,"json");
+function treemenu(data){
+	var pro = data.province;
+	var sci = data.scienceSpot;
+	var spo = data.spot;
+	for(var i=0;i<pro.length;i++){		
+		dataMenu[i] = {"id":treeidnum++,"treeid":1,"text":pro[i].provinceName,"state":"closed","provinceId":pro[i].provinceId,"children":[]};
+		var xj = 0;
+		for(var j=0;j<sci.length;j++){
+			if(pro[i].provinceId==sci[j].provinceId){
+				dataMenu[i].children[xj] = {"id":treeidnum++,"treeid":2,"text":sci[j].spotName,"state":"closed","status":sci[j].status,"spotId":sci[j].spotId,"provinceId":pro[i].provinceId,"children":[]};
+				var xk = 0;
+				for(var k=0;k<spo.length;k++){
+					if(sci[j].spotId==spo[k].spotId){
+						dataMenu[i].children[xj].children[xk] ={"id":treeidnum++,"treeid":3,"text":spo[k].spotName,"state":"closed","sysSpotId":spo[k].sysSpotId,"status":spo[k].status,"spotId":sci[j].spotId,};
+						xk++;					
+						}					
+					}
+					xj++;
+				}
+			}
+		}
+		
+		tree();	
+	}
+var tnode;
+function tree(){
+	
+$('#tt').tree({
+	onLoadSuccess:function(){
+		
+		var treedom = document.getElementsByClassName("tree-node");
+		for(var i=0;i<treedom.length;i++){
+			var treenode = $('#tt').tree('find',i);
+			if(treenode.status=="0"){
+				treenode.target.childNodes[treenode.target.childNodes.length-1].style.color = "#ff0c00";
+				}
+			}
+		},
+	onSelect:function(node){
+		tnode = $('#tt').tree('getSelected');
+		},
+	onClick: function(node){
+		
+            if(node.treeid == 1){
+			document.getElementById("iffr").src = "prdata.html?lxname="+node.provinceId+"&type=0";
+			}
+			else if(node.treeid==2){
+					document.getElementById("iffr").src = "ardata.html?lxname="+node.spotId+"&type=0&provinceId="+tnode.provinceId;
+				}
+				else if(node.treeid==3){
+					document.getElementById("iffr").src = "spdata.html?lxname="+node.sysSpotId+"&type=0&spotId="+tnode.spotId;
+				}	
+			if(node.status==0){
+					document.getElementById("iffr").src = "0";
+				}
+	},
+	data: dataMenu
+});
+
+}
+function remove1(){
+		
+	if(tnode.treeid!=1){	
+	if(tnode.treeid==2){
+		$.post("../../../scienceSpotController/forbitScenicSpot.do",{"paramter":JSON.stringify({"spotId":tnode.spotId})},fbit1,"json");	
+		}
+	if(tnode.treeid==3){
+		$.post("../../../spotController/forbitSpot.do",{"paramter":JSON.stringify({"sysSpotId":tnode.sysSpotId})},fbit2,"json");		
+		}		
+	}	
+}
+function fbit1(data){
+	
+	if(data.state==1){
+		alert("禁用成功");
+		tnode.target.childNodes[tnode.target.childNodes.length-1].style.color = "#ff0c00";
+	}else{
+		alert("禁用失败");
+		}
+	}
+function fbit2(data){
+	
+		if(data.state==1){
+		alert("禁用成功");
+		tnode.target.childNodes[tnode.target.childNodes.length-1].style.color = "#ff0c00";
+	}else{
+		alert("禁用失败");
+		}
+	}	
+function remove2(){	
+
+if(tnode.treeid!=1){	
+	if(tnode.treeid==2){
+		$.post("../../../scienceSpotController/unForbitScenicSpot.do",{"paramter":JSON.stringify({"spotId":tnode.spotId})},unfbit1,"json");	
+		}
+	if(tnode.treeid==3){
+		$.post("../../../spotController/unForbitSpot.do",{"paramter":JSON.stringify({"sysSpotId":tnode.sysSpotId})},unfbit2,"json");		
+		}		
+	}	
+}
+function unfbit1(data){
+	
+	if(data.state==1){
+		alert("解除禁用成功");
+		tnode.target.childNodes[tnode.target.childNodes.length-1].style.color = "#000000";
+	}else{
+		alert("解除禁用失败");
+		}
+	}
+function unfbit2(data){
+	
+		if(data.state==1){
+		alert("解除禁用成功");
+		tnode.target.childNodes[tnode.target.childNodes.length-1].style.color = "#000000";
+	}else{
+		alert("解除禁用失败");
+		}
+	}
+function append1(){
+	
+	if(tnode.treeid==3){
+		return;
+		}
+	if(tnode.treeid == 1){
+			document.getElementById("iffr").src = "ardata.html?lxname=null&type=1&provinceId="+tnode.provinceId;
+			}
+    else if(tnode.treeid==2){
+				document.getElementById("iffr").src = "spdata.html?lxname=null&type=1&spotId="+tnode.spotId;
+		    }
+$('#tt').tree('append', {
+	parent: tnode.target,
+	data: [{
+		 "treeid":tnode.treeid+1,
+		 "id":treeidnum++,
+		 "status":1
+	}]
+});
+
+var treenodese = $('#tt').tree('find',treeidnum-1);
+$('#tt').tree('select',treenodese.target);
+}
+function editname(strname){
+	tnode.target.lastChild.innerHTML = strname;
+	}
+</script>
+<iframe src="prdata.html?lxname=1&type=0" id="iffr" style="width:960px;height:1000px;float:right;border:none;" scrolling="no"></iframe>
+<div style="float:left;margin:10px 0 0 10px; "> <a href="#" class="myButton" onclick="append1()">添加</a> <a href="#" class="myButton" onclick="remove1()">禁用</a> <a href="#" class="myButton" onclick="remove2()">解除禁用</a> </div>
+</body>
+</html>

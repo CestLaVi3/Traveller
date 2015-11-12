@@ -1,0 +1,130 @@
+.friendCircle_list{
+	width: 770px;
+	margin: 0px auto;
+	background: #F1FFEE;
+	border:1px solid #F4F4F4;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+.friendCircle_con{
+	width:770px;
+	margin-top:10px;
+}
+.FC_Mhead{
+	width:100px;
+	height: 130px;
+	
+}
+.FC_Mhead img{
+	width：80px;
+	height:80px;
+	border-radius: 40px;
+	margin: 0px 10px;
+}
+.FC_rightCon{
+	padding-left: 10px;
+	border-left: 1px solid #F4F4F4;
+	width: 639px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #F4F4F4;
+	background: #fff;
+}
+
+.FC_tab_con{
+	width: 690px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	vertical-align: middle;
+}
+.FC_tab{
+	width: 150px;
+	height: 40px;
+	line-height: 20px;
+	
+}
+.FC_tab a{
+	color:#666;
+	font-size: 14px;
+}
+
+
+.JPosition{
+	width: 242px;
+	height: 560px;
+	position: fixed;
+	top: 20px;
+	left: 10px;
+	
+	border-radius: 10px;
+	border: 1px solid #dcdcdc;
+}
+.JCon{
+	height: 600px;
+	border-radius: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+.JH{
+	background: #FFCC33;
+	line-height: 60px;
+	font-size: 20px;
+}
+.JSeek{
+	height: 30px;
+	background: #Fff;
+	width: 220px;
+	margin: 10px auto;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.JSeek_text{
+	width: 150px;
+	height: 30px;
+	border: none;
+	margin-left: 10px;
+}
+.JSeek_but{
+	width: 55px;
+	height: 30px;
+	border: none;
+	background: #FFCC33;
+	color: #fff;
+}
+.JCity{
+	height: 420px;
+	width: 240px;
+	background: rgba(255,255,255,0.7);
+	border-left: 1px solid #DCDCDC;
+	border-right: 1px solid #DCDCDC;
+}
+.JCList{
+	height: 420px;
+	width: 240px;
+	border-bottom: 1px solid #DCDCDC;
+	overflow-y: auto;
+}
+.JCListCon{
+	min-height: 100px;
+	border-bottom: 1px solid #DCDCDC;
+	width: 240px;
+}
+.JCLcnt{
+	min-height: 80px;
+	width: 240px;
+	font-size: 12px;
+}
+.JClcntBut{
+	width: 60px;
+	height: 20px;
+	border:none;
+	background: #FFCC33;
+	color: #fff;
+	border-radius: 5px;
+}
+
+
+
+
+
+	

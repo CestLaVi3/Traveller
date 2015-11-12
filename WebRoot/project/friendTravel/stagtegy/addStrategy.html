@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>酒店评论</title>
+<link href="css/addstrategy.css" type="text/css" rel="stylesheet">
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/_examples/editor_api.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/addstrategy.js"></script>
+
+</head>
+
+<body onload="init()">
+ <form action="../../../stagtegyController/saveStagtegy.do" method="post" enctype="multipart/form-data" onsubmit="return check()">	
+	<div class="home">
+    	<div  class="left">
+		<p id="title"></p>
+		<span class="titleFont">标题：</span>
+		<input type="text" class="title"  id="title1" name="stagtegyTitle"/>
+           <div class="header">
+			<select name="spotId" id="place">
+            	<option selected="selected" value="0">请选择入住地...</option>
+            </select>
+            <select name="fitMonth" id="month">
+            	<option sselected="selected">请选择入住月份</option>
+            	<option value="1">1月</option>
+                <option value="2">2月</option>
+                <option value="3">3月</option>
+                <option value="4">4月</option>
+                <option value="5">5月</option>
+                <option value="6">6月</option>
+                <option value="7">7月</option>
+                <option value="8">8月</option>
+                <option value="9">9月</option>
+                <option value="10">10月</option>
+                <option value="11">11月</option>
+                <option value="12">12月</option>  
+            </select>
+    		<select name="travelDays" id="days">
+        		<option selected="selected" value="0">请选择入住天数</option>
+            	<option value="1">1天</option>
+                <option value="2">2天</option>
+                <option value="3">3天</option>
+                <option value="4">4天</option>
+                <option value="5">5天</option>
+                <option value="6">6天</option>
+                <option value="7">7天</option>
+                <option value="8">8天</option>
+                <option value="9">9天</option>
+                <option value="10">10天</option>
+                <option value="11">11天</option>
+                <option value="12">12天</option>
+                <option value="13">13天</option>
+                <option value="14">14天</option>
+                <option value="15">15天</option>
+                <option value="16">15天以上</option>
+           </select>
+        	<select name="stagtegyType" id="type">
+        		<option selected="selected" value="0">请选择旅店主题</option>
+        	</select>
+        	<select name="status" id="status">
+        		<option selected="selected" value="0">选择权限</option>
+        		<option value="1">申请公开</option>
+        		<option value="0">个人可见</option>
+        	</select>
+            </div>
+           
+       <div class="manypic" id="manypic">
+       	<ul id="images"><li><label for="url1" class="label">添加图片</label><input type="file" id="url1" name="url1" onchange="previewImage(this)" style=" display:none;"/><label class="lbl" for="url1"><img src=""/></label></li><li><label for="url2" class="label">添加图片</label><input type="file" id="url2" name="url2" onchange="previewImage(this)" style=" display:none;"/><label class="lbl" for="url2"><img src=""/></label></li><li><label for="url3" class="label">添加图片</label><input type="file" id="url3" name="url3" onchange="previewImage(this)" style=" display:none;"/><label class="lbl" for="url3"><img src=""/></label></li></ul>
+       </div>
+       
+             <div class="head">
+				
+                <p>
+				<span class="titleFont">内容：</span>
+                <script id="editor" name="stagtegyContent" type="text/plain" style="width:810px;"></script>
+                </p>
+			</div>
+            	<input type="submit" value="提交评论"/>
+                <a href="strategyHome.html">返回</a>
+        </div>
+        
+        <div class="right">
+        <span >关键字（非必填）</span>
+		<textarea name="keys" id="keys" class="mainFont"></textarea>
+    
+        <span>攻略导读（非必填）</span>
+        <textarea name="subComment" id="subComment" class="mainMenu"></textarea>
+	   <p>
+		<span>评论发表说明： </span>
+		<span>1.一个好的导读，会让他人的阅读更顺畅。</span>
+		<span>2.仅可上传6张图片，单张图片大小不超过500KB。</span>
+		<span>3.每篇评论成功提交并审核通过后，您将获得50金币奖励；优秀的评论将额外获得50-100金币。（<a href="../activity/presentChange/redemption.html">金币获取规则</a>）</span>
+	   </p>
+        </div>
+    </div>
+    <input type="hidden" name="successUrl" value="project/friendTravel/members2/members_home.html"/>
+    <input type="hidden" name="stagtegyId" value="" id="stagtegyId"/>
+    <script type="text/javascript">
+ 	var editor_a = UE.getEditor('editor',{initialFrameHeight:300});
+    </script>
+</form>
+</body>
+
+</html>

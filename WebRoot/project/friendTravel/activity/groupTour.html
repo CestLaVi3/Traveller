@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>天天特价</title>
+<link rel="stylesheet" href="../../base/css/base.css"/>
+<link rel="stylesheet" href="css/groupTour.css"/>
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/groupTour.js"></script>
+<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/themes/default/easyui.css"/>
+<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/themes/icon.css"/>
+<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/demo/demo.css"/>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.min.js"></script>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.easyui.min.js"></script>
+</head>
+
+<body onload="init()">
+<div class="container">
+  <!--天天特价-->
+		<div class="tripRecommand">
+			<p>
+				<span class="s"><span id="dayPrice" class="dayPrice">天天有惊喜，今日来抢</span></span>
+				  <select id="spot">	<option selected="selected" value="0">全部</option></select>
+				   <input type="button" value="搜索" onclick="getOtherTrip()" />	
+			</p>
+			<ul id="otherTrip">
+			</ul>
+		</div>
+		
+		<!-- 分页 -->
+		<div class="changePage">
+       <a  onclick="firstPage()">首页</a>
+       <a onclick="pastPage()">上一页</a>
+       <a  onclick="nextPage()">下一页</a>
+       <a  onclick="lastPage()">末页</a>
+       <a class="nowPage">第<input type="text" value="1" id="nowPage"/>页</a>
+       <input type="button" value="跳转" onclick="redirect()"/>
+       <a class="totalPage">共<span id="sumPage"></span>页</a> 
+     </div>
+</div>
+</body>
+</html>

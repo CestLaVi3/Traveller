@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+body{ height:2140px;}
+.container{ width:1200px; margin:auto; position:relative; }
+/*头部*/
+.header{ width:1200px; height:450px; position:relative;  margin-bottom:220px;}
+.header>.p1{ font-size:60px; position:absolute; left:550px; top:100px; font-weight:600; font-family:"方正舒体";}
+.header>img{width:400px;  float:left;}
+.header>.img{width:700px;height:318px; float:right;}
+#img{width:500px; height:318px;}
+/*报名*/
+.focus{ width:400px; height:200px; position:absolute;left:150px; top:400px;}
+.focus>img{width:400px;height:200px;}
+.apply{width:300px; height:100px; top:50px; left:50px; position:absolute;text-align:center;}
+.apply>p{margin-bottom:10px; }
+.apply>span{ display:inline-block;width:20px; height:20px; background-color:#CCC; margin-left:10px; text-align:center; line-height:20px;}
+.apply>input{width:120px; height:30px;line-height:30px; background-color:white; font-size:16px; font-weight:600;border:#FC9 1px solid; margin-top:15px; margin-right:10px;}
+
+/*比赛规则*/
+.roles{ width:410px; height:240px; position:absolute;left:680px; top:380px; }
+.roles>img{width:410px; height:240px;}
+.roles>div{width:270px; height:150px;top:30px; left:50px; position:absolute; }
+
+
+/*往期回顾*/
+.ul1{width:1200px; height:50px; float:left;}
+.ul1 li{width:150px;float:left; margin-bottom:20px; margin-left:15px;}
+.ul1 li:hover{ cursor:pointer;}
+.ul1 li img{width:30px; float:left;}
+.ul1 li p{float:left;height:30px; line-height:30px; font-size:18px; font-weight:600;}
+.food_div1{width:865px; float:left; }
+/*参赛者上传*/
+.personMakeFood{width:865px;height:590px;margin-left:0px; }
+.personMakeFood>li{width:255px;height:240px; float:left;margin-left:15px; margin-right:15px; margin-bottom:30px; position:relative; }
+.personMakeFood>li:hover{ cursor:pointer;}
+.personMakeFood>li>p span{color:#93C9CC; float:left; margin-top:5px;}
+.personMakeFood>li>p .sp1{display:inline-block;width:60px; height:25px; line-height:25px; text-align:center;background-color:#F5F5F5; color:#939393; margin-right:10px;font-weight:600; }
+.personMakeFood>li>p .sp2{ width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.personMakeFood>li>p .sp3{ float:right; color:#F00;}
+.personMakeFood>li>img{width:255px;height:150px; margin-bottom:5px; }
+.personMakeFood>li>p{height:30px; }
+.personMakeFood>li>p img{ height:30px;width:30px; border-radius:20px; float:right; }
+/*往期活动*/
+.pastFoodAcity{width:865px; height:420px; margin-left:15px; float:left; display:none;}
+.pastFoodAcity>li{width:250px; height:180px; margin-right:25px; margin-bottom:35px; float:left; position:relative;}
+.pastFoodAcity>li>a>img{width:250px;height:180px;}
+.pastFoodAcity .a1{position:absolute; left:0px; top:140px; width:250px; height:40px; text-align:center; background-color:black; opacity:0.5;filter:alpha(opacity=50); color:white; font-size:30px; font-family:"方正舒体"; font-weight:600; line-height:40px;}
+.pastFoodAcity .a1:hover{color:#FF0;}
+/*排名*/
+.rank{ width:300px; height:430px;border:#e2e2e2 1px solid; float:left; margin-left:30px;margin-top:50px;}
+.rank>P{width:50px; height:20px; color:#FC6; font-size:16px; margin-left:15px; margin-top:10px;}
+.rank>ul{width:270px; height:300px; margin-left:15px; margin-top:10px;border-top:#e2e2e2 1px solid; }
+.rank>ul>li{width:270px; height:30px; border-bottom:#e2e2e2 1px dotted;}
+.rank>ul>li>img{ float:left;margin-right:10px;}
+.rank>ul>li>p{ float:left; line-height:30px;width:100px;text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.rank>ul>li>.number{width:35px; margin-right:8px;}
+.rank>ul>li>.p1{width:270px; height:10px;line-height:10px; text-align:center;display:block; font-size:10px; font-weight:600;}
+#myRank{color:#F99;}
+/*美食推荐*/
+.foodRecommand{width:620px;height:660px; margin-top:50px; float:left; }
+.foodRecommand>p{width:620px;height:30px; font-size:30px; font-weight:600; text-align:center; height:30px; line-height:30px; margin-bottom:50px;}
+.foodRecommand>ul{width:620px; }
+.foodRecommand ul>li{width:280px;height:250px; float:left;margin-left:15px; margin-right:15px; margin-bottom:40px; position:relative;}
+.foodRecommand ul>li img{width:280px;height:210px; margin-bottom:5px;}
+.foodRecommand ul>li a{ display:inline-block; margin-bottom:5px; font-size:14px;  }
+a:hover{color:#FC9;}
+a:active{color:#6F9;}
+.foodRecommand li span{display:inline-block;width:30px; height:20px; text-align:center; line-height:20px; background-color:#CCC; margin-right:10px;color:black;}
+/*评论*/
+.comment_p{width:530px;height:30px; font-size:30px; font-weight:600; text-align:center; height:30px; line-height:30px; margin-bottom:50px; float:left;}
+.comment{width:530px; border-bottom-width:2px; margin-top:50px; margin-left:50px; float:left;}
+.comment_ul1{width:530px; height:30px; float:left; margin-bottom:20px; border-top:#999 2px solid;}
+.comment_ul1>li{ float:left; height:30px; font-size:16px; line-height:30px;color:#499fe8; text-align:center;}
+.comment_ul1>.commentTitle{ float:right;}
+/*所有评论*/
+#allComment{ margin-top:50px;}
+.category>p{ float:left;  margin-left:30px; margin-top:-5px; width:300px; }
+.category>p>input{ margin-right:30px;}
+
+.allComment{  width:530px; margin-top:20px; float:left;}
+.allComment li{width:530px; height:100px; border-top:#e2e2e2 1px solid;}
+.answers_img{ width:60px; height:60px; margin-right:20px; margin-top:20px; float:left;border:#e2e2e2 1px solid; border-radius:30px;}
+.userName{ float:left;margin-top:25px;}
+.userName span{ color:#999; margin-left:20px;}
+.deleteComment{ float:right; margin-top:25px; color:black;}
+.saveComment_div{ display:none; width:530px; height:100px; margin-top:20px;position:relative; clear:both;}
+.wordNumber{ display:inline-block; width:100px; height:10px; position:absolute; top:75px; left:480px; font-size:12px;  }
+.talk{ width:530px; height:70px; margin-bottom:10px; }
+.commentDetail{	margin-top:55px; width:450px; }
+
+/*分页*/
+.changePage{ float:left; width:100%; text-align:center; margin-top:20px;}
+.changePage input{width:30px; color:#6CF;text-align:center; }
+.nowPage{ margin-left:50px;}
+.totalPage{ margin-left:50px;}
+.changePage input[type=button]{width:50px; height:30px; background-color:#E1FFEF; color:black; margin-left:5px;}
+a{ color:#CE9DFF;}
+/*美食报名*/
+.foodApply_container{width:1200px; height:2140px; margin:auto; position:fixed; top:0px; margin:auto; background-color:black;opacity:0.88;filter:alpha(opacity=88); display:none;}
+.foodApply{margin:auto; position:fixed;width:550px; left:33%; top:50px;border-radius:15px; background-color:white; background-image:url(../../../../upload/activity/images/deliciousFood/applyBg.gif);}
+.foodApply_p1{ font-size:72px; position:absolute;left:0px; top:-45px;font-weight:600;z-index:1;color:red; font-family:方正舒体; letter-spacing:-10px;}
+.close{ font-size:36px; width:36px; height:36px; line-height:25px; text-align:center; background-color:red;position:absolute;left:515px; top:0px;font-weight:600; border-radius:18px;border:0px;z-index:1;color:black; }
+
+.manypic{width: 400px;height: 150px;opacity: 0.9; margin-left:50px; margin-top: 0px;;padding-top: 30px; }
+.manypic ul li{ position:relative; display: inline-block; width: 100px; height: 70px; border: 3px solid #D3EDFC; margin-left: 20px; list-style-type: none; float: left; padding-bottom: 30px; background-color: #DCDCDC; }
+.manypic ul li .label{ display: inline-block; text-align:center; line-height:100px; font-size:20px; width: 100px; height: 70px; }
+.manypic ul li .lbl{ position:absolute; left:0px; top:0px; display:none;}
+.manypic ul li label img{width: 100px;height:100px;position:absolute;left:0px; top:0px; display:none;}
+
+.apply_container{width:515px; border-radius:10px;border:red 3px solid;margin-top:40px; padding-left:30px;}
+.apply_container>p{width:545px;height:35px;line-height:35px;font-size:28px;font-weight:600; background-color:red; position:relative; left:-30px;top:0px;}
+/* .apply_container>div{width:130px;height:100px; float:left;border:red 2px solid; margin:auto; margin-top:10px; margin-left:17px; }
+ */
+ .apply_container>div>p{font-size:15px; text-align:center;height:30px; line-height:30px; font-weight:600; margin-top:30px;}
+.apply_container>div>img{width:130px; height:100px;display:none;}
+.step{ height:320px; width:515px; overflow:scroll;}
+
+.apply_container>div.content{width:625px;height:200px; margin:auto; color:red;border:0px; }
+div.content>input{width:200px; height:25px; margin-top:20px;color:black;}
+div.content>input[type=button]{width:150px; height:40px; background-color:red;border:0px;}
+div.content>textarea{width:200px; height:100px; margin-top:20px; overflow:scroll;}
+.petName{ color:black; margin-top:20px; font-size:16px; font-weight:600; display:inline-block;}
+
+/*烹调步骤*/
+/*.makeFoodStep{width:1200px; height:2110px; background-color:black; opacity:0.85; filter:alpha(opacity=85); position:absolute; left:0px; top:0px; display:none;}
+.makeFood{ position:fixed; left:33%; top:40%; width:470px; height:600px; background-color:white; color:black; background-image:url(../images/deliciousFood/applyBg.gif);overflow:scroll; font-size:16px;display:none;}
+.makeFood img{width:130px; height:100px; margin-left:10px;}
+.closeStep{ font-size:36px; width:36px; height:36px; line-height:30px; text-align:center;font-weight:600; border-radius:18px;border:0px;z-index:1;color:black; position:fixed;  left:62%;top:40%;}
+.makeFood>p{ font-size:40px; font-weight:600; font-family:"华文行楷";}
+.makeFood>ol>li{ width:400px;  margin-left:30px; margin-top:10px;list-style-type:decimal;}
+*/
+

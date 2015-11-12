@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+.traveller_main{ width:1200px; margin:auto;}
+.traveller_left{ width:900px; float:left; }
+.traveller_right{ width:250px; float:right;}
+.traveller_img{ width:900px; height:400px;}
+.traveller_img img{ width:900px; height:400px;}
+.traveller_content{ margin-top:50px;}
+
+.traveller_content>ul>li{ height:165px;}
+.traveller_content>ul>li:hover{ background-color:#CCC;}
+.traveller_content>ul>li>a>img{ width:150px; height:100px; float:left;  float:left; margin-top:10px; margin-left:20px; margin-right:10px;}
+.traveller_content>ul>li>a.a1{ font-size:18px; float:left; width:700px; margin-top:10px; margin-left:20px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.traveller_content>ul>li>a.a2{ float:right; font-size:16px; margin-top:20px; margin-right:20px;}
+.traveller_content>ul>li>p{ font-size:14px; color:#666; margin-top:10px; float:left; width:700px; height:60px;overflow:hidden;}
+.traveller_content>ul>ul{ height:497px; background-color:#fff9f9;}
+.traveller_content>ul>li>span{ float:right; margin-top:20px; font-size:16px; margin-right:5px;}
+.traveller_content>ul>li>div{ float:left; width:700px; margin-top:10px;}
+.traveller_content>ul>li>div>img{ float:left; margin-right:5px;}
+.traveller_content>ul>li>div>span{ float:left;}
+.traveller_content>ul>li>div>span.s1{ float:right;}
+
+
+.traveller_search{ margin:auto; width:500px;  margin-top:20px;}
+.traveller_search .input1{ width:400px; height:40px;}
+.traveller_search .input2{ width:80px; height:45px;}
+.cf{ clear:both;}
+.traveller_content>div>ul>li{ width:100px; height:30px; float:left;}
+.traveller_content>div>ul>li>a{ display:block; width:100px; height:30px; line-height:30px; text-align:center; font-size:18px;}
+.traveller_rightTop{ width:250px; height:400px;}
+.traveller_rightTop h3{ font-size:20px; margin-top:50px; text-align:center;}
+.traveller_rightTop p{ font-size:14px; margin-top:10px; text-indent:32px; letter-spacing:2px; margin-top:20px;}
+.traveller_rightButtom img{width:100px; height:100px; border-radius:50px; float:left; margin-right:10px; margin-top:20px;}
+.traveller_rightButtom p{ font-size:14px;  float:left; width:140px; margin-top:10px;}
+.traveller_rightButtom h3{ font-size:18px; float:left; width:100px; margin-top:20px;}
+.traveller_rightButtom li{ width:250px; height:140px;} 
+.traveller_content>div{ margin-top:20px;}
+.traveller_content>div>span,.traveller_content>div>input,.traveller_content>div>div>ul>li{ float:right; border:none;}
+.traveller_content>div>div>ul>li{ margin-left:5px; width:15px; height:15px; border-radius:2px; text-align:center;}
+.traveller_content>div>span{ margin-right:10px;}
+.traveller_content>div>input{ background-color:#FC3; border-radius:2px; margin-left:5px; margin-right:5px;}
+.traveller_rightButtom input{ border-radius:5px; width:100px; height:30px; background-color:#FC3; float:right; font-size:20px;}
+.traveller_rightButtom>div>p{ font-size:30px; text-align:center; width:250px; height:100px; margin-top:100px;}
+.traveller_rightButtom>div>input{ margin:auto; float:none; margin-left:50px; width:150px; height:50px; background-color:#FC3;}

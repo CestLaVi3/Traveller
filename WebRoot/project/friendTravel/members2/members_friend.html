@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>XXX个人主页</title>
+		<link rel="stylesheet" type="text/css" href="css/baseN.css" />
+		<link rel="stylesheet" type="text/css" href="css/globalN.css" />
+
+		<script src="../../base/js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/members_friend.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--------------------------------右侧内容------------------------------------>
+
+		<div style="width: 998px;overflow: hidden;background: #fff;border-radius: 10px;">
+			<ul style="height: 45px; ">
+				<li id="cntaMenu_0" style="border-bottom: 2px solid #FFCC33;" class="friend_tit fl tc" onclick="tabNav1(0)">已关注</li>
+				<li id="cntaMenu_1" class="friend_tit fl tc ml15" onclick="tabNav1(1)">添加关注</li>
+				<li id="cntaMenu_2" class="friend_tit fl tc ml15" onclick="tabNav1(2)">我的粉丝</li>
+				<li id="cntaMenu_3" class="friend_tit fl tc ml15" onclick="tabNav1(3)">我的访客</li>
+			</ul>
+			<ul class="members_friend" id="">
+				<li class="friend_list" id="cnta_0">
+					<ul id="attention_friends" class="friend_membersShowCon">
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="tc">
+									<a id="" class="f12 fl">
+										<img style="width: 15px;height: 15px;" src="img/user_remove.gif" />
+										<span>取消关注</span>
+									</a>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="friend_list" id="cnta_1">
+					<div class="friend_inp mt10">
+
+						<input type="text" name="" id="sName" value="" placeholder="      输入好友昵称" />
+						<select id="sexNum" name="">
+							<option value="0"> 男</option>
+							<option value="1"> 女</option>
+						</select>
+						<input type="image" name="" id="" onclick="clickSearch()" src="img/006.jpg" style="width: 30px;background: #FFCC33;border: none;" />
+					</div>
+
+					<ul id="add_friends" class="friend_membersShowCon">
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="tc f12">
+									个性签名内容...
+								</p>
+							</div>
+							<div class="friend_information fr" style="width: 400px;">
+								<a id="" class="f12 fr">
+									<img style="width: 15px;height: 15px;" src="img/user_remove.gif" />
+									<span>添加关注</span>
+								</a>
+							</div>
+						</li>
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="tc f12">
+									个性签名内容...
+								</p>
+							</div>
+							<div class="friend_information fr" style="width: 400px;">
+								<a id="" class="f12 fr">
+									<img style="width: 15px;height: 15px;" src="img/user_remove.gif" />
+									<span>添加关注</span>
+								</a>
+							</div>
+						</li>
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="tc f12">
+									个性签名内容...
+								</p>
+							</div>
+							<div class="friend_information fr" style="width: 400px;">
+								<a id="" class="f12 fr">
+									<img style="width: 15px;height: 15px;" src="img/user_remove.gif" />
+									<span>添加关注</span>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="friend_list" id="cnta_2">
+					<ul id="friend_funs" class="friend_membersShowCon">
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20 " id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="tc">
+									<a id="" class="f12 fl">
+										<img style="width: 15px;height: 15px;" src="img/user_remove.gif" />
+										<span>未关注</span>
+									</a>
+								</p>
+							</div>
+						</li>
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="tc">
+									<a id="" class="f12 fl">
+										<img style="width: 15px;height: 15px;" src="img/user_remove.gif" />
+										<span>已关注</span>
+									</a>
+								</p>
+							</div>
+						</li>
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="tc">
+									<a id="" class="f12 fl">
+										<img style="width: 15px;height: 15px;" src="img/user_remove.gif" />
+										<span>未关注</span>
+									</a>
+								</p>
+							</div>
+						</li>
+
+					</ul>
+				</li>
+				<li class="friend_list" id="cnta_3">
+
+					<ul id="friend_visits" class="friend_membersShowCon">
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20 " id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="f12">
+									今天
+								</p>
+							</div>
+						</li>
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="f12">
+									昨天
+								</p>
+							</div>
+						</li>
+						<li class="friend_membersShow mt20 ml20">
+							<div class="friend_avatar fl " id="">
+								<a href="#"><img src="img/wKgBpVXZNQ6AaTNLAAJr0VpECdA02.groupinfo.w600.jpeg" /></a>
+							</div>
+							<div class="friend_information fl ml20" id="">
+								<a href="#">asdasdsdfhg</a>
+								<p class="f12 clearfloat"><span class="fl">男</span><span class="fr">23   岁</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的关注：</span><span class="fr c08c">212</span></p>
+								<p class="f12 clearfloat"><span class="fl fb">他的粉丝</span><span class="fr c08c">433</span></p>
+								<p class="f12">
+									2015-8-9
+								</p>
+							</div>
+						</li>
+
+					</ul>
+				</li>
+			</ul>
+			<div class="fengye">
+				<a id="pageFirst" href="members_friend.html" onclick="pageFirstClick();return false;">首页</a>
+				<a id="pageMinus" href="#" onclick="pageMinusClick()">上一页</a>
+				<a id="pageAdd" href="#" onclick="pageAddClick()">下一页</a>
+				<a id="pageLast" href="#" onclick="pageLastClick()">末页</a>
+				<span>第<input id="pageNumInp" type="text" value="3" class="pageNum"/>页</span>
+				<a href="#" onclick="skipClick()">跳转</a>
+				<span>共<input id="pageSumNum" type="text" value="7" readonly class="sumNum"/>页</span>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+/*我的点评*/
+#myComment{ display:none; float:left;width:300px; height:400px; margin-top:20px; }
+.myComment{width:200px;float:left; margin-left:30px; }
+.myComment>li{ margin-bottom:15px;}
+.myComment>li>img{margin-left:5px;}
+
+#myComment>div{ float:left;width:300px;}
+textarea{margin-left:30px;width:220px; height:150px; overflow:scroll; font-size:14px;}
+#myComment>div>input{width:100px; height:50px; margin-left:30px; margin-top:20px;}

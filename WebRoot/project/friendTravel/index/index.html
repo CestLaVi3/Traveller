@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>旅行家</title>
+
+<script type="text/javascript" src="../../base/js/validate.js">
+</script>
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js">
+</script>
+<script type="text/javascript" src="js/login.js">
+</script>
+<link type="text/css" rel="stylesheet" href="../../base/css/base.css"/>
+<link type="text/css" rel="stylesheet" href="css/index.css"/>
+</head>
+
+<body onload="init()">
+<div class="login_mb" id="login_mb"></div>
+<div class="login_mainright" id="login_main">
+	<div>
+        <p>账号登录</p>
+        <input type="button" class="login_input" readonly="readonly" onclick="loginClose()"/>
+    </div>
+    <div id="message"></div>
+    <form>
+    	<input type="text" placeholder="用户名/邮箱" id="userName" onfocus="changeUserName()" onblur="returnUserName()" value=""/><br/><br/>
+        <input type="password" placeholder="密码" id="password" onfocus="changePassword()" onblur="returnPassword()" value=""/><br/><br/>
+        <span>验证码：</span><input type="text" id="yzm" onblur=""/> <img src="../../../servlet/verifyCodeServlet" border=1 id="code_img"/><input type="button" id="login_refresh" readonly="readonly" onclick="changeImg()"/> <br/>
+        <input type="checkbox" id="check"/><span id="login_sp">下次免登陆</span><a href="#">忘记密码？</a><br/><br/>
+        <input type="button" value="登录" id="login_submit" onclick="loginUser()"/><br/><br/>
+        <span id="login_sp2">还没有账号？<a href="../login/register.html" id="login_a">立即注册</a></span>
+    </form>
+</div>
+<div class="top_bar">
+    <div class="top_middle">
+    	<a href="index.html"><strong><p>旅行家</p></strong></b></a>
+    	<ul>
+    		<a href="index.html"><li>首页</li></a>
+    		<a href="../travel/travelsHome.html" target="iframeMain"><li>大众点评</li></a>
+    		<a href="../stagtegy/strategyHome.html" target="iframeMain"><li>旅游指南</li></a>
+    		<a href="../activity/groupTour.html" target="iframeMain"><li>天天特价</li></a>
+    		<a href="../activity/partnerTripApply.html" target="iframeMain"><li>马代百科</li></a>
+    		<a href="../activity/photoPK.html" target="iframeMain"><li>美食天下</li></a>
+    	</ul>
+    	<div id="index_headRight">
+    		<a onclick="login()" href="#" class="topRightA">会员登录</a>
+    		<span class="topRightA">|</span>
+        	<a href="../login/register.html" class="topRightA">免费注册</a>
+    	</div>
+    	<div class="index_loginRight" id="index_loginRight">
+    		<div>
+    			<a href="../members2/members_home.html" target="iframeMain">
+         		<p id="petName">隽莪Baby</p>
+    			<img src="images/35.jpg" id="userImg"/>
+       			</a>
+        	</div>
+        	<ul>
+        		<li>
+            		<a href="../members2/members_home.html" target="iframeMain">
+                	<img src="images/home.gif" alt=""/>
+                	<p>我的个人主页</p>
+                	</a>
+            	</li>
+            	<!--  <li>
+            	<a href="../members2/members_home.html" target="iframeMain">
+                 <img src="images/tuandui.gif" alt=""/>
+                 <p>我的团队</p>
+                 </a>
+            	</li>
+            	<li>
+            		<a href="../members2/members_home.html" target="iframeMain">
+                 	<img src="images/write.gif" alt=""/>
+                	<p>我的游记</p>
+                 	</a>
+            	</li>
+            	<li>
+            		<a href="../members2/members_home.html" target="iframeMain">
+                 	<img src="images/wenta.gif" alt=""/>
+                	<p>出行计划</p>
+                 	</a>
+            	</li>
+            	<li>
+            		<a href="../activity/activityRecord/activityRecord.html" target="iframeMain">
+                 	<img src="images/zuji.gif" alt=""/>
+                	<p>我的活动</p>
+                 	</a>
+            	</li>
+            	<li>
+            		<a href="../members2/members_home.html" target="iframeMain">
+                	<img src="images/shoucang.gif" alt=""/>
+                 	<p>我的收藏</p>
+                 	</a>
+            	</li> -->
+            	<li>
+            		<a href="index.html" onclick="fexit()">
+                 	<img src="images/2015-09-14_204456_14.gif" alt=""/>
+                 	<p>退出登录</p>
+                 	</a>
+            	</li>
+        	</ul>
+    </div>
+	</div>
+</div>
+
+<div class="index_middle">
+<iframe src="indexMain.html" name="iframeMain" id="iframeMain"  onload="Javascript:SetWinHeight(this)" frameborder="0" ></iframe>
+</div>
+
+<div class="cf"></div>
+<div class="index_footer">
+<div class="index_footerMain">
+	<br/>
+	<p>© 2015 Mafengwo.cn 京ICP备11015476号 京公网安备110105013401号 京ICP证110318号 新出网证(京)字242号</p><br/>
+	<p>旅行家客服 400 166 6866   工作时间 10:00-18:30   网站地图</p>
+</div>
+</div>
+</body>
+</html>

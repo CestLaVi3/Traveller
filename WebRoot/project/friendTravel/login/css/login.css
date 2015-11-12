@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+.cf{ clear:both;}
+.login_head{ height:215px; background-color:#00b38a;}
+.login_middle{ height:350px; background-color:#FFF;}
+.login_footer{  height:100px; background-color:#00b37f; text-align:center; color:#fff;}
+.login_top{ width:900px; height:50px;}
+.login_main{ width:900px; border:1px solid #ccc; height:400px; background-color:#FFF; position:relative;}
+.login_logo{ float:left;}
+.login_logo>img{ width:100px; height:50px; float:left;}
+.login_logo>span{ font-size:20px; color:#FFF; float:left; margin-top:20px;}
+.login_topRight{ float:right; margin-top:20px;}
+.login_topRight>ul>li{ float:left;}
+.login_topRight>ul>li>a{ font-size:20px; color:#FFF;} 
+.login_middle>div{width:900px; margin:auto; position:relative;}
+.main{ position:absolute; top:-180px; left:0px;}
+.login_mainLeft{ float:left; width:425px; margin-top:25px;}
+.login_mainLeft>img{ width:350px; height:350px; margin-left:50px;}
+.login_mainright{ float:right; width:350px; margin-top:25px; height:350px; margin-right:50px;}
+.login_mainright span{ font-size:20px;}
+.login_mainright img{ width:20px; height:20px; margin-left:10px; display:none;}
+.login_mainright input{ width:200px; height:30px; font-size:20px;}
+.login_mainright>form{ margin-left:30px; margin-top:20px;}
+#login_sp{font-size:16px;}
+#login_sp2{font-size:16px; margin-left:123px;}
+#login_a{font-size:16px; margin-left:0px;}
+.login_mainright a{ font-size:16px; margin-left:110px;}
+#yzm{ width:100px;}
+#check{ width:15px; height:15px; margin-top:10px;}
+#login_submit{ width:305px;background-color:#00b38a; color:#fff; height:40px; font-size:20px; border:none;}
+/* 竖线*/
+.sx{ width:1px; height:350px; border:none; background-color:#ccc; float:left;  margin-top:25px; margin-left:25px;}
+.smallSx{  width:1px; height:20px; border:none; background-color:#FFF; float:left; margin-top:5px; margin-left:10px; margin-right:10px;}
+/*验证码*/ 
+
+.register_mainLeft input.code_img{ width:70px; height:30px; margin-left:10px; margin-bottom:0px; border:none;}
+.code_img1{ width:70px; height:30px; position:absolute; left:290px; top:208px;}
+/*注册*/
+#register_a{ color:#ff9e01;}
+#register_a:hover{ text-decoration:underline;}
+.register_mainLeft{ float:left; width:500px; margin-top:25px; height:350px; margin-left:50px;}
+.register_mainLeft span{ font-size:20px;}
+.register_mainLeft img{ width:20px; height:20px; margin-left:10px; display:none;}
+.register_mainLeft input{ width:200px; height:30px; font-size:16px;}
+.register_mainLeft>form{ margin-left:30px; margin-top:20px;}
+.register_mainLeft a{ font-size:16px;}
+#register_sp2{font-size:16px; margin-left:170px;}
+.register_mainRight{ width:300px; height:350px; float:right; margin-top:55px;}
+.register_mainLeft input#login_refresh{ width:15px; height:16px; background-image:url(../../index/images/refresh.jpg); background-repeat:no-repeat; border:none; margin-top:10px; margin-left:10px; border-radius:10px; }
+
+.register_mainRight li>a>img{ float:left; margin-right:10px;}
+.register_mainRight li>a>p{ float:left;}
+.register_mainRight li>a>p:hover{ text-decoration:underline;}
+.register_mainRight li{ margin-top:20px; margin-bottom:20px; width:200px; height:25px;}
+.register_mainRight a{ color:#00b38a;}
+.register_mainRight a:hover{ text-decoration:underline;}
+.register_mainRight>p{ margin-top:20px;}
+.index_footerMain{ width:1200px; margin:auto;}

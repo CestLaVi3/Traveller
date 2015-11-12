@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>添加旅游行程</title>
+<link rel="stylesheet" href="../../../../base/css/base.css" />
+<link rel="stylesheet" href="../../css/addPhotoPk.css" />
+<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/_examples/editor_api.js"></script>
+</head>
+
+<body>
+<div class="home">
+	<div class="left">
+    	<h2>照片PK</h2>
+        <span>关于作品:</span>
+        <script id="editor" type="text/plain" style="width:840px;"></script>
+        <span>比赛规则:</span>
+        <script id="editor1" type="text/plain" style="width:840px;"></script>
+        <input type="button" value="提交"/>
+    </div>
+    
+    <div class="right">
+    	<p>一等奖：</p>
+        <input type="file"/>
+    	<p>简介：</p>
+        <textarea class="area">
+        
+        </textarea>
+        <p>二等奖：</p>
+        <input type="file"/>
+    	<p>简介：</p>
+        <textarea class="area">
+        
+        </textarea>
+        <p>三等奖：</p>
+        <input type="file"/>
+    	<p>简介：</p>
+        <textarea class="area">
+        
+        </textarea>
+        
+        
+
+    </div>
+
+</div>
+</body>
+<script type="text/javascript">
+ 	var editor_a = UE.getEditor('editor',{initialFrameHeight:300});
+	var editor_b = UE.getEditor('editor1',{initialFrameHeight:300});
+</script>
+</html>

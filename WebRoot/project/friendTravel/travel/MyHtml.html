@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link href="../../base/css/base.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../base/css/style.css"/>
+	<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/_examples/editor_api.js"></script>
+	<script src="../../base/js/carousel/zns_move.js" type="text/javascript"></script>
+	<script src="../../base/js/carousel/zns_index.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js">
+</script>
+	<script type="text/javascript">
+	  $(function(){
+       $("#url1").change(function(e){
+             var file = e.target.files||e.dataTransfer.files;
+             if(file){
+                 var reader = new FileReader();
+                 reader.onload=function(){
+                        $("<img src='"+this.result+"'/>").appendTo("body");
+
+                 }
+
+                reader.readAsDataURL(file);
+            }
+      });
+   })
+	</script>
+  </head>
+  
+  <body>
+  <form onsubmit="return aaa()" action="../../../travelDescController/saveTravelDesc.do" method="post" enctype="multipart/form-data">
+			<input type = "file" name="url1" id="url1"/>
+			<input type = "file" name="url2"/>
+			<input type = "file" name="url3"/>
+			<input type="button" value="fewfew" onclick="aaa()"/>
+			<select name="spotId"> 
+			<option value="1">1</option>
+			<option value="2">2</option>
+			</select>
+			<input type = "text" name="descTitle"/>
+			 <script id="editor" type="text/plain" style="width:810px;" name="descContent"></script>
+			<script type="text/javascript">
+ 			var editor_a = UE.getEditor('editor',{initialFrameHeight:300});
+			</script>
+			<input type="submit" value="提交"/>
+		</form>
+  <br/>
+  <br/>
+   
+	
+	
+    <div id="pxs_container" class="pxs_container">
+        <div class="pxs_bg">
+            <div class="pxs_bg1"></div>
+            <div class="pxs_bg2"></div>
+            <div class="pxs_bg3"></div>
+        </div>
+        <div class="pxs_loading">Loading images...</div>
+        <div class="pxs_slider_wrapper">
+            <ul class="pxs_slider">
+                <li><img src="images/22.jpg" alt="First Image" /></li>
+                <li><img src="images/22.jpg" alt="Second Image" /></li>
+                <li><img src="images/22.jpg" alt="Third Image" /></li>
+                <li><img src="images/22.jpg" alt="Forth Image" /></li>
+                <li><img src="images/22.jpg" alt="Fifth Image" /></li>
+                <li><img src="images/22.jpg" alt="Sixth Image" /></li>
+            </ul>
+            <div class="pxs_navigation">
+                <span class="pxs_next"></span>
+                <span class="pxs_prev"></span>
+            </div>
+            <ul class="pxs_thumbnails">
+                <li><img src="images/22.jpg" alt="First Image"/></li>
+                <li><img src="images/22.jpg" alt="Second Image"/></li>
+                <li><img src="images/22.jpg" alt="Third Image" /></li>
+                <li><img src="images/22.jpg" alt="Forth Image" /></li>
+                <li><img src="images/22.jpg" alt="Fifth Image" /></li>
+                <li><img src="images/22.jpg" alt="Sixth Image" /></li>
+            </ul>
+        </div>
+
+<script>
+var oLoad = getByClass(document.body, 'pxs_loading')[0];
+var oImgBox = getByClass(document.body,'pxs_slider_wrapper')[0];
+//var oEvent=ev||event;
+//var obj=oEvent.srcElement||oEvent.target;
+var imgs = document.getElementsByTagName('img');
+for(var i=0;i<imgs.length;i++)
+{
+	imgs[i].onload = function()
+	{
+		oLoad.style.display = 'none';
+	}
+	oImgBox.style.display = 'block';
+}
+</script>    
+   </div>
+  </body>
+</html>

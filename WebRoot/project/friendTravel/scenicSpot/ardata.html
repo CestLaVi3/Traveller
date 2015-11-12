@@ -1,0 +1,358 @@
+﻿<!doctype html>
+<html>
+<head>
+<script src="easyUI/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/_examples/editor_api.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=na8qYGG7wD5AwaXnAEAQifII"></script>
+<script type="text/javascript" src="js/searchCs.js"></script>
+<script type="text/javascript" src="js/ardata.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<title>无标题文档</title>
+<link href="../../base/css/base.css" rel="stylesheet" type="text/css">
+<link href="pasrdata.css" rel="stylesheet" type="text/css">
+<link href="css/general.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="width:960px;position:absolute;">
+<div class="header"> <img src="arheader.jpg">
+  <ul id="showmenu" >
+    <li onClick="show(0),findpost()">基本信息</li>
+    <li onClick="show(1)">历史名人</li>
+    <li onClick="show(2)">民风民俗</li>
+    <li onClick="show(3)">景区介绍</li>
+    <li onClick="show(4)">风景赏析</li>
+    <li onClick="show(5)">名菜</li>
+    <li onClick="show(6)">特产</li>
+    <li onClick="show(7)">旅游路线</li>
+  </ul >
+  <ul id="editmenu" style="display:none">
+    <li onClick="showedit(0)">基本信息</li>
+    <li onClick="showedit(1)">历史名人</li>
+    <li onClick="showedit(2)">民风民俗</li>
+    <li onClick="showedit(3)">景区介绍</li>
+    <li onClick="showedit(4)">图片上传</li>
+    <li onClick="showedit(5)">名菜</li>
+    <li onClick="showedit(6)">特产</li>
+    <li onClick="showedit(7)">旅游路线</li>
+  </ul>
+</div>
+<div class="subject"  name="subject">
+  <h2 id="spotName"></h2>
+  <h6 id="hotLevel"></h6>
+  <div id="allmap"></div>
+  <p id="locationDesc"></p>
+  <a href="#" class="myButton myButton1" onClick="showedit1(0)">编辑</a> </div>
+<div class="subject"  style="display:none;" name="subject">
+  <h2>关于名人</h2>
+  <ul class="ul2" id="human"> 
+  </ul>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(1)">编辑</a> </div>
+<div class="subject" style="display:none;" name="subject">
+  <h2>民风民俗</h2>
+  <p id="custom"></p>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(2)">编辑</a> </div>
+<div class="subject" style="display:none;" name="subject">
+  <h2>景区介绍</h2>
+  <p id="spotDesc"> </p>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(3)">编辑</a> </div>
+<div class="subject" style="display:none;" name="subject">
+  <h2>关于风景</h2>
+  <ul class="ul1">
+    <li><img  id="zimg1" alt="img1"></li>
+    <li><img  id="zimg2" alt="img2"></li>
+    <li><img  id="zimg3" alt="img3"></li>
+    <li><img  id="zimg4" alt="img4"></li>
+    <li><img  id="zimg5" alt="img5"></li>
+    <li><img  id="zimg6" alt="img6"></li>
+  </ul>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(4)">编辑</a> </div>
+<div class="subject"  style="display:none;" name="subject">
+  <h2>名菜</h2>
+  <ul class="ul2" id="menu">
+  </ul>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(5)">编辑</a> </div>
+<div class="subject"  style="display:none;" name="subject">
+  <h2>特产</h2>
+  <ul class="ul2" id="specialty">
+  </ul>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(6)">编辑</a> </div>
+<div class="subject"  style="display:none;" name="subject" id="travelRoute">
+
+  </div>
+</div>
+<div class="edit" name="edit" style="display:none">
+  <h2>基本信息</h2>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="中文名称："/>
+    <input type="text" class="input3" id="inspotName">
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="热度等级："/>
+    <select class="input4" id="inhotLevel">
+      <option value="10">10</option>
+      <option value="9">9</option>
+      <option value="8">8</option>
+      <option value="7">7</option>
+      <option value="6">6</option>
+      <option value="5">5</option>
+      <option value="4">4</option>
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="地理坐标："/>
+   <input type="text" class="input2" readonly id="inlocationX"/>
+    <input type="text" class="input3" readonly id="inlocationY"/>
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <h5>地理环境：</h5>
+    <textarea style="margin-top:10px;width:700px;height:300px;border: 2px solid #999999;border-radius:10px;outline:none;" id="inlocationDesc"></textarea>
+  </div>
+  <iframe src="baidumapaddjiexi3.html" id="iframeditu" style="position:absolute;top:150px;left:450px;width:400px;height:220px;border:none;" scrolling="no"></iframe>
+  <a href="#" class="myButton myButton1" onClick="show1(0),save1()">保存</a> </div>
+<div class="edit" name="edit" style="display:none;position:relative;">
+  <h2>历史名人</h2>
+  <div style="display:none;height:450px;background-color:rgba(0,0,0,0.53);position:relative;" id="edithuman1">
+  <h3>创建</h3>
+  <form action = "../../../scienceSpotController/saveHuman.do" method="post" enctype="multipart/form-data">
+  <input type="text" class="input1" readonly value="姓名："/>
+  <input type="text" class="input3" id="inhumanname" name="humanName" style="width:130px"><br/>
+  <input type="text" class="input1" readonly value="出生日期："/>
+  <input type="text" class="input3" id="inbirthday" name="birthday" style="width:130px"><br/>
+  <input type="text" class="input1" readonly value="去世日期："/>
+  <input type="text" class="input3" id="indieday" name="dieDay" style="width:130px"><br/>
+  <textarea name="humanDesc" style="width:206px;resize:none;height:280px;"></textarea>
+  <label for="humanimg1"><img src="images/1.jpg" class="laimg"  style="float:right;"></label>
+  <input id="humanimg1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="humanimg2"><img src="images/1.jpg" class="laimg"  style="float:right;" ></label>
+  <input id="humanimg2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="humanimg3"><img src="images/1.jpg" class="laimg"  style="float:right;" ></label>
+  <input id="humanimg3" type="file" accept="image/*" name="url3" style="display:none">
+  <input type="hidden" name="spotId" id="savehumanspotid"/>
+  <input type="submit" style="position:absolute;top:335px;left:480px;" class="myButton" onClick="show1(5)"></input>  
+  </form>  
+  </div>  
+  <div style="display:none;height:450px;background-color:rgba(0,0,0,0.53);position:relative;" id="edithuman2">
+  <h3>修改</h3>
+  <form action = "../../../scienceSpotController/updateHuman.do" method="post" enctype="multipart/form-data">
+  <input type="text" class="input1" readonly value="姓名："/>
+  <input type="text" class="input3" id="uphumanname" name="humanName" style="width:130px"><br/>
+  <input type="text" class="input1" readonly value="出生日期："/>
+  <input type="text" class="input3" id="upbirthday" name="birthday" style="width:130px"><br/>
+  <input type="text" class="input1" readonly value="去世日期："/>
+  <input type="text" class="input3" id="updieday" name="dieDay" style="width:130px"><br/>
+  <textarea name="humanDesc" id="uphumanDesc" style="width:206px;resize:none;height:280px;"></textarea>
+  <label for="uphumanimg1"><img src="images/1.jpg" class="laimg" id="himg1" style="float:right;"></label>
+  <input id="uphumanimg1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="uphumanimg2"><img src="images/1.jpg" class="laimg" id="himg2" style="float:right;" ></label>
+  <input id="uphumanimg2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="uphumanimg3"><img src="images/1.jpg" class="laimg" id="himg3" style="float:right;" ></label>
+  <input id="uphumanimg3" type="file" accept="image/*" name="url3" style="display:none">
+  <input type="hidden" name="spotId" id="uphumanspotid"/>
+   <input type="hidden" name="humanId" id="uphumanid"/>
+  <input type="submit" style="position:absolute;top:335px;left:480px;" class="myButton" onClick="show1(5)"></input>
+    <input type="button" style="position:absolute;top:335px;left:550px;" class="myButton" onClick="drophuman()" value="删除">
+  
+  </form>  
+  </div>  
+  <ul class="ul2" id="inhuman">
+  <li id="inhumanflag">
+   <a href="#" class="myButton myButton1" style="margin:0" onClick="savehuman();">新建</a>
+   </li> 
+  </ul> 
+  
+     <a href="#" class="myButton myButton1" onClick="show1(1)">保存</a>
+    </div>
+<div class="edit" name="edit" style="display:none">
+  <h2>民风民俗</h2>
+  <div style="width:920px;margin:20px 0 0 20px"> 
+    <script type="text/plain" id="customue" name="myEditor" ></script> 
+    <a href="#" class="myButton myButton1" onClick="show1(2),save2()">保存</a> </div>
+</div>
+<div class="edit" name="edit" style="display:none">
+  <h2>景区介绍</h2>
+  <div style="width:920px;margin:20px 0 0 20px"> 
+    <script type="text/plain" id="spotDescue" name="myEditor" ></script> 
+    <a href="#" class="myButton myButton1" onClick="show1(3),save3()">保存</a> </div>
+</div>
+<div class="edit" name="edit" style="display:none">
+  <h2>图片上传</h2>
+  <form action = "../../../scienceSpotController/updateimageBySpotId.do" method="post" enctype="multipart/form-data">
+  <label for="filenum1"><img src="images/1.jpg" class="laimg" id="bjimg1" ></label>
+  <input id="filenum1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="filenum2"><img src="images/1.jpg" class="laimg" id="bjimg2"></label>
+  <input id="filenum2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="filenum3"><img src="images/1.jpg" class="laimg" id="bjimg3"></label>
+  <input id="filenum3" type="file" accept="image/*" name="url3" style="display:none">
+  <label for="filenum4"><img src="images/1.jpg" class="laimg" id="bjimg4" ></label>
+  <input id="filenum4" type="file" accept="image/*" name="url4" style="display:none">
+  <label for="filenum5"><img src="images/1.jpg" class="laimg" id="bjimg5"></label>
+  <input id="filenum5" type="file" accept="image/*" name="url5" style="display:none">
+  <label for="filenum6"><img src="images/1.jpg" class="laimg" id="bjimg6"></label>
+  <input id="filenum6" type="file" accept="image/*" name="url6" style="display:none">
+  <input type="hidden" name="spotId" id="form1">
+  <input type="hidden" name="provinceId" id="form2">
+  <br/>
+  <input type="submit" class="myButton myButton1" onClick="show1(5)"></input></div>
+    </form>
+<div class="edit" name="edit" style="display:none">
+  <h2>美食</h2>
+   <div style="display:none;height:450px;background-color:rgba(0,0,0,0.53);position:relative;"  id="edithuman3">
+  <h3>创建</h3>
+  <form action = "../../../scienceSpotController/saveMenu.do" method="post" enctype="multipart/form-data">
+  <input type="text" class="input1" readonly value="菜名："/>
+  <input type="text" class="input3" name="menuName" style="width:130px"><br/>
+  <textarea name="menuDesc" style="width:206px;resize:none;height:280px;"></textarea>
+  <label for="menuimg1"><img src="images/1.jpg" class="laimg"  style="float:right;"></label>
+  <input id="menuimg1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="menuimg2"><img src="images/1.jpg" class="laimg" style="float:right;" ></label>
+  <input id="menuimg2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="menuimg3"><img src="images/1.jpg" class="laimg" style="float:right;" ></label>
+  <input id="menuimg3" type="file" accept="image/*" name="url3" style="display:none">
+  <input type="hidden" name="spotId" id="savemenuspotid"/>
+  <input type="submit" style="position:absolute;top:335px;left:480px;" class="myButton" onClick="show1(6)"></input>  
+  </form>  
+  </div>  
+  <div style="display:none;height:450px;background-color:rgba(0,0,0,0.53);position:relative;"  id="edithuman4">
+  <h3>修改</h3>
+  <form action = "../../../scienceSpotController/updateMenu.do" method="post" enctype="multipart/form-data">
+  <input type="text" class="input1" readonly value="菜名："/>
+  <input type="text" class="input3" id="upmenuname" name="menuName" style="width:130px"><br/>
+  <textarea name="menuDesc" id="upmenuDesc" style="width:206px;resize:none;height:280px;"></textarea>
+  <label for="upmenuimg1"><img src="images/1.jpg" class="laimg" id="mimg1" style="float:right;"></label>
+  <input id="upmenuimg1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="upmenuimg2"><img src="images/1.jpg" class="laimg" id="mimg2" style="float:right;" ></label>
+  <input id="upmenuimg2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="upmenuimg3"><img src="images/1.jpg" class="laimg" id="mimg3" style="float:right;" ></label>
+  <input id="upmenuimg3" type="file" accept="image/*" name="url3" style="display:none">
+  <input type="hidden" name="spotId" id="upmenuspotid"/>
+   <input type="hidden" name="menuId" id="upmenuid"/>
+  <input type="submit" style="position:absolute;top:335px;left:480px;" class="myButton" onClick="show1(6)"></input>
+    <input type="button" style="position:absolute;top:335px;left:550px;" class="myButton" onClick="dropmenu()" value="删除">  
+  </form>  
+  </div>  
+  <ul class="ul2" id="inmenu">
+  <li id="inmenuflag">
+   <a href="#" class="myButton myButton1" style="margin:0" onClick="savemenu();">新建</a>
+   </li> 
+  </ul> 
+  
+     <a href="#" class="myButton myButton1" onClick="show1(1)" style="margin-top:30px;">保存</a>
+    </div>
+<div class="edit" name="edit" style="display:none">
+  <h2>特产</h2>
+   <div style="display:none;height:450px;background-color:rgba(0,0,0,0.53);position:relative;" id="edithuman5">
+  <h3>创建</h3>
+  <form action = "../../../scienceSpotController/saveSpecialty.do" method="post" enctype="multipart/form-data">
+  <input type="text" class="input1" readonly value="特产名："/>
+  <input type="text" class="input3" name="specialtyName" style="width:130px"><br/>
+  <textarea name="specialtyDesc" style="width:206px;resize:none;height:280px;"></textarea>
+  <label for="specialtyimg1"><img src="images/1.jpg" class="laimg"  style="float:right;"></label>
+  <input id="specialtyimg1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="specialtyimg2"><img src="images/1.jpg" class="laimg"  style="float:right;" ></label>
+  <input id="specialtyimg2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="specialtyimg3"><img src="images/1.jpg" class="laimg"  style="float:right;" ></label>
+  <input id="specialtyimg3" type="file" accept="image/*" name="url3" style="display:none">
+  <input type="hidden" name="spotId" id="savespecialtyspotid"/>
+  <input type="submit" style="position:absolute;top:335px;left:480px;" class="myButton" onClick="show1(6)"></input>  
+  </form>  
+  </div>  
+   <div style="display:none;height:450px;background-color:rgba(0,0,0,0.53);position:relative;"  id="edithuman6">
+  <h3>修改</h3>
+  <form action = "../../../scienceSpotController/updateSpecialty.do" method="post" enctype="multipart/form-data">
+  <input type="text" class="input1" readonly value="特产名："/>
+  <input type="text" class="input3" id="upspecialtyname" name="specialtyName" style="width:130px"><br/>
+  <textarea name="specialtyDesc" id="upspecialtyDesc" style="width:206px;resize:none;height:280px;"></textarea>
+  <label for="upspecialtyimg1"><img src="images/1.jpg" class="laimg" id="simg1" style="float:right;"></label>
+  <input id="upspecialtyimg1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="upspecialtyimg2"><img src="images/1.jpg" class="laimg" id="simg2" style="float:right;" ></label>
+  <input id="upspecialtyimg2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="upspecialtyimg3"><img src="images/1.jpg" class="laimg" id="simg3" style="float:right;" ></label>
+  <input id="upspecialtyimg3" type="file" accept="image/*" name="url3" style="display:none">
+  <input type="hidden" name="spotId" id="upspecialtyspotid"/>
+   <input type="hidden" name="specialtyId" id="upspecialtyid"/>
+  <input type="submit" style="position:absolute;top:335px;left:480px;" class="myButton" onClick="show1(6)"></input>
+    <input type="button" style="position:absolute;top:335px;left:550px;" class="myButton" onClick="dropspecialty()" value="删除">  
+  </form>  
+  </div>  
+  <ul class="ul2" id="inspecialty">
+   <li id="inspecialtyflag">
+   <a href="#" class="myButton myButton1" style="margin:0" onClick="savespecialty();">新建</a>
+   </li> 
+  </ul> 
+  
+     <a href="#" class="myButton myButton1" onClick="show1(1)" style="margin-top:30px;">保存</a>
+    </div>
+<div class="edit" name="edit" style="display:none">
+  <h2>旅游路线</h2>
+  <h4>一日游</h4>
+  <input type="text" class="lylx input5" id="OneDay">
+  <h4>二日游</h4>
+  <input type="text" class="lylx input5" id="TwoDay">
+  <h4>三日游</h4>
+  <input type="text" class="lylx input5" id="ThreeDay">
+  <h4>四日游</h4>
+  <input type="text" class="lylx input5" id="FourDay">
+  <h4>五日游</h4>
+  <input type="text" class="lylx input5" id="FiveDay">
+  <h4>六日游</h4>
+  <input type="text" class="lylx input5" id="SixDay">
+  <h4>七日游</h4>
+  <input type="text" class="lylx input5" id="SevenDay">
+  <a href="#" class="myButton myButton1" onClick="show1(7),save4()">保存</a> </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+		
+	function show(num){
+		debugger;
+		var subject = document.getElementsByName("subject");
+		for(var i=0;i<subject.length;i++){
+			subject[i].style.display = "none";
+			if(i==num){
+				subject[num].style.display = "block";
+				}
+			}
+		}
+		function show1(num){
+		showedit(100);
+		document.getElementById("showmenu").style.display ="block";
+		document.getElementById("editmenu").style.display ="none";
+		var subject = document.getElementsByName("subject");
+		for(var i=0;i<subject.length;i++){
+			subject[i].style.display = "none";
+			if(i==num){
+				subject[num].style.display = "block";
+				}
+			}
+		}	
+	function showedit(num){
+		var edit = document.getElementsByName("edit");
+		for(var i=0;i<edit.length;i++){
+			edit[i].style.display = "none";
+			if(i==num){
+				edit[num].style.display = "block";
+				}
+			}
+		}
+		function showedit1(num){
+			show(100);
+		document.getElementById("showmenu").style.display ="none";
+		document.getElementById("editmenu").style.display ="block";
+		var edit = document.getElementsByName("edit");
+		for(var i=0;i<edit.length;i++){
+			edit[i].style.display = "none";
+			if(i==num){
+				edit[num].style.display = "block";
+				}
+			}
+		}
+	   var editor1 = UE.getEditor('customue',{initialFrameHeight:350});
+	   var editor2 = UE.getEditor('spotDescue',{initialFrameHeight:350});
+</script>

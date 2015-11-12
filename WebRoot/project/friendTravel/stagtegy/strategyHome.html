@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>旅游指南</title>
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet">
+<link href="css/strategyHome.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/strategyHome.js"></script>
+</head>
+
+<body onload="init()">
+<div class="home">
+	<!--页面第一部分-->
+	
+	<div class="picshow">
+      <div class="advertImg">
+    	<ul id="advertImg">
+    		<!--<li>
+            <img src="images/images/hotel1.jpg" alt="这是广告图片"/>
+            <p class="month">9月</p>
+            </li>-->
+    	</ul>
+    </div>
+   	<div class="timetree">
+   		<hr class="hr1"/><span class="disc"></span>
+   		<hr class="hr2"/><span class="disc"></span><hr class="hr3"><span class="disc"></span>
+   		<hr class="hr4"/><span class="disc"></span><hr class="hr3">
+   	</div>
+    	<div class="container1">
+    		<ul class="hotScenic" id="hotScenic">
+            	 <!--<li>
+                	<a href="strategy.html"><img src="images/photo3.jpg" class="bigImg"></a>
+                    <p class="font">
+                    	<span class="address">九寨沟</span>
+                        <span class="view">秋高气爽，正是旅游好时节</span>
+                    </p>
+		           
+                </li>
+               <li>
+                	<a href="#"><img src="images/photo3.jpg" class="bigImg"></a>
+                    <p class="font">
+                    	<span class="address">九寨沟</span>
+                        <span class="view">秋高气爽，正是旅游好时节</span>
+                    </p>
+		   
+                </li>
+                <li>
+                	<a href="#"><img src="images/photo3.jpg" class="bigImg"></a>
+                    <p class="font">
+                    	<span class="address">九寨沟</span>
+                        <span class="view">秋高气爽，正是旅游好时节</span>
+                    </p>
+		    		
+                </li>-->
+            </ul>
+    	</div>
+   	</div>
+
+ 	<div class="left">
+
+        <h2>相关评论</h2>
+        <div class="strategys">
+        	<p id="des"><span>出游地点:</span><span class="selected" onclick="selScenic()">不限</span></p>
+            
+        	 <p id="month"><span>入住月份:</span><span class="selected" onclick="monthClick()">不限</span></p>
+             
+            <p id="day"><span>入住天数:</span><span class="selected"  onclick="dayClick()">不限</span></p>
+            
+            <p id="sta"><span>酒店主题:</span><span class="selected" onclick="selScenicType()">不限</span></p>
+            
+            <p id="search"><span>已选条件:</span></p>
+            
+	<p class="style">
+            <span class="selected" onclick="selHot()" id="hot">热门</span>
+            <span onclick="selNew()" id="new">最新</span>
+	</p>
+            <ul class="strategy_ul" id="strategy_ul">
+            <!--	<li>
+                	<a href="strategy.html"><img class="photo" src="images/view.jpg"></a>
+                    <a class="title" href="strategy.html">【杭州】国庆七日游，快乐游杭州</a>
+                    <span class="type">美图</span>
+		<p>
+                    <span class="writer">来自：浪漫雨天</span>
+                    <span class="time">2015-09-12</span>
+                    <span class="time">7天</span>
+		</p>
+                    <span class="detail">攻略导读：大法师法师打发士大夫是防守对方法师打发士大夫似的发生大幅释放 ，法师打发士大夫似的法师法士大夫时发生大法师法师法士大夫似的</span>
+                    <p class="strategy_p">
+                    	<img src="images/liulan.png" alt="这是图片"/><span>6545</span>
+                        <img src="images/zan.jpg" alt="这是图片"/><span>52</span>
+                        <img src="images/pinglun.jpg" alt="这是图片"/><span>5</span>
+                    </p>
+                </li>-->
+               
+            </ul>
+            
+            <div class="fengye">
+            	<a  onclick="firstPage()">首页</a>
+        		<a onclick="pastPage()">上一页</a>
+          		<a  onclick="nextPage()">下一页</a>
+                <a  onclick="lastPage()">末页</a>
+           	 	<span>第<input type="text" value="1" class="yeNum" id="nowPage"/>页</span>
+            	<a onclick="redirect()">跳转</a>
+                <span>共<input type="text"  class="countPage" readonly="readonly" id="sumPage" />页</span>
+        	</div>
+        </div>
+    </div>
+    
+    
+    <!--页面右部-->
+    <div class="right">
+    	<div class="write">
+    		 <a onclick="writeSta()"><span class="youji">写指南</span></a>
+    	</div>
+    	 <div class="people">
+        	<h3>本周达人</h3>
+            <div class="daren" id="daren">
+            	<!--<a href="#">
+                	<img src="images/people.jpg">
+                
+                	<p class="p2">
+                		<span>浪漫雨天</span>
+                		<span>北京</span>
+                		<span></span>
+                	</p> 
+                 </a>
+                	 	<p class="p1">旅行是一种修行</p><p>旅行，是一种生活的方式,走进自然，远离喧嚣 ，
+                	法师打发士大夫似的法师法士大夫时发生大法师法师法士大夫。</p>-->
+        	</div>
+      </div>  
+        <div class="right_div1">
+        	 	
+            	<div class="div1_header">
+            		<span class="div1_span1">写指南得金币</span>
+               	</div>
+                <div class="div1_form">
+                	<img src="../../../upload/strategy/images/gold.jpg" alt="图片加载失败"/>
+                    <span>金币可兑换缤纷大礼</span>
+                    <a href="../activity/presentChange/redemption.html">点击查看</a>
+                </div>
+               <a href="../activity/presentChange/redemption.html" class="div1_a2">金币如何获取！点我就知道</a>
+         </div>
+         
+         
+        <div class="bang">
+        	<h3>热门指南排行榜</h3>
+            <ul class="bang_ul" id="bang_ul">
+            	<!--<li>
+                	<span class="paixu">1</span>
+                   <a href="strategy.html">自驾游苏州</a>
+                    <span class="number">34342次浏览</span>
+                </li>-->   
+        	</ul>
+        </div>   
+    </div>
+</div>
+
+</body>
+</html>

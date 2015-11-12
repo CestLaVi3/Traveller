@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hotelDetail.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../base/css/base.css"/>
+    <script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/hotelDetail.css">
+    <script type="text/javascript" src="js/hotelDetail.js"></script>
+    <script src="http://api.map.baidu.com/api?v=1.5&ak=7Aww1eFPhuX793cEm0ww1bxm" type="text/javascript"></script>
+  </head>
+  
+  <body>
+    <div class="mainDiv">
+    	<!--酒店图片价格Div代码开始-->
+    	<div class="hotelBig">
+        	<h2>马尔大夫酒店</h2>
+            <img alt="加载中" />
+            <div class="hotelBasic">
+            	<div class="hotelPrice">
+                	<a>￥</a>
+                    <strong></strong>
+                    <span>6.2折<br />折扣</span>
+                </div>
+                <ul>
+                	<li></li>
+                    <li>原价￥19600</li>
+                    <li style="border-right:none;">546人浏览</li>
+                </ul>
+                <span>有效期&emsp;&emsp;2015-12-31</span>
+                <a href="##">立即订购</a>
+            </div>
+        </div>
+        <!--酒店图片价格Div代码结束-->
+        <!--酒店周边景点推荐代码开始-->
+        <div class="recommendSpot">
+        	<h3>周边景点推荐</h3>
+            <ul>
+            	<li>
+                	<img src="img/wave.jpg" alt="加载中" />
+                    <h5>马尔代夫冲浪</h5>
+                    <a>￥</a>
+                    <strong>358</strong>
+                    <p>已售&emsp;<mark>0</mark></p>
+                </li>
+                <li>
+                	<img src="img/water.jpg" alt="加载中" />
+                    <h5>马尔代夫潜水</h5>
+                    <a>￥</a>
+                    <strong>358</strong>
+                    <p>已售&emsp;<mark>0</mark></p>
+                </li>
+                <li>
+                	<img src="img/food.jpg" alt="加载中" />
+                    <h5>马尔代夫美食</h5>
+                    <a>￥</a>
+                    <strong>358</strong>
+                    <p>已售&emsp;<mark>0</mark></p>
+                </li>
+                <li>
+                	<img src="img/fish.jpg" alt="加载中" />
+                    <h5>马尔代夫垂钓</h5>
+                    <a>￥</a>
+                    <strong>358</strong>
+                    <p>已售&emsp;<mark>0</mark></p>
+                </li>
+            </ul>
+        </div>
+        <!--酒店图片价格Div代码结束-->
+        <ul class="options"><li>交通位置</li><li>酒店详情</li><li>美食介绍</li><li style="border:none;">查看评价（36）</li></ul>
+        <!--酒店交通位置Div代码开始-->
+        <div class="hotelLocation">
+        	<h3>交通位置</h3>
+            <div id="hotelMap"></div>
+            <h4></h4>
+            <span class="na">推荐理由：</span>
+            <p class="Con"></p>
+            <span class="na">电话：</span>
+            <p class="Con"></p>
+            <span class="na">营业时间：</span>
+            <p class="Con">24小时营业</p>
+        </div>
+        <!--酒店交通位置Div代码结束-->
+        <!--酒店详情Div代码开始-->
+        <div class="hotelDetail">
+        	<h3>酒店详情</h3>
+            <table border="1" cellspacing="0" class="table">
+            	<tr>
+                	<th>推荐理由</th>
+                    <td colspan="3"></td>
+                    <th>价格</th>
+                    <td></td>
+                </tr>
+                <tr>
+                	<th>一价全包</th>
+                    <td></td>
+                    <th>中文服务</th>
+                    <td></td>
+                    <th>接待儿童</th>
+                    <td></td>
+                </tr>
+                <tr>
+                	<th>距离</th>
+                    <td></td>
+                    <th>交通</th>
+                    <td></td>
+                    <th>岛屿位置</th>
+                    <td>南马累环礁</td>
+                </tr>
+                <tr>
+                	<th>星级</th>
+                    <td></td>
+                    <th>所属集团</th>
+                    <td></td>
+                    <th>建成/翻新</th>
+                    <td></td>
+                </tr>
+                <tr>
+                	<th>房间总数</th>
+                    <td>50间</td>
+                    <th>水上屋</th>
+                    <td>50间</td>
+                    <th>沙滩屋</th>
+                    <td>0间</td>
+                </tr>
+                <tr>
+                	<th>官网</th>
+                    <td colspan="3"></td>
+                    <th>联系电话</th>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <!--酒店详情Div代码结束-->
+        <!--酒店美食展示代码开始-->
+        	<div class="hotelFood">
+            	<h3>美食介绍</h3>
+                <ul>
+                	<li>
+                    	<img src="img/food1.jpg" alt="加载中" />
+                        <h5>咖尔迪亚</h5>
+                    </li>
+                    <li>
+                    	<img src="img/food2.jpg" alt="加载中" />
+                        <h5>马尔代夫美食狂欢节</h5>
+                    </li>
+                    <li>
+                    	<img src="img/food3.jpg" alt="加载中" />
+                        <h5>马尔代夫自助美食</h5>
+                    </li>
+                    <li>
+                    	<img src="img/food4.jpg" alt="加载中" />
+                        <h5>甜点美食</h5>
+                    </li>
+                </ul>
+            </div>
+        
+        <!--酒店美食展示代码结束-->
+    </div>
+  </body>
+</html>

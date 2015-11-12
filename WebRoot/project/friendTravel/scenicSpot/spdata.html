@@ -1,0 +1,237 @@
+﻿<!doctype html>
+<html>
+<head>
+<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/_examples/editor_api.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=na8qYGG7wD5AwaXnAEAQifII"></script>
+<script type="text/javascript" src="js/searchCs.js"></script>
+<script type="text/javascript" src="js/spdata.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<title>无标题文档</title>
+<link href="../../base/css/base.css" rel="stylesheet" type="text/css">
+<link href="pasrdata.css" rel="stylesheet" type="text/css">
+<link href="css/general.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="width:960px;position:absolute;">
+<div class="header"> <img src="spheader.jpg">
+  <ul id="showmenu" >
+    <li onClick="show(0)">基本信息</li>
+    <li onClick="show(1)">景点描述</li>
+    <li onClick="show(2)">风景赏析</li>
+  </ul >
+  <ul id="editmenu" style="display:none">
+    <li onClick="showedit(0)">基本信息</li>
+    <li onClick="showedit(1)">景点描述</li>
+    <li onClick="showedit(2)">图片上传</li>
+  </ul>
+</div>
+<div class="subject"  name="subject">
+  <h2 id="zsspotname"></h2>
+  <h6 id="zshotlevle"></h6>
+  <div id="allmap"></div>
+  <div class="basic">
+    <h4>景点类型</h4>
+    <span style="color:rgba(183,183,183,1.00);float:left">丨</span>
+    <p id="zsspottype"></p>
+  </div>
+  <div class="basic">
+    <h4>适宜季节</h4>
+    <span style="color:rgba(183,183,183,1.00);float:left">丨</span>
+    <p id="zsseason"></p>
+  </div>
+  <div class="basic">
+    <h4>门票</h4>
+    <span style="color:rgba(183,183,183,1.00);float:left">丨</span>
+    <p id="zsmenpiao"></p>
+  </div>
+  <div class="basic">
+    <h4>地理位置</h4>
+    <span style="color:rgba(183,183,183,1.00);float:left">丨</span>
+    <p id="zsaddres"></p>
+  </div>
+  <div class="basic">
+    <h4>Open Time</h4>
+    <span style="color:rgba(183,183,183,1.00);float:left">丨</span>
+    <p id="zsopentime"></p>
+  </div>
+  <div class="basic">
+    <h4>优惠政策</h4>
+    <span style="color:rgba(183,183,183,1.00);float:left">丨</span>
+    <p id="zsyouhui"></p>
+  </div>
+  <a href="#" class="myButton myButton1" onClick="showedit1(0)">编辑</a> </div>
+<div class="subject" style="display:none;" name="subject">
+  <h2>景点描述</h2>
+  <p id="zsspotdesc"></p>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(1)">编辑</a> </div>
+<div class="subject" style="display:none;" name="subject">
+ <h2>关于风景</h2>
+  <ul class="ul1">
+    <li><img  id="zimg1" alt="img1"></li>
+    <li><img  id="zimg2" alt="img2"></li>
+    <li><img  id="zimg3" alt="img3"></li>
+    <li><img  id="zimg4" alt="img4"></li>
+    <li><img  id="zimg5" alt="img5"></li>
+    <li><img  id="zimg6" alt="img6"></li>
+  </ul>
+  <a href="#" class="myButton myButton1"  onClick="showedit1(2)">编辑</a> </div>
+<div class="edit" name="edit" style="display:none">
+  <h2>基本信息</h2>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="中文名称：">
+    <input id="spotname" type="text" class="input3" style="width:200px;">
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="热度等级：">
+    <select id="spothot" class="input4" style="width:200px;">
+      <option value="10">10</option>
+      <option value="9">9</option>
+      <option value="8">8</option>
+      <option value="7">7</option>
+      <option value="6">6</option>
+      <option value="5">5</option>
+      <option value="4">4</option>
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="景区类型：">
+    <select id="spottype" class="input4" style="width:200px;">
+    </select>
+  </div>
+  <div style="margin:30px 0 0 160px;" >
+    <input type="text" class="input1" readonly value="适宜季节：">
+    <select id="season" class="input4" style="width:200px;">
+      <option value="1">春</option>
+      <option value="2">夏</option>
+      <option value="3">秋</option>
+      <option value="4">冬</option>
+    </select>
+  </div>
+  <div style="margin:30px 0 0 160px; " >
+    <input type="text" class="input1" readonly value="地理坐标：">
+    <input id="zX" type="text" class="input2" readonly>
+    <input id="zY" type="text" class="input3" readonly>
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="门票信息：">
+    <input id="menp" type="text" class="input3" style="width:600px;">
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="OpenTime：">
+    <input id="opentime" type="text" class="input3" style="width:600px;">
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="地理位置：">
+    <input id="diliweizhi" type="text" class="input3" style="width:600px;">
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <input type="text" class="input1" readonly value="优惠政策：">
+    <input id="youhuizhengce" type="text" class="input3" style="width:600px;">
+  </div>
+  <div style="margin:30px 0 0 160px;">
+    <iframe src="baidumapaddjiexi2.html" id="iframeditu" style="position:absolute;top:160px;left:450px;width:400px;height:350px;border:none;" scrolling="no"></iframe>
+  </div>
+  <a href="#" class="myButton myButton1" onClick="show1(0),save1()">保存</a> 
+   <a href="#" class="myButton myButton2" onClick="updatabaidu()">更新百度数据</a> </div>
+<div class="edit" name="edit" style="display:none">
+  <h2>景点描述</h2>
+  <div style="width:920px;margin:20px 0 0 20px"> 
+    <script type="text/plain" id="spotDesc" name="myEditor" ></script> 
+    <a href="#" class="myButton myButton1" onClick="show1(1),save2()">保存</a> 
+    </div>
+</div>
+<div class="edit" name="edit" style="display:none">
+  <h2>图片上传</h2>
+<form action = "../../../spotController/updateimages.do" method="post" enctype="multipart/form-data">
+  <label for="filenum1"><img src="images/1.jpg" class="laimg" id="bjimg1" ></label>
+  <input id="filenum1" type="file" accept="image/*" name="url1" style="display:none">
+  <label for="filenum2"><img src="images/1.jpg" class="laimg" id="bjimg2"></label>
+  <input id="filenum2" type="file" accept="image/*" name="url2" style="display:none">
+  <label for="filenum3"><img src="images/1.jpg" class="laimg" id="bjimg3"></label>
+  <input id="filenum3" type="file" accept="image/*" name="url3" style="display:none">
+  <label for="filenum4"><img src="images/1.jpg" class="laimg" id="bjimg4" ></label>
+  <input id="filenum4" type="file" accept="image/*" name="url4" style="display:none">
+  <label for="filenum5"><img src="images/1.jpg" class="laimg" id="bjimg5"></label>
+  <input id="filenum5" type="file" accept="image/*" name="url5" style="display:none">
+  <label for="filenum6"><img src="images/1.jpg" class="laimg" id="bjimg6"></label>
+  <input id="filenum6" type="file" accept="image/*" name="url6" style="display:none">
+  <input type="hidden" name="sysSpotId" id="form1">
+  <br/>
+  <input type="submit" class="myButton myButton1" onClick="show1(2)"></input></div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能    
+	var uid;
+	var spotname1;
+	var adders;
+function updatabaidu(){
+	debugger;
+	$.ajax({
+        url: "http://api.map.baidu.com/telematics/v3/travel_attractions?id="+uid+"&ak=FHzpoYHvfrqyGlB5OZoZQezQ&output=json",
+        type: 'GET',
+        dataType: 'JSONP',//here
+        success: function (data) {
+			debugger;
+			document.getElementById("spotname").value = data.result.name;
+			document.getElementById("zX").value = data.result.location.lat;
+			document.getElementById("zY").value = data.result.location.lng;
+			document.getElementById("menp").value = data.result.ticket_info.price;
+			document.getElementById("opentime").value = data.result.ticket_info.open_time;
+			document.getElementById("youhuizhengce").value = data.result.ticket_info.attention[0].description;
+			document.getElementById("diliweizhi").value = adders;
+			        }
+    });
+	}				
+function show(num){
+		var subject = document.getElementsByName("subject");
+		for(var i=0;i<subject.length;i++){
+			subject[i].style.display = "none";
+			if(i==num){
+				subject[num].style.display = "block";
+				}
+			}
+		}
+function show1(num){
+		showedit(100);
+		document.getElementById("showmenu").style.display ="block";
+		document.getElementById("editmenu").style.display ="none";
+		var subject = document.getElementsByName("subject");
+		for(var i=0;i<subject.length;i++){
+			subject[i].style.display = "none";
+			if(i==num){
+				subject[num].style.display = "block";
+				}
+			}
+		}	
+function showedit(num){
+		var edit = document.getElementsByName("edit");
+		for(var i=0;i<edit.length;i++){
+			edit[i].style.display = "none";
+			if(i==num){
+				edit[num].style.display = "block";
+				}
+			}
+		}
+function showedit1(num){
+			show(100);
+		document.getElementById("showmenu").style.display ="none";
+		document.getElementById("editmenu").style.display ="block";
+		var edit = document.getElementsByName("edit");
+		for(var i=0;i<edit.length;i++){
+			edit[i].style.display = "none";
+			if(i==num){
+				edit[num].style.display = "block";
+				}
+			}
+		}
+	   var editor1 = UE.getEditor('spotDesc',{initialFrameHeight:350});	  
+</script>

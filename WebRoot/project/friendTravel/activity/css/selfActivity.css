@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+.container{width:1200px; margin:auto;}
+.header{ width:1200px; height:500px; position:relative;}
+.header img{ width:1200px; height:500px; }
+.header>input{width:1200px; height:60px; text-align:center; position:absolute;left:0px;top:225px; background-color:transparent; font-size:60px; color:#BF65E7; line-height:50px;border:0px; font-family:"华文行楷";}
+/*团游推荐*/
+.partnerRecommand{width:1200px; height:850px; margin-top:30px;}
+.partnerRecommand>p{width:1200px;height:30px; font-size:30px; font-weight:600; text-align:center; height:30px; line-height:30px;margin-bottom:50px;}
+
+.partnerRecommand>ul{width:1200px; }
+.partnerRecommand li{width:270px;height:300px; float:left; margin-left:15px; margin-right:15px; margin-bottom:40px;}
+.partnerRecommand li img{width:270px;height:250px; margin-bottom:5px;}
+a{ display:block; margin-bottom:5px; font-size:14px; color:#B9B9FF;  }
+.partnerRecommand li p{ color:#999; font-size:14px;}
+.partnerRecommand li .sp3{ float:right; color:#999; font-size:13px; background-color:transparent; width:auto; margin-right:0px;}
+a:hover{color:#FC9;}
+a:active{color:#6F9;}
+.partnerRecommand li span{display:inline-block;width:40px; height:20px; text-align:center; line-height:20px; background-color:#CCC;margin-right:10px;color:black;}
+.partnerRecommand li .sp1{display:inline; color:red; margin:0px; background-color:transparent;}
+
+/*搜索框*/
+.find{width:1170px; margin-left:15px; height:30px; line-height:30px; text-align:center;  margin-top:-20px; margin-bottom:20px;}
+.find>select{width:150px; height:30px; margin-right:20px;}
+.find>input{ background-color:#FC9;width:100px; height:30px;border:#F96 2px solid;}
+/*发布结伴*/
+.partnerTrip_container{width:1200px; height:2100px; margin:auto; position:absolute;top:0px; margin:auto; background-color:black;opacity:0.85; filter:alpha(opacity=85); display:none;}
+.partnerTrip{margin:auto; position:absolute; width:450px; height:700px;left:400px; top:150px;border-radius:15px; background-color:white; background-image:url(../images/deliciousFood/applyBg.gif);}
+.partnerTrip_p1{ font-size:72px; position:absolute;left:0px; top:-45px;font-weight:600;z-index:1;color:red; font-family:方正舒体; letter-spacing:-10px;}
+.close{ font-size:36px; width:36px; height:36px; line-height:36px; text-align:center; background-color:red;position:absolute;left:414px; top:0px;font-weight:600; border-radius:10px;border:0px;z-index:1;color:black; }
+
+.partner_container{width:444px; height:655px;border-radius:10px;border:red 3px solid;margin-top:40px;}
+.partner_container>p{width:444px;height:30px;line-height:30px;font-size:28px;font-weight:600; background-color:red;}
+.partner_container>div{width:250px;height:150px;border:red 2px solid; margin:auto; margin-top:10px;margin-bottom:20px; }
+.partner_container>div>p{font-size:20px; text-align:center;height:30px; line-height:30px; margin-top:60px; font-weight:600;}
+.partner_container>div>img{width:150px; height:100px;display:none;}
+
+.partner_container>div.content{width:430px;height:400px; margin:auto; color:red;border:0px;}
+div.content>input{width:200px; height:25px; margin-bottom:20px;color:black;}
+div.content>input[type=button]{width:200px; height:30px; background-color:red;border:0px; margin-left:65px;}
+div.content>select{margin-top:10px;}
+div.content>.detail{width:180px; }
+div.content>.connect{width:95px;}
+div.content textarea{width:200px; height:60px; overflow:scroll; margin-bottom:15px;}
+div.content span{ float:left;}
+
+/*分页*/
+.changePage{ float:left; margin-top:1px; width:100%; text-align:center;}
+.changePage>a{ display:inline-block; }
+.changePage input{width:30px; color:#6CF;text-align:center;  }
+.nowPage{ margin-left:50px;}
+.totalPage{ margin-left:50px;}
+.changePage input[type=button]{width:50px; height:30px; background-color:#E1FFEF; color:black; margin-left:5px; }
+

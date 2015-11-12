@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+.zajindan_main{ width:1200px; margin:auto; }
+.zajindan_content{ width:1200px; height:500px; position:relative;}
+.zajindan_content>img{ width:1200px; height:500px;}
+.zajindan_content>div{ position:absolute; left:220px; top:250px; cursor: url(../images/present/chuizi.gif),defalut;}
+.zajindan_content>div#tishi{ width:250px; height:100px; border-radius:10px;; position:absolute; left:475px; top:250px; background-color:#e89b13;cursor:default; display:none;}
+.zajindan_content>div#tishi>p{ font-size:24px; text-align:center; margin-top:20px;}
+.zajindan_content>div#tishi>input{ width:80px; height:30px; margin-left:85px; border-radius:5px; font-size:20px; margin-top:10px;}
+.zajindan_content>p{ position:absolute; left:485px; top:50px; font-size:50px; color:#d69307; font-weight:700;}
+.zajindan_content>div>img{ margin-left:50px; margin-right:50px; width:150px; height:200px; float:left; position:relative;}
+.zajindan_bottom{ background-color:#961414; height:600px;}
+.zajindan_bottom>div{ width:430px; height:480px; float:left; margin-left:20px; background-color:#760605; margin-top:50px;}
+.zajindan_bottom>div.zajindan_bottomRight{ width:230px; margin-left:50px; margin-right:0px;}
+.zajindan_bottom>div>p{ font-size:20px; color:#ff9e01; font-weight:700; margin-left:10px; margin-top:10px;}
+.zajindan_bottom>div li{ margin-top:10px;}
+.zajindan_bottom>div li>p{ font-size:14px; float:left; margin-left:20px;}
+.zajindan_bottom>div li>p.zajidan_p1{color:#666;}
+.zajindan_bottom>div li>p.zajindan_fr{ float:right; margin-right:20px;}
+.zajindan_bottomRight li>img{ width:180px; height:100px; float:left; margin-left:25px;}
+.zajindan_bottom>div li>p.zajindan_p{ width:230px; height:30px; text-align:center; line-height:30px; margin-left:0px; margin-bottom:20px;}
+.cf{ clear:both;}

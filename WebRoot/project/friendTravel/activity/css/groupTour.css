@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body{height:2100px;}
+.container{width:1200px; margin:auto;}
+/*天天特价*/
+.tripRecommand{width:1200px; height:780px; margin-top:10px; float:left;}
+.tripRecommand>p .dayPrice{display:inline-block;width:400px;margin-top:-10px;font-size:20px;font-weight:600;color:white;}
+.s{width:800px;display:inline-block;margin-left:-200px;}
+.tripRecommand>p{width:1200px;height:20px;background-color:#2B7DFD;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;padding-top:10px; text-align:center;letter-spacing:5px;line-height:30px;margin-bottom:50px;}
+.tripRecommand>ul{width:1200px;}
+.tripRecommand>ul li a{width:350px;height:300px;}
+.tripRecommand>ul li{width:350px;height:300px;float:left; border:1px solid #f1f1f1;margin-left:30px;margin-bottom:40px; cursor:pointer;}
+.tripRecommand >ul li img{width:320px;height:200px; margin-bottom:5px;margin-left:15px;margin-top:10px;}
+.tripRecommand >ul li p{  float:left;margin-left:15px;font-size:14px; margin-top:10px; width:150px; height:20px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.tripRecommand >ul li .sp3{ display:block;color:#999; margin-left:20px;margin-top:30px;font-size:13px; background-color:transparent; width:200px;height:20px;}
+.tripRecommand >ul li .price{background-color:white;font-size:20px;color:#fd8e51;font-weight:bold;}
+
+.tripRecommand >ul li .sp1{display:inline; color:red; margin:0px; background-color:transparent;}
+.tripRecommand>ul li:hover{border:1px solid #2B7DFD;}
+.look{width:70px;height:25px;background-color:#2B7DFD;color:white;border-radius:5px;font-size:15px;text-align:center;display:inline-block;float:right;margin-right:20px;padding-top:5px;margin-top:-5px;}
+/*搜索框*/
+.tripRecommand>p>select{width:100px; height:20px;margin-top:-5px;float:right;margin-right:50px;border-radius:5px;}
+.tripRecommand>p>input{ background-color:#2B7DFD;width:30px;margin-top:-5px;margin-right:-140px;border-radius:5px;height:20px;float:right;font-size:13px; border:none;color:#fe8a4b}
+/*分页*/
+.changePage{ width:100%; text-align:center;margin-top:40px;}
+.changePage input{width:30px; color:#6CF;text-align:center; }
+.nowPage{ margin-left:50px;}
+.totalPage{ margin-left:50px;}
+.changePage input[type=button]{width:50px; height:30px;color:white; background-color:#2B7DFD;margin-left:5px;}

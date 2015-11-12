@@ -1,0 +1,269 @@
+ @charset "utf-8";
+/* CSS Document */
+* {
+	font-family: "微软雅黑";
+	padding: 0px;
+	margin: 0px;
+}
+.container{
+	width:1200px;
+	margin:auto;
+	padding:0px;
+}
+#allmap {
+	border-radius: 20px;
+	width: 1200px;
+	height: 350px;
+	margin-top: 20px;
+	font-family: "微软雅黑";
+	margin-bottom:20px;
+}
+.header{position:relative;width:1200px;}
+.header img{width:1200px;}
+.header>ul {
+	position:absolute;
+	top: 100px;
+	right:0px;
+	margin-bottom:0px;
+}
+.header>ul>li {
+	font-weight: bold;
+	float: left;
+	margin-right: 15px;
+	color: #FFFFFF;
+	font-size:20px;
+	font-family:"华文行楷";
+	cursor: pointer;
+}
+.header>ul li:hover{color:#C6F371;}
+.subject1{
+	margin-top:20px;
+	}
+.subject {
+	width: 1200px;
+	clear:both;
+}
+.subject>.ul1 {
+	margin-top: 20px;
+}
+.subject>.ul1>li {
+	float: left;
+	width: 315px;
+}
+.subject>.ul1>li>img {
+	padding-left: 55px;
+	margin-top: 20px;
+	width: 200px;
+	height: 120px;
+}
+.subject>.ul2{
+	margin:20px 0 0 20px;
+	}
+.subject>.ul2>li{
+	 
+	float:left;
+	margin-top: 20px;
+	width:157px;
+	margin-left:20px;
+	}
+.subject>.ul2>li>img{
+	box-shadow:4px 4px 4px rgba(1,1,1,1.00);
+	margin-left: 28.5px;
+	width:100px;
+	height:150px;
+	cursor:pointer;
+	}
+.subject>.ul2>li>h6{
+	text-align:center;
+	}	
+.subject>h2 {
+	font-family:"华文行楷";
+	font-size:30px;
+}
+.subject>h6 {
+	color:red;
+	font-family:"华文行楷";
+	font-size:20px;
+}
+.subject>h4 {
+	margin-left: 68px;
+	margin-top: 20px;
+
+}
+.subject>.lylx{
+	margin:10px 0 0 150px;
+	}
+.subject>p {
+	text-indent: 20px;
+	margin-top: 20px;
+	line-height:25px;
+	background-color:#F1EFEC;
+	padding:10px;
+}
+.subject>.basic{
+	height:30px;
+	margin-bottom:20px;
+	float:left;
+	}
+.subject>.basic>h4{
+	float:left;
+	height:30px;
+	line-height:30px;
+	width:145px;
+	text-align:center;
+	}
+.subject>.basic span{
+	float:left;
+	height:50px;
+	line-height:50px;
+	margin-right:10px;
+}
+.basic p{width:145px;text-align:center;}
+.edit {
+	width: 960px;
+}
+.edit>.ul1 {
+	margin-top: 20px;
+}
+.edit>.ul1>li {
+	list-style: none;
+	float: left;
+	width: 315px;
+	height:144px;
+}
+.edit>.ul1>li>img {
+	padding-left: 55px;
+	margin-top: 20px;
+	width: 200px;
+	height: 120px;
+	border-radius:10px;
+}
+.edit>.ul1>li>input {
+	padding-left: 55px;
+	margin-top: 20px;
+	height: 124px;
+	width: 200px;
+}
+.edit>.ul2{
+	margin:20px 0 0 20px;
+	}
+.edit>.ul2>li{
+	 
+	float:left;
+	margin-top: 20px;
+	width:157px;
+	margin-left:20px;
+	}
+.edit>.ul2>li>img{
+	margin-left: 28.5px;
+	width:100px;
+	height:150px;
+	}
+.laimg{
+	width: 200px;
+	height: 120px;
+	margin:0px 15px;
+	border-radius:10px;
+	}	
+.edit>.ul2>li>h6{
+	text-align:center;
+	}			
+.edit>h2 {
+	margin-left: 20px;
+}
+.edit>h6 {
+	margin-left: 20px;
+}
+.edit>h4 {
+	margin-left: 68px;
+	margin-top: 20px;
+}
+.edit>p {
+	text-indent: 20px;
+	margin: 20px 0 0 20px;
+}
+.edit>.lylx{
+	margin:10px 0 0 150px;
+	}
+.myButton1 {
+	margin-top: 60px;
+	margin-left: 480px;
+}
+.myButton2 {
+	margin-top: 60px;
+	margin-left: 10px;
+}
+.myButton {
+	
+	background-color: #eae0c2;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	display: inline-block;
+	cursor: pointer;
+	color: #505739;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 12px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
+	background: -moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background: -webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background: -o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background: -ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2', GradientType=0);
+	background-color: #ccc2a6;
+}
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+.input1 {
+	font-weight: bold;
+	border: 2px solid #999999;
+	border-right: none;
+	width: 75px;
+	height: 40px;
+}
+.input2 {
+	border: 2px solid #999999;
+	border-left: none;
+	border-right: none;
+	margin-left: -5px;
+	outline: none;
+	width: 100px;
+	height: 40px;
+}
+.input3 {
+	width: 100px;
+	border: 2px solid #999999;
+	border-left: none;
+	
+	margin-left: -5px;
+	outline: none;
+	height: 40px;
+}
+.input4 {
+	width: 100px;
+	border: 2px solid #999999;
+	border-left: none;
+	
+	margin-left: -5px;
+	height: 44px;
+}
+.input4:focus {
+	border: none;
+}
+.input5 {
+	width: 600px;
+	border: 2px solid #999999;
+	
+	outline: none;
+	height: 40px;
+}
+

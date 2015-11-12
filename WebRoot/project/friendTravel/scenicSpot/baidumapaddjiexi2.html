@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<style type="text/css">
+body, html, #allmap {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: "微软雅黑";
+}
+#l-map {
+	height: 350px;
+	width: 100%;
+}
+#r-result {
+	
+	width: 150px;
+	font-size: 14px;
+	line-height: 20px;
+	height: 300px;	
+	background-color: rgba(82,82,82,0.6);
+	position: absolute;
+	left: 260px;
+	top: 0px;	
+}
+#r-result>h4{
+	text-align:center;
+	margin:5px auto;
+	}
+#r-result>ul{
+	height:250px;
+	overflow-x:hidden;	
+	padding:0px;
+	}
+#r-result>ul>li{
+	cursor:pointer;
+	list-style:none;
+	}
+#r-result>ul>li:hover{
+	background-color: rgba(158,155,155,0.4);
+	}	
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FHzpoYHvfrqyGlB5OZoZQezQ"></script>
+<title>本地搜索的数据接口</title>
+</head>
+<body>
+<div id="l-map"></div>
+<div id="r-result">
+<h4>景点列表</h4>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	// 百度地图API功能搜索水电费
+	 function drawmap(arid){
+		debugger;
+		$.post("../../../scienceSpotController/findById.do",{"paramter":JSON.stringify({"spotId":arid})},findar,"json");
+		}
+	function findar(data){
+	debugger;
+	var map = new BMap.Map("l-map"); 
+	var maks = [];
+    map.disableScrollWheelZoom();
+	map.disableDoubleClickZoom();
+	map.disableKeyboard();
+	map.disableContinuousZoom();	
+	map.centerAndZoom(new BMap.Point(data.value.locationX, data.value.locationY), 11);
+	var local = new BMap.LocalSearch(map, { //智能搜索
+		  onSearchComplete: myFun		  
+		});
+	local.search("旅游景点");	
+	//local.setLocation(data.value.locationX, data.value.locationY);
+	local.setPageCapacity(99);
+			function myFun(results){
+				debugger;  
+				var listrom;
+			for(sta in results){
+				if(typeof(results[sta])=="object"&&results[sta].length>0){
+					listrom=results[sta];
+					}
+				}	
+			var ul = document.createElement("ul");
+			var datalist = document.getElementById("r-result");
+			var spotname = window.parent.document.getElementById("spotname").value;
+			for(var i=0;i<listrom.length;i++){
+				if(spotname.length == 0){
+				    var point = new BMap.Point(listrom[i].point.lng,listrom[i].point.lat);
+					var marker = new BMap.Marker(point);					
+					map.addOverlay(marker);
+					var li = document.createElement("li");
+					li.innerHTML = listrom[i].title;
+					li.address = listrom[i].address;
+					li.name = listrom[i].title;
+					li.uid  = listrom[i].uid;
+					li.num = i;
+					maks[i] = marker;
+					li.pointX = listrom[i].point.lat;
+					li.pointY =  listrom[i].point.lng;	
+					li.markers =  marker;			
+					li.onclick = function(){
+					debugger;
+					var li = event.srcElement;	
+					window.parent.uid = li.uid;
+					window.parent.spotname1 = li.name;	
+					window.parent.adders = li.address;						 
+					map.panTo(new BMap.Point(li.pointY, li.pointX));
+					for(var q= 0 ; q<maks.length;q++){
+						maks[q].setAnimation();
+						}
+					li.markers.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+						}
+					ul.appendChild(li);
+				}
+				if(spotname.length != 0&&spotname==listrom[i].title){
+				var point = new BMap.Point(listrom[i].point.lng,listrom[i].point.lat);
+					var marker = new BMap.Marker(point);					
+					map.addOverlay(marker);
+					var li = document.createElement("li");
+					li.innerHTML = listrom[i].title;
+					li.address = listrom[i].address;
+					li.name = listrom[i].title;
+					li.uid  = listrom[i].uid;
+					li.num = i;
+					maks[i] = marker;
+					li.pointX = listrom[i].point.lat;
+					li.pointY =  listrom[i].point.lng;	
+					li.markers =  marker;			
+					li.onclick = function(){
+					debugger;
+					var li = event.srcElement;	
+					window.parent.uid = li.uid;
+					window.parent.spotname1 = li.name;	
+					window.parent.adders = li.address;						 
+					map.panTo(new BMap.Point(li.pointY, li.pointX));
+					for(var q= 0 ; q<maks.length;q++){
+						maks[q].setAnimation();
+						}
+					li.markers.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+						}
+					ul.appendChild(li);
+				}
+			}
+			datalist.appendChild(ul);				
+		}		
+		}
+</script>

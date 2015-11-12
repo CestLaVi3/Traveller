@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../../base/css/base.css" />
+<link rel="stylesheet" href="css/deliciousFood.css" />
+<title>美食</title>
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/deliciousFood.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../base/js/ueditor/_examples/editor_api.js"></script>
+</head>
+
+<body onload="init()">
+<div class="container">
+<!--头部-->
+ <div class="header" id="header">
+  <!-- <p class="p1">夏日美食节</p>
+  <img  id="img" src="../../../upload/activity/images/deliciousFood/cq/cq.gif" alt="加载失败"/>
+  <img src="../../../upload/activity/images/deliciousFood/bg4.jpg" class="img" alt="加载失败"/>
+  <img src="../../../upload/activity/images/deliciousFood/bg1.jpg" alt="加载失败"/>
+  <img src="../../../upload/activity/images/deliciousFood/bg2.jpg" alt="加载失败"/>
+  <img src="../../../upload/activity/images/deliciousFood/bg3.jpg" alt="加载失败"/>
+   关注
+    	<div class="focus">
+      		<img src="../../../upload/activity/images/deliciousFood/1.png" alt="加载失败"/>
+     		<div class="apply">
+      			<p >已报名人数</p>
+      			<span>0</span><span>0</span><span>4</span><span>5</span><span>6</span><span>7</span>
+      			<input type="button" value="立即报名" onclick="showApply()"/>
+      			<input type="button" value="关注此活动"/>
+     		</div>
+    	</div>
+   比赛规则
+    	<div class="roles">
+     		<img src="../../../upload/activity/images/deliciousFood/2.png" alt="加载失败"/>
+      		<ol>
+       			<li>本季赛事为主题赛<span>《美食征集》</span></li>
+       			<li>上传作品的画面中必须是与<span>"美食"</span>相关的照片。不符合主题的作品将会被删除。<span>活动时间：2015-9-10至2015-1-10</span></li>
+       			<li>在美食报名中。用50个字以内说明拍摄美食的地方。</li>
+       			<li>参赛作品必须是原创作品</li>
+       			<li>获奖用户可获得精美礼品，奖品产生的个税需有获奖用户个人承担</li>
+    		</ol>
+    	</div>  -->
+ </div>
+ <!--参赛者美食-->
+ <div class="food_div1">
+ <ul class="ul1">
+    <li onclick="showHotAcity()" ><img src="../../../upload/activity/images/hot.jpg" alt="加载失败"/><p>火热进行中</p></li>
+    <li onclick="showPastAcity()"><img src="../../../upload/activity/images/deliciousFood/time.png" alt="加载失败"/><p>往期回顾</p></li>
+ </ul>
+ <ul class="personMakeFood" id="personMakeFood">
+     <!--  <li>
+      <img src="../../../upload/activity/images/deliciousFood/food/1.jpg"/>
+      <p>
+       <span class="sp1">美食</span>
+       <span>雕刻美食</span>
+       <span class="sp3">223</span>
+       <img src="../../../upload/activity/images/deliciousFood/heart.jpg"/>
+      </p>
+      <p>
+       <span class="sp1">参赛者</span>
+       <span>王萌</span>
+      </p>
+      <p>
+       <span class="sp1">美食介绍</span>
+       <span  class="sp2">好吃又健康,好吃又健康,好吃又健康,</span>
+      </p> 
+    </li>
+      <li>
+      <img src="../../../upload/activity/images/deliciousFood/food/4.jpg"/>
+      <p>
+       <span class="sp1">美食</span>
+       <span>雕刻美食</span>
+       <span class="sp3">223</span>
+       <img src="../../../upload/activity/images/deliciousFood/heart.jpg"/>
+      </p>
+      <p>
+       <span class="sp1">参赛者</span>
+       <span>王萌</span>
+      </p>
+      <p>
+       <span class="sp1">美食介绍</span>
+       <span  class="sp2">好吃又健康,好吃又健康,好吃又健康,</span>
+      </p> 
+    </li>
+      <li>
+      <img src="../../../upload/activity/images/deliciousFood/food/5.jpg"/>
+      <p>
+       <span class="sp1">美食</span>
+       <span>雕刻美食</span>
+       <span class="sp3">223</span>
+       <img src="../../../upload/activity/images/deliciousFood/heart.jpg"/>
+      </p>
+      <p>
+       <span class="sp1">参赛者</span>
+       <span>王萌</span>
+      </p>
+      <p>
+       <span class="sp1">美食介绍</span>
+       <span  class="sp2">好吃又健康,好吃又健康,好吃又健康,</span>
+      </p> 
+    </li>
+      <li>
+      <img src="../../../upload/activity/images/deliciousFood/food/6.jpg"/>
+      <p>
+       <span class="sp1">美食</span>
+       <span>雕刻美食</span>
+       <span class="sp3">223</span>
+       <img src="../../../upload/activity/images/deliciousFood/heart.jpg"/>
+      </p>
+      <p>
+       <span class="sp1">参赛者</span>
+       <span>王萌</span>
+      </p>
+      <p>
+       <span class="sp1">美食介绍</span>
+       <span  class="sp2">好吃又健康,好吃又健康,好吃又健康,</span>
+      </p> 
+    </li>
+      <li>
+      <img src="../../../upload/activity/images/deliciousFood/food/7.jpg"/>
+      <p>
+       <span class="sp1">美食</span>
+       <span>雕刻美食</span>
+       <span class="sp3">223</span>
+       <img src="../../../upload/activity/images/deliciousFood/heart.jpg"/>
+      </p>
+      <p>
+       <span class="sp1">参赛者</span>
+       <span>王萌</span>
+      </p>
+      <p>
+       <span class="sp1">美食介绍</span>
+       <span  class="sp2">好吃又健康,好吃又健康,好吃又健康,</span>
+      </p> 
+    </li>
+      <li>
+      <img src="../../../upload/activity/images/deliciousFood/food/8.jpg"/>
+      <p>
+       <span class="sp1">美食</span>
+       <span>雕刻美食</span>
+       <span class="sp3">223</span>
+       <img src="../../../upload/activity/images/deliciousFood/heart.jpg"/>
+      </p>
+      <p>
+       <span class="sp1">参赛者</span>
+       <span>王萌</span>
+      </p>
+      <p>
+       <span class="sp1">美食介绍</span>
+       <span class="sp2">好吃又健康,好吃又健康,好吃又健康,</span>
+      </p> 
+    </li> -->
+  </ul>
+  <!--往期回顾-->
+  <ul class="pastFoodAcity" id="pastFoodAcity">
+     <!-- <li>
+      <a href="pastFoodAcivity.html"><img src="../../../upload/activity/images/deliciousFood/food/8.jpg"/></a>
+      <a href="pastFoodAcivity.html" class="a1">春日美食节</a>
+    </li>
+     <li>
+      <a href="pastFoodAcivity.html"><img src="../../../upload/activity/images/deliciousFood/food/7.jpg"/></a>
+      <a href="pastFoodAcivity.html" class="a1">夏日美食节</a>
+    </li>
+    <li>
+      <a href="pastFoodAcivity.html"><img src="../../../upload/activity/images/deliciousFood/food/4.jpg"/></a>
+      <a href="pastFoodAcivity.html" class="a1">秋日美食节</a>
+    </li>
+     <li>
+      <a href="pastFoodAcivity.html"><img src="../../../upload/activity/images/deliciousFood/food/1.jpg"/></a>
+      <a href="pastFoodAcivity.html" class="a1">冬日美食节</a>
+    </li>
+    <li>
+      <a href="pastFoodAcivity.html"><img src="../../../upload/activity/images/deliciousFood/food/8.jpg"/></a>
+      <a href="pastFoodAcivity.html" class="a1">春日美食节</a>
+    </li>
+     <li>
+      <a href="pastFoodAcivity.html"><img src="../../../upload/activity/images/deliciousFood/food/7.jpg"/></a>
+      <a href="pastFoodAcivity.html" class="a1">夏日美食节</a>
+    </li> -->
+  </ul>
+   <!--分页-->
+   <div class="changePage">
+       <a onclick="firstPage()">首页</a>
+       <a onclick="pastPage()">上一页</a>
+       <a onclick="nextPage()">下一页</a>
+       <a onclick="lastPage()">尾页</a>
+       
+       <a class="nowPage">第<input type="text" value="1" id="pageNum"/>页</a>
+       <input type="button" value="跳转" onclick="redirect()"/>
+       <a class="totalPage">共<span id="sumNum">1</span>页</a> 
+     </div>
+ </div>
+   <!--排名-->
+  <div class="rank" id="rank">
+    <!-- <p>排行榜</p>
+    <ul>
+      <li>
+        <img src="../../../upload/activity/images/photoPK/1.png"/>
+        <p>南弦月</p>
+        <p>34534人赞</p>
+      </li>
+       <li>
+        <img src="../../../upload/activity/images/photoPK/2.png"/>
+        <p>南弦月</p>
+        <p>12144人赞</p>
+      </li>
+       <li>
+        <img src="../../../upload/activity/images/photoPK/3.png"/>
+        <p>南弦月</p>
+        <p>9876人赞</p>
+      </li>
+       <li>
+         <p class="number">4</p>
+        <p>南弦月</p>
+        <p>1231人赞</p>
+      </li>
+       <li>
+        <p class="number">5</p>
+        <p>南弦月</p>
+        <p>1231人赞</p>
+      </li>
+       <li>
+        <p class="number">6</p>
+        <p>南弦月</p>
+        <p>1231人赞</p>
+      </li>
+       <li>
+         <p class="number">7</p>
+        <p>南弦月</p>
+        <p>1231人赞</p>
+      </li>
+       <li>
+        <p class="number">8</p>
+        <p>南弦月</p>
+        <p>1231人赞</p>
+      </li>
+       <li>
+        <p class="number">9</p>
+        <p>南弦月</p>
+        <p>1231人赞</p>
+      </li>
+       <li>
+        <p class="number">10</p>
+        <p>南弦月</p>
+        <p>1231人赞</p>
+      </li>
+      <li>
+        <p class="p1">.</p>
+        <p class="p1">.</p>
+        <p class="p1">.</p>
+      </li>
+      <li id="myRank">
+        <p class="number">101</p>
+        <p>我</p>
+        <p>654人赞</p>
+      </li>
+    </ul> -->
+  </div>
+<!--美食推荐-->
+ <div class="foodRecommand" id="foodRecommand">
+   <p>美食推荐</p>
+   <ul>
+      <li>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/5.jpg"><img src="../../../upload/activity/images/deliciousFood/food/5.jpg"/></a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/5.jpg"><span>美食</span>猪排意面</a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/5.jpg"><span>地址</span>北京市昌平区中软国际ETC</a>
+     </li>
+     <li>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/6.jpg"><img src="../../../upload/activity/images/deliciousFood/food/6.jpg"/></a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/6.jpg"><span>美食</span>栗子美食</a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/6.jpg"><span>地址</span>北京市昌平区中软国际ETC</a>
+     </li>
+      <li>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/7.jpg"><img src="../../../upload/activity/images/deliciousFood/food/7.jpg"/></a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/7.jpg"><span>美食</span>熊猫甜品</a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/7.jpg"><span>地址</span>北京市昌平区中软国际ETC</a>
+     </li>
+     <li>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/8.jpg"><img src="../../../upload/activity/images/deliciousFood/food/8.jpg"/></a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/8.jpg"><span>美食</span>冰激凌蛋糕</a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/8.jpg"><span>地址</span>北京市昌平区中软国际ETC</a>
+     </li>
+   </ul>
+ </div>
+  <!--评论-->
+    <div class="comment" >
+     <p class="comment_p">所有评论</p>
+      <ul class="comment_ul1" id="comment_ul1"><li>相关评论</li><li class="commentTitle" onclick="submitComment()">点击发表评论</li></ul>
+            <div class="saveComment_div" id="saveComment_div">
+            	好评<input type="radio" name="comment" value="0" />
+				中评<input type="radio" name="comment" value="1" />
+				差评<input type="radio" name="comment" value="2" />
+            	<textarea class="talk" id="talk" onkeyup="checkLength()"></textarea>
+            	<span class="wordNumber" id="wordNumber">100/100</span>
+            	<input type="button" value="取消评论" class="submitTalk" onclick="hiddenComment()"/>
+            	<input type="button" value="发表评论" class="submitTalk" onclick="saveComment()"/>
+            </div>
+           
+      
+     <div id="allComment">
+      <div class="category">
+       <p>
+        全部<input type="radio" name="radio" value="3" id="checked" checked="checked"  onclick="check()"/>
+        好评<input type="radio" name="radio" value="0" onclick="check()"/>
+        中评<input type="radio" name="radio" value="1" onclick="check()"/>
+        差评<input type="radio" name="radio" value="2" onclick="check()"/>
+       </p>
+      </div>
+       <!--所有评论-->
+       <ul class="allComment" id="allComment1">
+         <!-- <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p><p class="deleteComment">删除评论</p> 
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞</p> 
+        </li>
+        <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p> 
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞</p> 
+        </li>
+        <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p> 
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞</p> 
+        </li>
+        <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p>  
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞</p> 
+        </li> -->
+      </ul>
+       <div class="changePage">
+       <a onclick="firstPage1()">首页</a>
+       <a onclick="pastPage1()">上一页</a>
+       <a onclick="nextPage1()">下一页</a>
+       <a onclick="lastPage1()">尾页</a>
+       
+       <a class="nowPage">第<input type="text" value="1" id="pageNum1"/>页</a>
+       <input type="button" value="跳转" onclick="redirect1()"/>
+       <a class="totalPage">共<span id="sumNum1">50</span>页</a> 
+     </div>
+    </div>
+   </div>
+ 
+ <!--美食报名-->
+ <div class="foodApply_container" id="foodApply_container">
+   <div class="foodApply">
+     <p class="foodApply_p1">美食征集</p>
+     <button class="close" onclick="closeApply()">×</button>
+     <div class="apply_container">
+       <p>·在线报名</p>
+       <form action = "../../../activeController/saveActiveJoin.do" method="post" enctype="multipart/form-data">
+       <div class="manypic" id="manypic">
+       	<ul>
+       		<li><label for="url1" class="label">添加图片</label><input type="file" id="url1" name="url1" onchange="previewImage(this)" style=" display:none;"><label class="lbl" id="img1" for="url1"><img  class="img"></label></li>
+            <li><label for="url2" class="label">添加图片</label><input type="file" id="url2" name="url2" onchange="previewImage(this)" style=" display:none;"><label class="lbl" id="img2" for="url2"><img  class="img"></label></li>
+            <li><label for="url3" class="label">添加图片</label><input type="file" id="url3" name="url3" onchange="previewImage(this)" style=" display:none;"><label class="lbl" id="img3" for="url3"><img  class="img"></label></li>
+       	</ul>
+       </div>
+       <div class="content">
+        *会员名:&nbsp;&nbsp;<span class="petName" id="petName">王萌</span><br/>
+        *美食名称:&nbsp;&nbsp;<input type="text" name = "joinName"/><br/>
+        *手&nbsp;&nbsp;机&nbsp;&nbsp;号:&nbsp;&nbsp;<input type="text" name ="phoneNum"/><br/>
+        *烹调步骤:
+		<div class="step">
+		  <script id="editor" type="text/plain" name = "joinDesc" type="text/plain" style="width:495px;"></script>
+        </div>
+       <!--*美食介绍:<textarea placeholder="请输入制作步骤，分享制作过程" ></textarea><br/>-->
+        <input type = "hidden" name = "activeId" id="activeId" />
+		<input type = "hidden" name = "activeType" id="activeType" />
+		<input type = "hidden" name = "successUrl" value="project/friendTravel/activity/deliciousFood.html" />
+        <input type="submit" value="提交"/> 
+       </div>
+     </div>
+     </form>
+   </div>
+ </div>
+<!--烹饪步骤-->
+  <!--<div class="makeFoodStep" id="makeFoodStep">
+ </div>
+ <div class="makeFood" id="makeFood">
+      <p>烹饪步骤</p>
+      <img src="../../../upload/activity/images/deliciousFood/step1.jpg" alt="加载失败"/>
+      <img src="images/deliciousFood/step2.jpg" alt="加载失败"/>
+      <img src="images/deliciousFood/step3.jpg" alt="加载失败"/>
+      <button class="closeStep" onclick="closeStep()">×</button>
+      <ol>
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li>
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li>
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li>
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li> 
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li>
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li>
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li>
+        <li>排骨切成小块</li>
+        <li>把水烧开,排骨放入水中焯一下拿出,把水烧开,排骨放入水中焯一下拿出</li>
+      </ol>
+   </div>-->
+</div>
+</body>
+<script type="text/javascript" charset="utf-8">
+ var editor_a=UE.getEditor('editor',{initialFrameHeight:120});
+</script>
+</html>

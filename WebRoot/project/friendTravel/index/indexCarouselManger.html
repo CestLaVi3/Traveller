@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet"/>
+<link href="../../base/js/easyUI/themes/icon.css" type="text/css" rel="stylesheet"/>
+<link href="../../base/js/easyUI/themes/default/easyui.css" type="text/css" rel="stylesheet"/>
+<link href="css/manager.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.min.js"></script> 
+<script type="text/javascript" src="../../base/js/easyUI/jquery.easyui.min.js"></script>   
+<script type="text/javascript" src="js/indexManager.js"></script> 
+</head>
+
+<body>        
+<div class="indexCarouselManager">  
+    <div class="imgManager">
+    	<p>轮播图片</p>
+    	<ul id="imagesUl">
+        	<!-- <li>
+            	<img src="images/8.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li>
+            <li>
+            	<img src="images/18.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li>
+            <li>
+            	<img src="images/17.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li>
+            <li>
+            	<img src="images/16.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li>
+            <li>
+            	<img src="images/15.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li>
+            <li>
+            	<img src="images/14.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li>
+            <li>
+            	<img src="images/13.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li>
+            <li>
+            	<img src="images/12.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li><li>
+            	<img src="images/11.jpg" alt="加载失败"/>
+                <input type="checkbox" name="check"/>
+                <sapn>图片名称</sapn>
+            </li> -->
+        </ul>
+    </div>
+    <div class="cf"></div>
+    <div class="imgChange">
+    	<input type="button" value="添加图片" onclick="addImg()"/>
+        <input type="button" value="修改图片" onclick="updateImg()"/>
+        <input type="button" value="删除图片" id="deleteImages"/>
+         <div class="addImg" id="addImg">
+         <form action="../../../mainController/addImage.do" method="post" enctype="multipart/form-data">
+        	<div class="manypic">
+       		<label for="url1" class="label">添加图片</label><input type="file" id="url1" name="url" onchange="previewImage(this)" style=" display:none;"/>
+      		</div>
+        	<span>名&nbsp;&nbsp;&nbsp;称:</span><input type="text"/>
+            <div> 
+            <input type="button" value="添加" class="left"/>
+            <input type="button" value="取消" class="right" onclick="quxiao()"/>
+            </div>
+            </form>
+        </div>
+        <div class="updateImg" id="updateImg">
+        	<img src="images/9.jpg" alt="加载失败"/>
+            <input type="file" value="选择图片" class="file"/><br/>
+        	<span>名&nbsp;&nbsp;&nbsp;称:</span><input type="text" value="图片名称"/>
+            <div> 
+            <input type="button" value="修改" class="left"/>
+            <input type="button" value="取消" class="right" onclick="quxiao()"/>
+            </div>
+        </div>
+    </div>
+    <div class="imgmb" id="imgmb">
+    </div>
+</div>
+</body>
+</html>

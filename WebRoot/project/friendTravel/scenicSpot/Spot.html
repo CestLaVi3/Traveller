@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/gooey.min.css">
+<link rel="stylesheet" href="css/livedemo.css">
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link href="../../base/css/base.css" rel="stylesheet" type="text/css">
+<link href="pasrdata.css" rel="stylesheet" type="text/css">
+<script src="jquery.min.js"></script>
+<script src="js/searchCs.js"></script>
+<script src="js/spjs.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+<script src="js/gooey.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/_examples/editor_api.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=na8qYGG7wD5AwaXnAEAQifII"></script>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<title>无标题文档</title>
+</head>
+
+<body style="height:1200px">
+<div class="container">
+<div class="header"><img src="spheader.jpg">
+  <ul id="showmenu" >
+    <li onClick="show(sub1)">基本信息</li>
+    <li onClick="show(sub2)">景点描述</li>
+    <li onClick="show(sub3)">风景赏析</li>
+  </ul >
+</div>
+<div   id="sub1" class="subject subject1"  name="subject">
+<h2 id="zsspotname"></h2>
+  <h6 id="zshotlevle"></h6>
+  <div id="allmap"></div>
+  <div class="basic">
+    <h4>景点类型</h4>
+    <span>丨</span>
+    <p id="zsspottype"></p>
+  </div>
+  <div class="basic">
+    <h4>适宜季节</h4>
+    <span>丨</span>
+    <p id="zsseason"></p>
+  </div>
+  <div class="basic">
+    <h4>门票</h4>
+    <span>丨</span>
+    <p id="zsmenpiao"></p>
+  </div>
+  <div class="basic">
+    <h4>地理位置</h4>
+    <span>丨</span>
+    <p id="zsaddres"></p>
+  </div>
+  <div class="basic">
+    <h4>Open Time</h4>
+    <span>丨</span>
+    <p id="zsopentime"></p>
+  </div>
+  <div class="basic">
+    <h4>优惠政策</h4>
+    <span>丨</span>
+    <p id="zsyouhui"></p>
+
+</div>
+</div>
+<div   id="sub2" class="subject subject1"   name="subject">
+  <h2>景点描述</h2>
+   <p id="zsspotdesc"></p>
+ </div>
+<div id="sub3" class="subject subject1"  name="subject">
+  <h2>关于风景</h2>
+  			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2969141180" target="_blank"><img src="images/1.jpg" alt="image1" id="zimg1"/></a>
+						<div class="sb-description">
+							<h3>&nbsp;</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968268187" target="_blank"><img src="images/2.jpg" alt="image2" id="zimg2"/ ></a>
+						<div class="sb-description">
+							<h3>&nbsp;</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968114825" target="_blank"><img src="images/3.jpg" alt="image1" id="zimg3"/></a>
+						<div class="sb-description">
+							<h3>&nbsp;</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968122059" target="_blank"><img src="images/4.jpg" alt="image1" id="zimg4"/></a>
+						<div class="sb-description">
+							<h3>&nbsp;</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2969119944" target="_blank"><img src="images/5.jpg" alt="image1" id="zimg5"/></a>
+						<div class="sb-description">
+							<h3>&nbsp;</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968126177" target="_blank"><img src="images/6.jpg" alt="image1" id="zimg6"/></a>
+						<div class="sb-description">
+							<h3>&nbsp;</h3>
+						</div>
+					</li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+			</div>
+</div>
+
+<!-- <div style="position:absolute;
+left:0px;top:0px;">
+		<nav id="gooey-round" style="position:fixed;margin:50px 0 0 550px;">
+<input type="checkbox" class="menu-open" name="menu-open3" id="menu-open3"/>
+<label class="open-button" for="menu-open3">
+<span class="burger burger-1"></span>
+<span class="burger burger-2"></span>
+<span class="burger burger-3"></span>
+</label>
+<a href="#" class="gooey-menu-item" onClick="show(sub1)">基本信息 </a>
+<a href="#" class="gooey-menu-item" onClick="show(sub2)">景点描述 </a>
+<a href="#" class="gooey-menu-item" onClick="show(sub3)">风景赏析 </a>
+</nav>
+</div> -->
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能    
+	function show(ss){
+		debugger;
+		var _targetTop = $('#'+ss.id).offset().top;//获取位置
+	    jQuery("html,body").animate({scrollTop:_targetTop},300);//跳转
+		}	
+	$(function($) {
+     $("#gooey-round").gooeymenu({
+			bgColor: "#000000",
+			contentColor: "white",
+			style: "circle",
+			horizontal: {
+				menuItemPosition: "spaced"
+			},
+			vertical: {
+				menuItemPosition: "spaced",
+				direction: "up"
+			},
+			circle: {
+				radius: 90
+			},
+			margin: "small",
+			size: 70,
+			bounce: true,
+			bounceLength: "small",
+			transitionStep: 100,
+			hover: "#5dbb89"
+		});
+
+	});	
+	</script>
+	<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {				
+				var Page = (function() {
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+				Page.init();
+			});  
+</script>

@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+.cf{ clear:both;}
+.managerMain{ width:1200px; margin:auto;}
+.managerTop{ height:50px; background-color:#eeeeee;}
+.managerIframe iframe{ width:1200px; border:none;}
+.managerFooter{ height:98px; background-color:#E4E4E4; padding:1px;}
+.managerTop_menu{ width:100%; height:50px; background-color:#00b38a;}
+.managerTop_menu>ul{ float:left;}
+.managerTop_left{ float:left;}
+.managerTop_right{ float:right;}
+.managerTop_menu li{ float:left; margin-left:20px; margin-top:12px;}
+.managerTop_left img{ width:100px; height:50px; float:left;}
+.managerTop_left p{ height:50px; font-size:20px; float:left; line-height:60px;}
+.managerTop_left p>span{ font-family:"华文行楷"; font-size:40px;}
+.managerTop_menu li a{ font-size:20px; color:#FFF;}
+.managerTop_menu li:hover{ background-color:#FFF;}
+.managerTop_menu li:hover a{ color:#01c32d;}
+.managerTop_right>div{ float:right; height:50px; cursor:pointer;}
+.managerTop_right>div.managerTop_message{ position:relative; width:50px; height:50px;}
+.managerTop_message>p.message_p{ position:absolute; left:28px; top:0px; width:20px; height:20px; border-radius:20px; background-color:#F00; color:#FFF; line-height:20px; text-align:center;}
+.managerFooter>p{ text-align:center; margin-top:15px;}
+.managerTop_right>div.managerTop_message>img{ width:30px; height:30px; margin-top:10px; margin-left:10px; border-radius:25px;}
+.managerTop_right>div.managerTop_manager>div>img{ width:30px; height:30px; border-radius:20px; margin-top:10px; }
+.managerTop_right>div.managerTop_manager{ position:relative;}
+.managerTop_right>div.managerTop_manager:hover>ul{ display:block;}
+.managerTop_right>div.managerTop_manager>ul{ position:absolute; right:0px;  top:50px; display:none; background-color:#FFF; border:1px solid #dcdcdc;}
+.managerTop_right>div.managerTop_manager>ul img{ width:20px; height:20px; float:left; margin-top:5px; margin-left:20px; margin-right:10px;}
+.managerTop_right>div.managerTop_manager>ul li{ width:130px; height:30px; margin-top:10px; margin-bottom:10px;}
+.managerTop_right>div.managerTop_manager>ul li:hover{ background-color:#eeeeee;}
+.managerTop_right>div.managerTop_manager>ul p{ width:80px; height:30px; line-height:30px; font-size:16px; float:left;}
+.managerTop_right>div.managerTop_manager>div>p{ height:50px; line-height:50px; margin-left:10px; font-size:20px;}
+.managerTop_changeColor>ul{ position:absolute; right:0px; top:50px; display:none;}
+.managerTop_right>div.managerTop_changeColor{ position:relative; width:50px; height:50px;}
+.managerTop_right>div.managerTop_changeColor>img{ width:30px; height:30px; margin-top:10px; margin-left:10px; border-radius:30px;}
+.managerTop_right>div:hover{ background-color:#e1e1e1;}
+.managerTop_right>div.managerTop_changeColor:hover>ul{ display:block;} 
+.managerTop_right>div.managerTop_changeColor>ul{ background-color:#ffffff; border:1px solid #dcdcdc;}
+.managerTop_right>div.managerTop_changeColor>ul>li{ width:50px; height:30px; margin-top:10px; margin-bottom:10px;}
+.managerTop_right>div.managerTop_changeColor>ul>li:hover{ background-color:#E1E1E1; cursor:cell;}
+.managerTop_right>div.managerTop_changeColor>ul>li>p{ width:50px; height:30px; text-align:center; line-height:30px; font-size:16px;}
+
+.indexManagerContentLeft{ float:left; width:200px;}
+.indexManagerContentright{ float:right; width:950px;}
+.indexManagerContentright>iframe{ width:100%; height:427px; border:none;}
+
+#tt li{ margin-top:10px;}
+.lable{width:200px;height:150px;margin-top:25px; display:block;}
+
+.indexCarouselManager{ position:relative;}
+.indexCarouselManager p{ float:left;}
+.indexCarouselManager select{ float:left; }
+
+.indexCarouselManager>ul{ margin-top:30px; margin-left:80px;}
+.indexCarouselManager>ul>li{ float:left; margin-left:50px;}
+
+
+.imgManager li{ width:100px; height:120px; margin-right:10px; float:left; margin-left:10px;}
+.imgManager img{ width:100px; height:80px;}
+.imgManager>p{ font-size:20px; width:850px; margin-top:10px; margin-left:10px; margin-bottom:20px;}
+.imgManager{ width:840px; margin-top:20px; margin-left:50px;}
+
+.imgChange{ margin-left:50px;}
+.imgChange>input{ margin-left:10px;}
+.updateImg img{ width:200px; height:150px; margin-top:25px;}
+.updateImg{display:none; position:absolute; left:350px; top:50px; z-index:1; background-color:#FFF; width:225px; height:300px; padding-left:25px}
+.updateImg>input.file{ width:72px; margin-top:10px; margin-bottom:10px;}
+.updateImg>div>input.left{ margin-top:10px; float:left;}
+.updateImg>div>input.right{ margin-top:10px; float:right; margin-right:25px;}
+.imgmb{ display:none; position:fixed; left:0px; top:0px; background-color:#000; opacity:0.5;filter:alpha(opacity=50); width:950px; height:450px;}
+
+
+.addImg img{ width:200px; height:150px; margin-top:25px;}
+.addImg{display:none; position:absolute; left:350px; top:50px; z-index:1; background-color:#FFF; width:225px; height:300px; padding-left:25px}
+.addImg>form>input.file{ width:72px; margin-top:10px; margin-bottom:10px;}
+.addImg>form>div>input.left{ margin-top:10px; float:left;}
+.addImg>form>div>input.right{ margin-top:10px; float:right; margin-right:25px;}
+
+
+.managerSearchbox{ margin-top:20px; margin-left:300px; }
+.chainingTable{ margin-top:20px; width:100%;}

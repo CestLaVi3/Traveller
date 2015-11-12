@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/foodUserInfo.css"/>
+<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/_examples/editor_api.js"></script>
+</head>
+
+<body>
+ <!--美食报名-->
+   <div class="foodApply">
+     <p class="foodApply_p1">美食征集</p>
+     <div class="apply_container">
+       <p>·在线报名</p>
+       <div>
+         <p>+上传图片</p>
+         <img alt="加载失败"/>
+       </div>
+        <div>
+         <p>+上传图片</p>
+         <img alt="加载失败"/>
+       </div>
+        <div>
+         <p>+上传图片</p>
+         <img alt="加载失败"/>
+       </div>
+       <div class="content">
+        *会员名:<span style="color:black; margin-top:20px; font-size:16px; font-weight:600; display:inline-block;">王萌</span><br/>
+        *美食名称:<input type="text"/><br/>
+        *手 机 号:<input type="text"/><br/>
+        *烹调步骤:
+		<div class="step">
+		  <script id="editor" type="text/plain" style="width:495px;"></script>
+        </div>
+       <!--*美食介绍:<textarea placeholder="请输入制作步骤，分享制作过程" ></textarea><br/>-->
+        <input type="button" value="提交"/> 
+       </div>
+     </div>
+   </div>
+</body>
+<script type="text/javascript" charset="utf-8">
+ var editor_a=UE.getEditor('editor',{initialFrameHeight:120});
+</script>
+</html>

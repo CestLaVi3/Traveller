@@ -1,0 +1,626 @@
+@charset "utf-8";
+/* CSS Document */
+#code_img{width:70px; height:30px; position:absolute; top:182px; left:220px; }
+/*lunbo*/
+#message{ width:320px; height:30px; position:absolute; left:40px; top:50px; color:#F00;}
+.lunbo{ position:absolute; right:0px; top:0px; width:125px; height:450px;}
+.lunbo img{ width:100px; height:60px; margin-left:25px;}
+.lunbo img.middleImg{ border:2px solid #ff9e01; width:110px; height:65px; margin-left:10px;}
+
+/* login */
+.login_mb{ z-index:5; width:100%; height:100%; background-color:#000; opacity:0.5;filter:alpha(opacity=50); position:fixed; left:0px; top:0px; display:none;}
+.login_mainright{z-index:6; width:360px; height:350px; position:fixed; left:37.5%; top:20%; background-color:#fff; display:none;}
+.login_mainright span{ font-size:20px;}
+.login_mainright img{ width:20px; height:20px; margin-left:10px;}
+.login_mainright input{ width:280px; height:30px; font-size:16px; text-indent:30px;background-repeat:no-repeat; border:1px solid #ccc;}
+.login_mainright input#userName{ background-image:url(../images/login_username.jpg); background-position:2px 5px;}
+.login_mainright input#password{ background-image:url(../images/login_password.jpg); background-position:2px 3px;}
+
+.login_mainright>div{ width:360px; height:50px;}
+.login_mainright>div>p{ float:left; font-size:24px; color:#00b38a; font-family:微软雅黑; line-height:50px; margin-left:40px;} 
+.login_mainright>div>input{ width:25px; height:25px; background-image:url(../images/close.jpg); background-repeat:no-repeat; border-radius:10px; float:right; margin-top:15px; margin-right:35px; border:none; cursor:pointer;}
+.login_mainright>form{ margin-left:40px; margin-top:30px;}
+#login_sp{font-size:14px; float:left; margin-top:8px;}
+#login_sp2{font-size:16px; margin-left:120px;}
+#login_a{font-size:16px; margin-left:0px; float:none;}
+.login_mainright a{ font-size:16px; color:#ff9e01; margin-top:8px; float:right; margin-right:40px;}
+.login_mainright a:hover{ text-decoration:underline;}
+#yzm{ width:100px; text-indent:0px;}
+#code{ width:70px; border:none; height:30px; text-indent:0px;}
+#check{ width:15px; height:15px; margin-top:10px; float:left;}
+#login_submit{ width:282px; height:40px; background-color:#00b38a; border-radius:2px; text-align:center; line-height:40px; font-size:24px; color:#FFF; text-indent:0px; border-radius:5px;}
+.login_mainright input#login_refresh{ width:15px; height:16px; background-image:url(../images/refresh.jpg); background-repeat:no-repeat; border:none; margin-top:10px; margin-right:40px; border-radius:10px; float:right;}
+
+.top_bar{
+	float:left;
+	width:100%;
+	height:40px;
+	background:#00b38a;
+	position:fixed;
+}
+.top_bar .top_middle{ 
+	width:1200px; margin:auto;
+}
+.top_bar .top_middle #index_headRight{
+	float:right;
+}
+.top_bar .top_middle p{
+	float:left;
+	display:inline-block;
+	font-size:28px;
+	font-family:"幼圆";
+	font-weight:blod;
+	
+	margin-top:3px;
+	color:#fff;
+}
+
+.top_bar .top_middle ul{
+	float:left;
+	width:600px;
+	height:40px;
+	font-family:"幼圆";
+	color:#fff;
+	margin-left:100px;
+}
+.top_bar .top_middle ul li{
+	float:left;
+	width:100px;
+	height:32px;
+	font-size:16px;
+	padding-top:8px;
+	text-align:center;
+	color:#fff;
+}
+.top_bar .top_middle ul a li:hover{
+	background:#00a57f;
+}
+	
+.top_bar .top_middle #index_headRight .topRightA{
+	display:inline-block;
+	font-size:14px;
+	margin-top:10px;
+	margin-left:10px;
+	color:#fff;
+}
+
+.triangle{ margin-left:10px; margin-top:23px; float:left; width:0px; height:0px; border-style:solid; border-width:6px 6px 0px 6px; border-color:#FFF transparent transparent transparent;}
+.triangle2{position:absolute; left:34px; bottom:-5px; width:0px; height:0px;  border-style:solid; border-width:5px 5px 5px 5px; border-color:transparent transparent #01c32d transparent;  display:none;}
+.cf{ clear:both;}
+
+
+
+.index_buttom{height:100px; background-color:#F7F7F7;}
+.index_buttomMain{ width:1200px; margin:auto;}
+.index_footer{height:100px; text-align:center; background-color:#E4E4E4;}
+.index_footerMain{ width:1200px; margin:auto;}
+
+.smallSx{  width:1px; height:16px; border:none; background-color:#ccc; float:left; margin-top:4px; margin-left:20px; margin-right:20px;}
+.index_buttomMain{ padding-top:20px;}
+.index_buttomMain a{float:left; font-size:16px; margin-left:15px; margin-right:15px; margin-bottom:10px;}
+.index_middle iframe{ width:100%; margin-top:40px;  border:none;}
+.index_headRight{ float:right; margin-top:12px;}
+.index_headRight a{ float:left; font-size:16px; line-height:25px; text-align:center; color:#FFF;}
+
+.index_loginRight{ float:right; height:50px;position:relative; display:none;}
+.index_loginRight>div>a>img{ width:40px; height:40px; border-radius:20px; float:right; margin-right:10px; margin-top:5px;}
+.index_loginRight>div>a>p{ height:40px; float:right; font-size:20px;  line-height:40px; margin-top:5px;} 
+#index_loginRight>ul{ position:absolute; top:40px; right:0px; z-index:2; display:none; background-color:#ffffff; border:1px solid #dcdcdc;}
+#index_loginRight:hover>ul{ width:190px;height:95px;display:block;}
+#index_loginRight li{ width:190px; height:40px; margin-top:0px; margin-bottom:0px;}
+#index_loginRight li:hover{ background-color:#eeeeee;}
+#index_loginRight li a>p{ font-size:16px; width:140px; height:30px;color:#000; line-height:25px; float:left;}
+#index_loginRight li a>img{ width:20px; height:20px; float:left; margin-right:10px; margin-left:20px; margin-top:5px;}
+#petName{
+	float:right;
+	font-size:15px;
+	margin-left:0px;
+	margin-right:10px;
+	margin-top:0px;
+}
+#userImg{
+	width:35px;
+	height:35px;
+	margin-top:2px;
+}
+#a{ font-size:16px; margin-left:0px; color:#000;}
+#a:hover{ color:#ff9e01;}
+.bigestDiv{
+	width:1200px;
+	margin:0 auto;
+}
+#main{
+	margin:0px auto;
+	width:100%;
+	height:350px;
+	overflow:hidden;
+	position:relative;
+}
+#main .box{
+	width:100%;
+	height:350px;
+	overflow:hidden;
+	position:relative;
+}
+#main .box img{
+	width:100%;
+	height:350px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+#main .page{
+	position:absolute;
+	top:330px;
+	left:45%;
+}
+#main .page a{
+	float:left;
+	display:inline-block;
+	width:30px;
+	height:5px; 
+	margin-right:5px;
+	background:#00b38a;
+	opacity:0.4;
+}
+#main  .page a.active{
+	opacity:1;
+}
+/*热门酒店、旅游推荐、明星酒店、主题PK导航的共同样式*/
+.publicTop{
+	width:1200px;
+	height:45px;
+	color:#00b38a;
+	border-bottom:2px solid #00b38a;
+	float:left;
+}
+.publicTop h3{
+	font-size:23px;
+    display:inline-block;
+	margin-top:10px;
+	width:200px;
+	float:left;
+	font-weight:400;
+}
+#sightsTopUl{
+	float:left;
+	width:650px;
+	height:35px;
+	margin-top:10px;
+}
+.publicTop img{
+	height:40px;
+	width:40px;
+	float:left;
+}
+#sightsTopUl li{
+	height:24px;
+	width:76px;
+	color:black;
+	float:left;
+	margin-left:5px;
+} 
+#sightsTopUl li span{
+	display:block;
+	height:21px;
+	width:74px;
+	text-align:center;
+	float:left;
+	font-size:15px;
+	border-radius:15px;
+	border:1px solid white;
+}
+#sightsTopUl li:hover span{
+	border:1px solid #00b38a;
+	color:#00b38a;
+}
+#sightsTopUl li div{
+	float:left;
+	width:0px;
+	height:0px;
+	border:solid 5px;
+	border-color:#ffffff #ffffff #01c32e #ffffff;
+	margin-top:25px;
+	margin-left:-45px;
+	display:none;
+}
+.more{
+	display:inline-block;
+	width:70px;
+	height:15px;
+	float:right;
+	text-align:right;
+	margin-top:10px;
+} 
+.publicTop .travelerTopic{
+	font-size:20px;
+    display:inline-block;
+	margin-top:10px;
+	width:100px;
+	padding-top:0px;
+}
+/*共同样式结束*/
+.hotHotel,.travel,.themePK,.hotelSpecial{
+	width:1200px;
+}
+.hotHotel{
+	height:320px;
+	margin-top:10px;
+}
+.hotHotel .sightsDisplay{
+	width:1220px;
+	height:272px;
+	float:left;
+}
+.hotHotel .sightsDisplay a{
+	float:left;
+	margin-right:10px;
+}
+.hotHotel .sightsDisplay li{
+	width:293px;
+	height:200px;
+	float:left;
+	background-color:#f7f7f7;
+	border-bottom:1px solid #cccccc;
+}
+.hotHotel .sightsDisplay li:hover{
+	border-bottom:2px solid #00b38a;
+}
+.hotHotel .sightsDisplay li img{
+	width:293px;
+	height:160px;
+}
+.hotHotel .sightsDisplay li span{
+	color:#555b57;
+	display:inline-block;
+	margin-top:10px;
+	margin-left:5px;
+	width:293px;
+	text-align:center;
+}
+.travel{
+	height:270px;
+	float:left;
+	margin-top:-50px;
+}
+.travel #traBigUl{
+	height:205px;
+	width:1190px;
+	float:left;
+	margin-top:18px;
+	margin-left:5px;
+}
+.travel #traBigUl>li{
+	height:95px;
+	width:395px;
+	float:left;
+	border-bottom:1px solid #f1f1f1;
+	border-right:1px solid #f1f1f1;
+}
+.travel #traBigUl>li .traD,.traD span,.hotelSpecial>ul li i,.starHotel_turnLast,.starHotel_turnNext{
+	float:left;
+	background:url("../image/hotel_index_icon.png") no-repeat 0 0;display:inline-block;
+}
+.travel #traBigUl>li .traD{
+	width:80px;
+	height:80px;
+	margin-left:15px;
+}
+.travel #traBigUl>li .traD1{background-position:-509px 0px;}
+.travel #traBigUl>li .traD2{background-position:-85px 0px;}
+.travel #traBigUl>li .traD3{background-position:-170px 0px;}
+.travel #traBigUl>li .traD4{background-position:-255px 0px;margin-top:15px;}
+.travel #traBigUl>li .traD5{background-position:-340px 0px;margin-top:15px;}
+.travel #traBigUl>li .traD6{background-position:-595px 0px;margin-top:15px;}
+.travel #traBigUl>li .traD span{
+	width:80px;
+	height:0px;
+	transition:height 0.5s;
+	-webkit-transition:height 0.5s;/*鼠标移走时动作*/
+}
+.travel #traBigUl>li:hover span{
+	height:80px;
+	transition:height 0.5s;
+	-webkit-transition:height 0.5s;
+}
+.travel #traBigUl>li .traD1 span{background-position:-509px -100px;}
+.travel #traBigUl>li .traD2 span{background-position:-85px -100px;}
+.travel #traBigUl>li .traD3 span{background-position:-170px -100px;}
+.travel #traBigUl>li .traD4 span{background-position:-255px -100px;}
+.travel #traBigUl>li .traD5 span{background-position:-340px -100px;}
+.travel #traBigUl>li .traD6 span{background-position:-595px -100px;}
+.travel #traBigUl>li a{
+	font-size:18px;
+	color:#00b38a;
+	margin-left:20px;
+	float:left;
+	width:200px;
+}
+.travel #traBigUl .bottomLi{
+	border-bottom:none;
+}
+.travel #traBigUl .bottomLi a{
+	margin-top:15px;
+}
+.travel #traBigUl>li ul{
+	width:240px;
+	height:64px;
+	float:left;
+	margin-left:20px;
+	margin-top:5px;
+}
+.travel #traBigUl>li ul li{
+	float:left;
+	padding:5px;
+	padding-top:1px;
+	padding-bottom:2px;
+}
+.travel #traBigUl>li ul li:hover{
+	background-color:#00b38a;
+	color:white;
+	cursor:pointer;
+}
+.themePK{
+	float:left;
+	margin-top:10px;
+}
+.themePK h3{
+	color:#00b38a;
+}
+.pkMem1 >a>ul>li{
+	font-size:23px;
+	padding-top:270px;
+	text-align:center;
+	color:#B52A64;
+	letter-spacing:10px;
+	font-weight:600;
+}
+.pkMem2 >a>ul>li{
+	font-size:23px;
+	padding-top:270px;
+	text-align:center;
+	color:#B52A64;
+	letter-spacing:10px;
+	font-weight:600;
+}
+.themePK>img{
+	float:left;
+	width:100px;
+	height:100px;
+	margin-top:130px;
+	margin-left:50px;
+}
+.themePK .pkMem1,.pkMem2{
+	width:500px;
+	height:350px;
+	float:left;
+	overflow:hidden;
+	margin-top:20px;
+	background-color:#f7f7f7;
+	border-bottom:2px solid #f1f1f1;
+}
+.themePK .pkMem1>p,.pkMem2>p{
+	margin-top:10px;
+	margin-left:-40px;
+	width:300px;
+	float:left;
+	font-size:20px;
+}
+.themePK .pkMem1>b,.pkMem2>b{
+	position:relative;
+	background-color:#b52a64;
+	font-size:15px;
+	height:25px;
+	color:#fff;
+	display:inline-block;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:3px;
+	text-align:center;
+	top:-290px;
+	left:-401px;
+	transition:left 1s;
+	-webkit-transition:left 1s;
+}
+.themePK .pkMem1:hover >b,.pkMem2:hover >b{
+	left:-310px;
+	transition:left 1s;
+	-webkit-transition:left 1s;
+}
+.themePK .pkMem1>strong,.pkMem2>strong{
+	height:28px;
+	width:60px;
+	float:right;
+	cursor:pointer;
+	margin-top:10px;
+	padding-top:2px;
+	margin-right:-45px;
+	text-align:center;
+	border-radius:5px;
+	background-color:#b52a64;
+	font-size:20px;
+	color:white;
+}
+.themePK .pkMem1 ul,.pkMem2 ul,.pkMem1 ul li,.pkMem2 ul li{
+	width:500px;
+	height:300px;
+	float:left;
+	overflow:hidden;
+}
+.themePK .pkMem1 ul li.mem1_Pic1{background:url("../pk_Image/101.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem1 ul li.mem1_Pic2{background:url("../pk_Image/102.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem1 ul li.mem1_Pic3{background:url("../pk_Image/103.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem1 ul li.mem1_Pic4{background:url("../pk_Image/104.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem2 ul li.mem2_Pic1{background:url("../pk_Image/110.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem2 ul li.mem2_Pic2{background:url("../pk_Image/111.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem2 ul li.mem2_Pic3{background:url("../pk_Image/112.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem2 ul li.mem2_Pic4{background:url("../pk_Image/113.jpg");background-repeat:no-repeat;background-size:500px 300px;}
+.themePK .pkMem2{
+	float:right;
+}
+.themePK .pkMem1 .pkMem1_turnNext,.pkMem1 .pkMem1_turnLast,.themePK .pkMem2 .pkMem2_turnLast,.themePK .pkMem2 .pkMem2_turnNext{
+	width:50px;
+	height:50px;
+	background:url("../images/1.png");
+	cursor:pointer;
+	position:relative;
+}
+.themePK .pkMem1 .pkMem1_turnNext,.pkMem2 .pkMem2_turnNext{
+	float:right;
+	transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	top:-150px;
+}
+.themePK .pkMem2 .pkMem2_turnLast,.pkMem1 .pkMem1_turnLast{
+	float:left;
+	transform:rotate(-270deg);
+	-webkit-transform:rotate(-270deg);
+	top:-165px;	
+}
+.starHotel{
+	float:left;
+	width:1202px;
+	height:375px;
+	margin-top:20px;
+}
+.starHotel .starHotelDis{
+	width:1200px;
+	float:left;
+	height:284px;
+	margin-top:20px;
+	overflow:hidden;
+}
+.starHotel .starHotelDis>ul{
+	float:left;
+	width:1202px;
+	height:284px;
+	overflow:hidden;
+}
+.starHotel .starHotelDis>ul li{
+	width:150px;
+	height:282px;
+	float:left;
+}
+.starHotel .starHotelDis>ul li a{
+	height:141px;
+	width:150px;
+	float:left;
+	border-left:1px solid #f1f1f1;
+}
+.starHotel .starHotelDis>ul li .iconT{
+	border-bottom:1px solid #f1f1f1;
+}
+.starHotel .starHotelDis>ul li a i.zhouji{background-position: -448px 0;}
+.starHotel .starHotelDis>ul li a i.xidawu{background-position: -448px -85px;}
+.starHotel .starHotelDis>ul li a i.wanhao{background-position: -674px 0;}
+.starHotel .starHotelDis>ul li a i.kaiyue{background-position: -674px -176px;}
+.starHotel .starHotelDis>ul li a i.rujia{background-position: -786px -85px;}
+.starHotel .starHotelDis>ul li a i.qitian{background-position: 0px -176px;}
+.starHotel .starHotelDis>ul li a i.jinjiangzhixing{background-position: -448px -176px;}
+.starHotel .starHotelDis>ul li a i.dazhonghua{background-position: -224px 0;}
+.starHotel .starHotelDis>ul li a i.xianggelila{background-position: -561px -85px;}
+.starHotel .starHotelDis>ul li a i.xierdun{background-position: 0px -85px;}
+.starHotel .starHotelDis>ul li a i.yashige{background-position: -786px -176px;}
+.starHotel .starHotelDis>ul li a i.juzi{background-position: -899px -176px;}
+.starHotel .starHotelDis>ul li a i.biguiyuan{background-position:0px -264px;}
+.starHotel .starHotelDis>ul li a i.motai{background-position: -112px -176px;}
+.starHotel .starHotelDis>ul li a i.gelinhaotai{background-position: 0 0;}
+.starHotel .starHotelDis>ul li a i.buding{background-position: -337px 0;}
+.starHotel .starHotelDis>ul li a i.suba{background-position: -674px -85px;}
+.starHotel .starHotelDis>ul li a i.daisi{background-position: -224px -85px;}
+.starHotel .starHotelDis>ul li a i.yibisi{background-position: -337px -85px;}
+.starHotel .starHotelDis>ul li a i.jinjiang{background-position: -337px -176px;}
+.starHotel .starHotelDis>ul li a i.weiyena{background-position: -561px 0;}
+.starHotel .starHotelDis>ul li a i.fuyi{background-position: -112px 0;}
+.starHotel .starHotelDis>ul li a i.jinling{background-position: -561px -176px;}
+.starHotel .starHotelDis>ul li a i.yage{background-position: -112px -85px;}
+.starHotel .starHotelDis>ul li a i.shoulvjianguo{background-position: -786px 0;}
+.starHotel .starHotelDis>ul li a i{
+	width:110px;
+	height:78px;
+	margin-left:18px;
+	margin-top:18px;
+	background: url("../image/icon.png") no-repeat 0 0;
+	display:inline-block;
+	transition:margin-top 1s;
+	-webkit-transition:margin-top 0.5s;
+}
+.starHotel .starHotelDis>ul li a:hover i{
+	margin-top:10px;
+	transition:margin-top 1s;
+	-webkit-transition:margin-top 0.5s;
+}
+.starHotel .starHotelDis>ul li a:hover{
+	border:1px solid #F03;
+	height:140px;
+	width:148px;
+}
+.starHotel .starHotelDis>ul li a p{
+	width:148px;
+	color:black;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+}
+.starHotel .starHotelDis>ul li a:hover p{
+	color:#F03;
+}
+.starHotel .starHotel_turnLast,.starHotel_turnNext{
+	width:40px;
+	height:40px;
+	cursor:pointer;
+}
+.starHotel .starHotel_turnLast{position:relative;float:left;margin-top:-165px;margin-left:-20px;background-position:-105px -296px;}
+.starHotel .starHotel_turnLast:hover{background-position:-211px -296px;}
+.starHotel .starHotel_turnNext{position:relative;float:right;margin-top:-165px;margin-right:-20px;background-position:-158px -296px;}
+.starHotel .starHotel_turnNext:hover{background-position:-264px -296px;}
+.hotelSpecial{
+	height:100px;
+	float:left;
+	background-color:#f7f7f7;
+}
+.hotelSpecial>ul{
+	height:60px;
+	width:1190px;
+	float:left;
+	margin-top:20px;
+	margin-left:10px;
+}
+.hotelSpecial>ul li{
+	height:60px;
+	width:270px;
+	float:left;
+	margin-left:20px;
+}
+.hotelSpecial>ul li i{
+	height:60px;
+	width:60px;
+	float:left;
+}
+.hotelSpecial>ul li:hover i{
+	-webkit-animation:myfirst 3s infinite linear;animation:myfirst 3s infinite linear;
+}
+.hotelSpecial>ul li i.spe1{background-position:-286px -218px;}
+.hotelSpecial>ul li i.spe2{background-position:-354px -218px;}
+.hotelSpecial>ul li i.spe3{background-position:-423px -218px;}
+.hotelSpecial>ul li i.spe4{background-position:-490px -220px;}
+.hotelSpecial>ul li span{
+	margin-top:20px;
+	float:left;
+	display:inline-block;
+	margin-left:10px;
+	color:#5c5e51;
+}
+@keyframes myfirst{0%{transform:rotateZ(15deg)}
+  5%{transform:rotateZ(-15deg)}
+  10%{transform:rotateZ(15deg)}
+  15%{transform:rotateZ(-15deg)}
+  20%{transform:rotateZ(15deg)}
+  25%{transform:rotateZ(-15deg)}
+  30%{transform:rotateZ(0deg)}
+  100%{transform:rotateZ(0deg)}
+  }
+
+  

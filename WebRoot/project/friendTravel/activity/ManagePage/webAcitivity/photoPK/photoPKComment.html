@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动管理</title>
+<style type="text/css">
+.div a{display:inline-block;width:50px; height:30px; text-decoration:none; border:#999 2px solid; text-align:center; line-height:30px; background-color:#B0B0B0; margin-right:10px;}
+a{text-decoration:none;}
+a:visited{text-decoration:none;}
+</style>
+<link rel="stylesheet" type="text/css" href="../../../../../base/js/easyUI/themes/default/easyui.css"/>
+<link rel="stylesheet" type="text/css" href="../../../../../base/js/easyUI/themes/icon.css"/>
+<link rel="stylesheet" type="text/css" href="../../../css/ManagePageMain.css"/>
+<link rel="stylesheet" type="text/css" href="../../../../../base/js/easyUI/demo/demo.css"/>
+<script type="text/javascript" src="../../../../../base/js/jquery-1.9.1.min.js"/></script>
+<script type="text/javascript" src="../../../../../base/js/easyUI/jquery.min.js"/></script>
+<script type="text/javascript" src="../../../../../base/js/easyUI/jquery.easyui.min.js"/></script>
+<script type="text/javascript">
+		var editIndex = undefined;
+		function endEditing(){
+			if (editIndex == undefined){return true}
+			if ($('#dg').datagrid('validateRow', editIndex)){
+				var ed = $('#dg').datagrid('getEditor', {index:editIndex,field:'productid'});
+				var productname = $(ed.target).combobox('getText');
+				$('#dg').datagrid('getRows')[editIndex]['productname'] = productname;
+				$('#dg').datagrid('endEdit', editIndex);
+				editIndex = undefined;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		function onClickRow(index){
+			if (editIndex != index){
+				if (endEditing()){
+					$('#dg').datagrid('selectRow', index)
+							.datagrid('beginEdit', index);
+					editIndex = index;
+				} else {
+					$('#dg').datagrid('selectRow', editIndex);
+				}
+			}
+		}
+		function append(){
+			if (endEditing()){
+				$('#dg').datagrid('appendRow',{status:'0'});
+				editIndex = $('#dg').datagrid('getRows').length-1;
+				$('#dg').datagrid('selectRow', editIndex)
+						.datagrid('beginEdit', editIndex);
+			}
+		}
+		function removeit(){
+			if (editIndex == undefined){return}
+			$('#dg').datagrid('cancelEdit', editIndex)
+					.datagrid('deleteRow', editIndex);
+			editIndex = undefined;
+		}
+		function accept(){
+			if (endEditing()){
+				$('#dg').datagrid('acceptChanges');
+			}
+		}
+		function reject(){
+			$('#dg').datagrid('rejectChanges');
+			editIndex = undefined;
+		}
+	</script>
+    
+    <script type="text/javascript">
+              function show1()
+              {
+               $('#cc').combobox({    
+               url:'combobox_data2.json',    
+               valueField:'id',    
+               textField:'name',
+			   method:'get'   
+              }); 
+              } 
+    </script>
+</head>
+
+<body class="easyui-layout"> 
+     <!--头部-->  
+    <!--<div data-options="region:'north',title:'活动管理',split:true" style="height:100px;"></div>-->
+     <!--底部-->  
+    <!--<div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>-->
+    <!--右侧-->   
+    <!--<div data-options="region:'east',iconCls:'icon-reload',title:'East',split:true" style="width:100px;"></div> -->
+    <!--左边-->  
+    <div data-options="region:'west',title:'活动列表',split:true" style="width:200px;">
+   <div style="margin:20px 0;"></div>
+  <ul class="easyui-tree">
+			<li>
+				<span><a href="../webAcitivityMain.html">站内活动</a></span>
+                
+				<ul> 
+					<li>
+						<span><a href="photoPK/photoPKMain.html">照片PK</a></span>
+					</li>
+					<li>
+						<span>美食征集</span>
+					</li>
+                    <li>
+						<span>金币兑换</span>
+					</li>
+					<li>
+						<span>抱团出游</span>
+					</li>
+				</ul>
+			</li>
+            
+            <li>
+				<span>自组活动</span>
+				<ul> 
+					<li>
+						<span>结伴同游</span>
+					</li>
+				</ul>
+			</li>
+</ul>
+  </div> 
+    <!--中间-->  
+    <div data-options="region:'center',title:'数据展示'" style="padding:5px;background:#eee; overflow:scroll;">
+     按用户:<input id="cc" name="dept"  onclick="show1()" style="height:auto;">
+     按关注:<input class="easyui-datebox" ></input>
+     按报名:<input class="easyui-datebox" ></input>
+           <input type="button"  value="搜索" style="width:50px;"/>
+            <span style=" color:blue; margin-right:20px;">*可对人数进行统计</span>
+             <span style=" color:red;">**此处省略了一些其他搜索条件</span>
+     <table id="dg" class="easyui-datagrid" title="春暖花开" style="width:98%;height:70%"
+			data-options="
+				iconCls:'icon-edit',
+				singleSelect: true,
+				toolbar:'#tb',
+				url:'datagrid_data1.json',
+				method:'get',
+				onClickRow: onClickRow
+			">
+		<thead>
+			<tr>
+               <th data-options="field:'ck',checkbox:true"></th>
+				<th data-options="field:'id',align:'center',width:80">活动ID</th>
+                <th data-options="field:'t_id',align:'center',width:100,editor:{
+							type:'combobox',
+							options:{
+								valueField:'t_id',
+								textField:'t_name',
+								method:'get',
+								url:'combobox_data1.json',
+								required:true,
+							}
+						}">类别ID</th>
+                 <th data-options="field:'user_id',width:80,align:'center',editor:'textbox'">用户ID</th>
+				<th data-options="field:'name',width:100,align:'center',
+						editor:{
+							type:'combobox',
+							options:{
+								valueField:'id',
+								textField:'name',
+								method:'get',
+								url:'combobox_data2.json',
+								required:true,
+							}
+						}">主题ID</th>
+				<th data-options="field:'image',width:80,align:'center',editor:'textbox'">评论</th>
+				
+                
+			</tr>
+		</thead> 
+	</table>
+    <div id="tb" style="height:auto">
+        <span  style="color:#CD9BFF; font-size:20px; font-family:'华文行楷';">操作栏</span>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">增加</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">确认</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">撤销</a>
+        <a href="webImages.html" class="easyui-linkbutton" style="color:#0EC786; font-weight:600;" data-options="iconCls:'icon-search',plain:true" >查看详情</a>
+        <span style=" color:red;font-size:16px;">**本表记录的是某一具体活动（例：春暖花开PK）下的所有评论（表中字段仅供参考）</span>
+	</div>
+
+    <!--分页-->
+    <div style=" margin-top:20px;"></div>
+	<div class="easyui-panel">
+		<div class="easyui-pagination" data-options="showPageList:false,total:114,buttons:$('#buttons')"></div>
+	</div>
+	<div id="buttons">
+		<table style="border-spacing:0">
+			<tr>
+				<td>
+					<input class="easyui-searchbox" style="width:150px">
+				</td>
+				<td>
+					<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="margin:10px 0; color:#3CBFFF; font-size:16px; font-weight:600;">
+		<span>选择方式: </span>
+		<select onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
+			<option value="0">单选</option>
+			<option value="1">多选</option>
+		</select>
+     </div>  
+   </div> 
+    
+  </div>   
+</body>
+</html>

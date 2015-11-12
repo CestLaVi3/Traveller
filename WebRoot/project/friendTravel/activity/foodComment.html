@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>美食介绍</title>
+<link rel="stylesheet" href="../../base/css/base.css"/>
+<link rel="stylesheet" href="css/foodComment.css"/>
+<link rel="stylesheet" href="css/comment.css"/>
+<script type="text/javascript" src="js/foodComment.js">
+</script>
+<script type="text/javascript" src="js/comment.js">
+</script>
+</head>
+
+<body onload="init()">
+ <div class="container">
+   <div class="header">
+     <span class="tit">美食</span>
+     <div>
+     <span class="name">呷哺呷哺</span><br/>
+     <span>健康饮食</span>
+     </div>
+     <p>
+     <img src="../../../upload/activity/images/deliciousFood/foodComment/floor.png"/>pattern of your health
+     </p>
+   </div>
+   <!--餐厅简介-->
+    <div class="restaurantIntro">
+      <img src="../../../upload/activity/images/deliciousFood/foodComment/bg.png" class="bg" alt="加载失败" >
+      <img src="../../../upload/activity/images/deliciousFood/food/7.jpg" alt="加载失败" id="bgImg"/>
+      
+      <div class="intro">
+        <p class="title">店内推荐</p>
+       <ul id="ad_ul" >
+        <li>
+          <img src="../../../upload/activity/images/deliciousFood/food/9.jpg" alt="加载失败"/>
+          <p class="ad_p1">小熊蛋糕</p>
+          <p class="ad_p1">采用全麦面粉制作，味道清甜，爱美的女生既可以大饱口福，也可以保持身材</p>
+          <p class="ad_p2">4.2分</p>
+          <p class="ad_p3">来自343个网友评价</p>
+          </li>
+        <li>
+          <img src="../../../upload/activity/images/deliciousFood/food/10.jpg" alt="加载失败"/>
+          <p class="ad_p1">小熊蛋糕</p>
+          <p class="ad_p1">采用全麦面粉制作，味道清甜，爱美的女生既可以大饱口福，也可以保持身材</p>
+          <p class="ad_p2">4.2分</p>
+          <p class="ad_p3">来自343个网友评价</p>
+         </li>
+        </ul>
+      </div>
+      <!--联系方式-->
+       <div class="connect">
+          <p class="title">联系方式</p>
+          <ul>
+            <li>
+              <img src="../../../upload/activity/images/deliciousFood/foodComment/family.png"alt="加载失败"/ >
+              <div>
+              <p>地址</p>
+              <p class="address">北京市昌平区西关呷哺呷哺</p>
+              </div>
+            </li>
+            <li>
+              <img src="../../../upload/activity/images/deliciousFood/foodComment/phone.png"alt="加载失败"/ >
+              <div>
+              <p>电话</p>
+              <p class="address">023-49684346</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+    
+    <!--评论-->
+    <div class="comment" >
+      <ul class="comment_ul1" id="comment_ul1"><li onclick="showAllComment()" class="li1">相关评论</li><li onclick="showMyComment()" class="li2">我要点评</li></ul>
+      
+     <div id="allComment">
+      <div class="category">
+       <p>
+        全部<input type="radio" name="radio" checked="checked">
+        好评<input type="radio" name="radio" >
+        中评<input type="radio" name="radio">
+        差评<input type="radio" name="radio">
+       </p>
+      </div>
+       <!--所有评论-->
+       <ul class="allComment" >
+         <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p> 
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞</p> 
+        </li>
+        <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p> 
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞/p> 
+        </li>
+        <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p> 
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞</p> 
+        </li>
+        <li >
+          <img alt="个人头像" src="../../../upload/activity/images/deliciousFood/food/1.gif" class="answers_img"/>
+          <p class="userName">Imfzc<span>发表于2015-9-20</span></p> 
+          <p class="commentDetail">环境清幽，味道好极了，服务超赞,环境清幽，味道好极了，服务超赞</p> 
+        </li>
+      </ul>
+    </div>
+   <!--我的点评-->
+   <div id="myComment" >
+     
+   </div> 
+   <img src="../../../upload/activity/images/deliciousFood/food/7.jpg"  id="comment_img" />
+     
+   </div> 
+   <!--其他推荐-->
+   <div class="foodRecommand">
+    <p>·美食推荐</p>
+    <ul>
+     <li>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/1.jpg"><img src="../../../upload/activity/images/deliciousFood/food/1.jpg"></a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/1.jpg"><span>美食</span>雕刻美食</a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/1.jpg">地址：北京市昌平区南大街</a>
+     </li>
+     <li>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/2.jpg"><img src="../../../upload/activity/images/deliciousFood/food/2.jpg"></a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/2.jpg"><span>美食</span>美味基围虾海鲜面</a>
+     <a href="foodComment.html?imgSrc=../../../upload/activity/images/deliciousFood/food/2.jpg">地址：北京市昌平区南大街</a>
+     </li> 
+     </ul>
+  </div> 
+      
+ </div>    
+
+</body>
+</html>

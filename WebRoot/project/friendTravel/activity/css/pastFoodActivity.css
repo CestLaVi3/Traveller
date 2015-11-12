@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+.container{width:1200px;height:1450px; margin:auto;}
+.header{width:1200px; position:relative; margin-top:70px; height:150px; }
+.header>img{width:400px;height:100px;float:left;}
+.logo_container{ position:absolute; left:500px; top:-50px;width:150px; height:150px;border:#B5E2FD 20px solid; border-radius:100px;}
+.logo{ width:150px; height:150px; border-radius:76px; background-color:#7E98EF;}
+.logo>P{ font-size:50px; color:white; font-family:"方正舒体"; font-weight:1000; text-align:center;width:150px; }
+/*往期回顾*/
+.ul1{width:1200px; height:50px; float:left;}
+.ul1 li{width:150px;float:left; margin-bottom:20px; margin-left:15px;}
+.ul1 li:hover{ cursor:pointer;}
+.ul1 li img{width:30px; float:left;}
+.ul1 li p{float:left;height:30px; line-height:30px; font-size:18px; font-weight:600;}
+.food_div1{width:865px; float:left; }
+/*参赛者上传*/
+.personMakeFood{width:865px;height:590px;margin-left:0px; }
+.personMakeFood>li{width:255px;height:240px; float:left;margin-left:15px; margin-right:15px; margin-bottom:30px; position:relative; }
+.personMakeFood>li:hover{ cursor:pointer;}
+.personMakeFood>li>p span{color:#93C9CC; float:left; margin-top:5px;}
+.personMakeFood>li>p .sp1{display:inline-block;width:60px; height:25px; line-height:25px; text-align:center;background-color:#F5F5F5; color:#939393; margin-right:10px;font-weight:600; }
+.personMakeFood>li>p .sp2{ width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.personMakeFood>li>p .sp3{ float:right; color:#F00;}
+.personMakeFood>li>img{width:255px;height:150px; margin-bottom:5px; }
+.personMakeFood>li>p{height:30px; }
+.personMakeFood>li>p img{ height:30px;width:30px; border-radius:20px; float:right; }
+/*往期活动*/
+.pastFoodAcity{width:865px; height:420px; margin-left:15px; float:left; display:none;}
+.pastFoodAcity>li{width:250px; height:180px; margin-right:25px; margin-bottom:35px; float:left; position:relative;}
+.pastFoodAcity>li>a>img{width:250px;height:180px;}
+.pastFoodAcity .a1{position:absolute; left:0px; top:140px; width:250px; height:40px; text-align:center; background-color:black; opacity:0.5;filter:alpha(opacity=50); color:white; font-size:30px; font-family:"方正舒体"; font-weight:600; line-height:40px;}
+.pastFoodAcity .a1:hover{color:#FF0;}
+/*排名*/
+.rank{ width:300px; height:430px;border:#e2e2e2 1px solid; float:left; margin-left:30px;margin-top:50px;}
+.rank>P{ height:20px; color:#FC6; font-size:16px; margin-left:15px; margin-top:10px;}
+.rank>ul{width:270px; height:300px; margin-left:15px; margin-right:15px; margin-top:10px;border-top:#e2e2e2 1px solid; }
+.rank>ul>li{width:270px; height:30px; border-bottom:#e2e2e2 1px dotted;}
+.rank>ul>li>img{ float:left;margin-right:10px;}
+.rank>ul>li>p{ float:left; line-height:30px;width:100px;text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.rank>ul>li>.number{width:35px; margin-right:8px;}
+.rank>ul>li>.p1{width:270px; height:10px;line-height:10px; text-align:center;display:block; font-size:10px; font-weight:600;}
+#myRank{color:#F99;}
+/*分页*/
+.changePage{width:100%; text-align:center;}
+.changePage input{width:30px; color:#6CF;text-align:center; }
+.nowPage{ margin-left:50px;}
+.totalPage{ margin-left:50px;}
+.changePage input[type=button]{width:50px; height:30px; background-color:#E1FFEF; color:black; margin-left:5px;}
+/*评论*/
+.comment{width:710px; border-bottom-width:2px;border-top:#999 2px solid; float:left; margin-top:30px;}
+.comment_ul1{width:700px; height:30px;}
+.comment_ul1>li{ float:left;width:700px font-size:16px; line-height:30px; color:#499fe8; text-align:center;}
+.comment_ul1>.commentTitle{ float:right;}
+/*所有评论*/
+#allComment{ margin-top:20px;}
+.category>p{ float:left;  margin-left:30px; margin-top:-5px; width:700px; }
+.category>p>input{ margin-right:30px;}
+
+.allComment{  width:700px; margin-top:20px; float:left;}
+.allComment li{width:700px; height:100px; border-top:#e2e2e2 1px solid;}
+.answers_img{ width:60px; height:60px; margin-right:20px; margin-top:20px; float:left;border:#e2e2e2 1px solid; border-radius:30px;}
+.userName{ float:left;margin-top:25px;}
+.userName span{ color:#999; margin-left:20px;}
+.deleteComment{ float:right; margin-top:25px; color:black;}
+.saveComment_div{ display:none; width:700px; height:120px; margin-top:20px;position:relative; clear:both;}
+.wordNumber{ display:inline-block; width:100px; height:10px; position:absolute; top:75px; left:660px; font-size:12px;  }
+.talk{ width:700px; height:70px; margin-bottom:10px; }
+.commentDetail{	margin-top:55px; width:700px; }
+/*烹调步骤*/
+.makeFoodStep{width:1200px; height:2110px; background-color:black; opacity:0.85; filter:alpha(opacity=85); position:absolute; left:0px; top:0px; display:none;}
+.makeFood{ position:fixed; left:33%; top:150px; width:470px; height:600px; background-color:white; color:black; background-image:url(../images/deliciousFood/applyBg.gif);overflow:scroll; font-size:16px;display:none;}
+.makeFood img{width:130px; height:100px; margin-left:10px;}
+.closeStep{ font-size:36px; width:36px; height:36px; line-height:30px; text-align:center;position:absolute;left:410px; top:0px;font-weight:600; border-radius:18px;border:0px;z-index:1;color:black; position:fixed;  left:62%;top:19%;}
+.makeFood>p{ font-size:40px; font-weight:600; font-family:"华文行楷";}
+.makeFood>ol>li{ width:400px;  margin-left:30px; margin-top:10px;list-style-type:decimal;}
+/*美食推荐*/
+.foodRecommand{width:447px; height:530px;  margin-left:40px; float:left;border:#e2e2e2 1px solid;margin-top:30px;}
+.foodRecommand>p{width:447px;height:30px; font-size:16px; font-weight:600; height:35px; line-height:35px;border-bottom:#e2e2e2 1px solid;}
+
+.foodRecommand>ul{width:445px; margin-top:10px;}
+.foodRecommand li{width:345px;height:220px; margin-bottom:20px; margin-left:50px;  }
+.foodRecommand li img{width:345px;height:170px; margin-bottom:5px;}
+.foodRecommand li a{ display:block; margin-bottom:5px; font-size:14px;  }
+a:hover{color:#FC9;}
+a:active{color:#6F9;}
+.foodRecommand li span{display:inline-block;width:30px; height:20px; text-align:center; line-height:20px; background-color:#CCC;margin-right:10px;color:black;}

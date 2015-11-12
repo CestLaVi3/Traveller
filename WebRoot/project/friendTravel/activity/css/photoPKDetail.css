@@ -1,0 +1,26 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ height:800px;}
+.container{width:1200px; margin:auto;}
+span{color:#6CF;}
+.header{width:1200px; height:250px; background-image:url(../../../../upload/activity/images/photoPK/photoPKDetail/bg2.png); position:relative;}
+.mainTitle{width:165px; height:165px ;border:#999 1px solid; border-radius:100px; position:absolute; left:155px; top:25px;}
+.mainTitle .p1{ font-size:18px; font-weight:600; margin-bottom:15px; margin-top:25px; margin-left:22px;}
+.mainTitle .p2{ margin-left:0px; margin-top:10px;}
+.mainTitle .p2>span{ font-size:28px; font-weight:700; color:#FCC; font-family:"方正舒体";}
+.mainTitle .p2>img{ width:30px; height:30px;}
+.mainTitle>img{width:50px;height:50px;  position:absolute; left:100px; top:-20px;}
+img.leaf{ position:absolute; left:240px; top:140px; width:120px;}
+img.leaf1{ position:absolute; left:130px; top:140px;width:120px;}
+
+#joinNum{position:absolute;left:1000px;top:10px;}
+#status{ position:absolute; left:500px; top:100px; font-size:24px;}
+#activeTime{float:right; margin-top:230px; color:red;}
+/*图片展示区*/
+.showPictures{width:1200px; height:500px; background-color:#EFF; float:left; }
+.left{float:left;width:410px;margin-top:25px;height:645px;}
+
+/*小图*/
+.smallPicture{ float:left; width:1200px;height:500px;border:#00b38a 3px solid;  margin-top:25px;}
+.smallPicture>img{width:600px; height:400px;float:left;margin-left:30px;margin-top:40px;}
+.smallPicture p{ font-size:20px; line-height:40px; float:left;margin-left:40px; display:inline-block;width:500px;height:400px; margin-top:30px;}

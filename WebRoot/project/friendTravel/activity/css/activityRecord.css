@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+.record_rightBottom iframe{ width:99.7%; height:800px;}
+.record_main{ width:1200px; margin:auto; height:800px;}
+.container{ margin:auto;}
+.record_left{width:300px; float:left; border:2px solid #999; height:800px;}
+.record_right{width:895px; float:left;}
+.record_leftTop{ height:150px; border-bottom:2px solid #999;}
+.record_leftTop img{ width:120px; height:120px; margin-top:15px; margin-left:15px; border-radius:60px; float:left; margin-right:30px;}
+.record_leftTop p.record_leftTopNmae{ font-size:20px; width:120px; margin-top:30px;}
+.record_leftTop p{ float:left; font-size:16px; margin-top:20px; color:#000;}
+.record_leftBottom{ margin-top:50px;}
+.record_leftBottom ul{ border-top:1px solid #CCC;}
+.record_leftBottom li{ width:300px; height:50px;border-bottom:1px solid #CCC;}
+.record_leftBottom li>a{ display:block; width:150px; height:50px;margin:auto; font-size:20px; border-radius:10px; text-align:center; line-height:50px;}
+
+.record_store li{width:250px; height:150px; float:left; margin-top:20px;}
+.record_store li>img{ width:200px; height:150px; margin-left:50px;}
+.record_store>p{ font-size:20px; width:100px; height:30px; margin-left:10px; margin-top:10px;}
+/*关注的活动*/
+.now{color:red;}
+.join{ margin-left:20px; }
+.join>p{width:100%;border-bottom:#e2e2e2 1px solid;}
+.join>p input{ width:100px; height:50px; background-color:white;border:0px; border-right:#e2e2e2 1px solid;  font-size:18px; margin-right:-4px;}
+.join>ul{ margin-top:20px;margin-bottom:50px;}
+.join>ul li{ margin-bottom:10px;}
+.intro{width:100%; background-color:#f7f7f7;height:30px; line-height:30px;}
+.intro input{width:20px; height:20px; margin-top:4px;float:left;}
+.intro span{ display:inline-block; margin-right:10px; float:left;}
+.intro .sp1{font-weight:600;}
+.intro .sp2{font-weight:600; color:#5A5A5A; font-size:18px;}
+.intro img{ float:right; margin-right:100px; margin-top:10px;}
+
+.detail{ margin-top:20px;width:700px;}
+.detail img{width:200px;height:120px; float:left; margin-right:20px;}
+.detail div{ float:left; margin-right:70px; height:120px; overflow:hidden;}
+.detail div p{width:350px; margin-top:1px;}
+.join>ul>li>a{color:#CED0F2; height:130px; line-height:130px; margin-right:10px;}
+.join>ul>li>a img{width:15px; height:15px; }
+
+.detail .sp1{ color:#999;}
+.sp1:hover{ color:#FC9;}
+/*已过期*/
+.pastJoin{ margin-left:20px; display:none; }
+.pastJoin>p{width:100%;border-bottom:#e2e2e2 1px solid;}
+.pastJoin>p input{ width:100px; height:50px; background-color:white;border:0px; border-right:#e2e2e2 1px solid;  font-size:18px; margin-right:-4px;}
+.pastJoin>ul{ margin-top:20px; margin-bottom:50px;}
+.pastJoin>ul li{ margin-bottom:10px;}
+.pastJoin>ul>li>a{color:#CED0F2; height:130px; line-height:130px; margin-right:10px;}
+.pastJoin>ul>li>a img{width:15px; height:15px; }
+/*分页*/
+.changePage{width:100%; text-align:center;}
+.changePage input{width:30px; color:#6CF;text-align:center; }
+.nowPage{ margin-left:50px;}
+.totalPage{ margin-left:50px;}
+.changePage input[type=button]{width:50px; height:30px; background-color:#E1FFEF; color:black; margin-left:5px;}
+
+
+.record_task>p{ font-size:20px; margin-left:20px; margin-top:20px; margin-bottom:20px;}
+.record_task li{ width:250px; height:200px; float:left; position:relative;}
+.record_task li img{ width:200px; height:150px; margin-left:50px;}
+.record_task li img.record_img{ position:absolute; left:0px; top:0px;}
+.record_task li p{ font-size:20px; text-align:center; margin-left:50px;}
+
+.record_help>p{ font-size:20px; margin-top:20px; margin-left:20px;}
+.record_help li{ margin-left:20px; margin-top:20px;}
+.record_help img{ width:10px; height:10px; border-radius:5px; float:left; margin-top:6px;}
+.record_help li h3{ font-size:18px; float:left; cursor:help;}
+.record_help li p{font-size:14px; text-indent:25px; display:none;}
+.cf{ clear:both;}
+
+li .scroll{width:100%;height:25px; background-color:#FFCA95;}
+.scroll img{ float:left; margin-right:5px; margin-top:2px;margin-left:40px;}
+.scroll span{ float:left; line-height:25px;}
+.scroll span{ color:white;}
+.scroll .sp1{ color:#FF3737; margin-right:5px;}
+.scroll  .sp2{ margin-left:50px; float:right;}

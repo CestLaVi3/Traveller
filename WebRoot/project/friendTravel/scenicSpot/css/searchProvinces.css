@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+.a1{
+	position:relative;
+	}
+.p1{
+	color:#FFFFFF;
+	position:absolute;
+	bottom:5px;
+	left:25px;
+	}
+#map{
+	transform:scale(0.8,0.8); 
+	text-align:center;
+	}
+#search_Provinces{
+	text-align:center;
+	height:25px;
+	position:relative;
+	margin-top:-50px;
+	}	
+#search_value{
+	height:21px;
+	width:150px;
+	}
+#search_Button{
+	position:absolute;
+	border:none;
+	background-image:url(../images/searchProvinces/search.png);
+	background-color:transparent;
+	background-size:100% 100%;
+	width:25px;
+	height:25px;
+	}	
+#bigpic{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-image:url(../images/searchProvinces/bigpic1.png);
+	z-index:-2;
+	background-size:100% 100%;
+	}
+#footerpic{
+	position:absolute;
+	bottom:0px;
+	left:0;background-image:url(../images/searchProvinces/footer.png);
+	z-index:-1;
+	background-position:center;
+	width:100%;
+	height:150px;
+	}	
+#search_Tittle{
+	position:absolute;
+	top:25px;
+	font-size:30px;
+	color:#FFFFFF;
+	width:29px;
+	background-color:rgba(255,255,255,0.42);
+	border-radius:10px;
+	left:100x;
+	}				
+

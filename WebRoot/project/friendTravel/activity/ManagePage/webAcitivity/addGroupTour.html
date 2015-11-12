@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>添加旅游行程</title>
+<link rel="stylesheet" href="../../../../base/css/base.css" />
+<link rel="stylesheet" href="../../css/addGroupTour.css" />
+<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/_examples/editor_api.js"></script>
+</head>
+
+<body>
+<div class="home">
+	<div class="left">
+    	<h2>行程安排</h2>
+    	<span>行程第？天:</span><input type="text" class="day"/>
+        <span>住宿:</span> <input type="text" class="hotel"/>
+    	<span>餐饮:</span> <input type="text" class="food"/>
+        <br/>
+        <span>上传图片：</span><input type="file" class="title"/>
+        <br/>
+        <span>游览景点:</span>
+        <script id="editor" type="text/plain" style="width:840px;"></script>
+        <input type="button" value="添加下一天"/>
+        <input type="button" value="提交计划" class="submitBut"/>
+    </div>
+    
+    <div class="right">
+    	<p>目的地：</p>
+        <input type="text" class="place"/>
+    	<p>简介：</p>
+        <textarea class="area">
+        
+        </textarea>
+        <p>发布时间：</p>
+        <input type="date" class="title"/>
+        
+
+    </div>
+
+</div>
+</body>
+<script type="text/javascript">
+ 	var editor_a = UE.getEditor('editor',{initialFrameHeight:300});
+</script>
+</html>

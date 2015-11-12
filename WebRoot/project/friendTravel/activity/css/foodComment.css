@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+body{ height:1200px;}
+.container{width:1200px;  margin:auto; margin-top:20px; }
+
+.header{width:1200px; height:100px; }
+.tit{ display:inline-block;width:15px;height:45px; text-align:center; line-height:20px;letter-spacing:15px;background-color:red; border-radius:5px; float:left;}
+.header>div{ float:left; margin-left:10px;}
+.header>div>span{ font-size:14px; color:#CCC; background-image:}
+.header>div>.name{font-size:20px; color:black; letter-spacing:2px;}
+.header>p{ float:left; width:1100px;height:30px; font-size:18px;color:#CCC;  line-height:30px; margin-top:15px;}
+.header>p>img{width:30px; height:30px;  float:left; margin-right:10px;}
+/*餐厅简介*/
+.restaurantIntro{width:1200px; height:550px;position:relative; overflow:hidden; margin-bottom:10px;}
+.restaurantIntro>img{width:580px; height:550px; border-radius:260px; position:absolute;left:58px; top:-47px;}
+.restaurantIntro>.bg{width:1200px; height:550px; position:absolute; left:0px; top:0px; border-radius:0px;}
+/*介绍*/
+.intro{width:550px; height:400px; position:absolute; left:750px;}
+.title{font-size:20px; width:400px;height:40px; line-height:40px; font-weight:600; border-bottom:#999 1px dotted; margin-top:-10px;margin-bottom:15px;}
+
+#ad_ul{width:400px; height:100px; float:left; }
+#ad_ul>li{ float:left;width:400px; height:150px; margin-bottom:20px; background-color:#e2e2e2;border-radius:15px;}
+#ad_ul>li>img{width:200px; height:150px;margin-right:12px; float:left; border-radius:15px;}
+#ad_ul>li>p{ margin-top:15px;}
+#ad_ul>li>.ad_p2{ float:left; color:#999;}
+#ad_ul>li>.ad_p3{ float:right;color:#999;}
+/*联系方式*/
+.connect{width:400px; height:150px; position:absolute; left:750px; top:390px;border-radius:15px; border:#999 1px solid;}
+.connect>ul{width:400px; height:100px;  margin-top:20px;}
+.connect>ul>li{width:150px; height:100px; margin-left:20px; float:left;}
+.connect>ul>li>div{ float:left;width:110px; height:100px;}
+.connect>ul>li>img{ float:left;width:30px; height:30px; margin-top:10px; margin-right:10px;}
+.address{ margin-top:5px; color:#999; }
+/*评论*/
+.comment{width:710px; border-bottom-width:2px;border-top:#999 2px solid; float:left;}
+.comment_ul1{width:700px; height:30px; float:left;}
+.comment_ul1>li{ float:left; width:100px; height:30px; font-size:16px; line-height:30px; background-color:#e2e2e2; color:#499fe8; margin-top:2px;  text-align:center;}
+.comment_ul1>.li2{color:#999; background-color:white;}
+#comment_img{float:left;width:300px; height:250px; margin-top:20px; margin-left:20px; display:none;}
+
+/*所有评论*/
+#allComment{ margin-top:50px;}
+.category>p{ float:left;  margin-left:30px; margin-top:-5px; width:700px; }
+.category>p>input{ margin-right:30px;}
+
+.allComment{  width:700px; margin-top:20px; float:left;}
+.allComment li{width:640px; height:100px; border-top:#e2e2e2 1px solid;}
+.answers_img{ width:60px; height:60px; margin-right:20px; margin-top:20px; float:left;border:#e2e2e2 1px solid; border-radius:30px;}
+.userName{ float:left;margin-top:25px;}
+.userName span{ color:#999; margin-left:20px;}
+.commentDetail{margin-top:55px;width:550px;overflow:hidden; white-space:nowrap;text-overflow:ellipsis;}
+
+/*美食推荐*/
+.foodRecommand{width:447px; height:530px;  margin-left:40px; float:left;border:#e2e2e2 1px solid;}
+.foodRecommand>p{width:447px;height:30px; font-size:16px; font-weight:600; height:35px; line-height:35px;border-bottom:#e2e2e2 1px solid;}
+
+.foodRecommand>ul{width:445px; margin-top:10px;}
+.foodRecommand li{width:345px;height:220px; margin-bottom:20px; margin-left:50px;  }
+.foodRecommand li img{width:345px;height:170px; margin-bottom:5px;}
+.foodRecommand li a{ display:block; margin-bottom:5px; font-size:14px;  }
+a:hover{color:#FC9;}
+a:active{color:#6F9;}
+.foodRecommand li span{display:inline-block;width:30px; height:20px; text-align:center; line-height:20px; background-color:#CCC;margin-right:10px;color:black;}

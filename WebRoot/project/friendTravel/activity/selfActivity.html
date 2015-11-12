@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自组活动</title>
+<link rel="stylesheet" href="../../base/css/base.css"/>
+<link rel="stylesheet" href="css/selfActivity.css"/>
+<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/selfActivity.js"></script>
+<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../../base/js/easyUI/demo/demo.css">
+	<script type="text/javascript" src="../../base/js/easyUI/jquery.min.js"></script>
+	<script type="text/javascript" src="../../base/js/easyUI/jquery.easyui.min.js"></script>
+</head>
+
+<body onload="init()">
+<div class="container">
+  
+  <!--结伴推荐-->
+ <div class="partnerRecommand" >
+<p onclick="showPub()">+发布我的结伴计划</p> 
+   	<p>结伴推荐</p>
+   
+    <ul id="selfActivityList">
+    <!-- <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/4.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html">
+     <span>简介</span>15-20人5天游
+     <span class="sp3">出发</span>
+     <span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/5.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+   <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/6.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/7.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+   <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/8.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/9.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+   <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/10.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/11.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li> -->
+   </ul>
+ </div>
+ 
+  <!--其他结伴-->
+ <div class="partnerRecommand">
+   <p>其他结伴</p>
+    <div class="find" id="find">
+     <select onchange="selectPlace()" id="selectPlace">
+     </select>
+     <input id="dd" type="text"  class="easyui-datebox"></input>
+     <input type="button" value="搜索" onclick="search()"/>
+   </div>
+   <ul id="otherActivity">
+    <!-- <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/4.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html">
+     	<span>简介</span>15-20人5天游
+     	<span class="sp3">出发</span>
+     	<span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/5.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+   <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/6.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/7.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+   <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/8.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/9.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+   <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/10.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li>
+  <li>
+     <a href="partnerTripApply.html"><img src="images/selfActivity/11.jpg" alt="加载失败"/></a>
+     <a href="partnerTripApply.html"><span>景点</span>长寿古镇</a>
+     <a href="partnerTripApply.html"><span>简介</span>15-20人5天游<span class="sp3">出发</span><span class="sp3">2015-12-09</span></a>
+     <p>已有<span class="sp1">12</span>人报名</p>
+  </li> -->
+   </ul>
+   <!--分页-->
+    <div class="changePage">
+       <a onclick="firstPage()">首页</a>
+       <a onclick="pastPage()">上一页</a>
+       <a onclick="nextPage()">下一页</a>
+       <a onclick="lastPage()">尾页</a>
+       
+       <a class="nowPage">第<input type="text" value="1" id="pageNum"/>页</a>
+       <input type="button" value="跳转" onclick="redirect()"/>
+       <a class="totalPage">共<span id="sumNum">1</span>页</a> 
+     </div>
+ </div>
+ 
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet"/>
+<link href="../../base/js/easyUI/themes/icon.css" type="text/css" rel="stylesheet"/>
+<link href="../../base/js/easyUI/themes/default/easyui.css" type="text/css" rel="stylesheet"/>
+<link href="css/manager.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.min.js"></script> 
+<script type="text/javascript" src="../../base/js/easyUI/jquery.easyui.min.js"></script>   
+<script type="text/javascript" src="js/indexManager.js"></script> 
+</head>
+
+<body onload="init()">
+<div id="cc" class="easyui-layout" style="width:1200px;height:460px;">        
+    <div data-options="region:'west',title:'主页管理'" style="width:250px;">
+    	<div class="indexManagerContentLeft">
+		<ul id="tt" class="easyui-tree" style="animate:true; width:200px; height:400px; margin-top:20px; margin-left:20px;">   
+   		
+	        <li>
+	        	<span><a href="indexCarouselManger.html" target="iframeMain3">轮播设置</a></span>
+	        	<ul>
+	        		<li>
+	                	<span><a href="#">轮播信息</a></span>
+	                </li>
+	        	</ul>
+	        </li>
+	        <li>
+	        	<span><a href="#">链接设置</a></span>
+	            <ul>
+	            	<li>
+	                	<span><a href="chainingManager.html" target="iframeMain3">链接信息</a></span>
+	                </li>
+	            </ul>
+	        </li>
+		</ul>  
+	</div>
+</div>   
+    <div data-options="region:'center',title:'具体信息'" >
+    	<div class="indexManagerContentright">
+			<iframe name="iframeMain3" id="iframeMain3" src="indexCarouselManger.html" frameborder=no border=0></iframe>
+		</div>
+    </div>   
+</div>  
+
+
+</div>
+</body>
+</html>

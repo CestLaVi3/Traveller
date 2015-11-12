@@ -1,0 +1,245 @@
+h3,.options,.hotelLocation,.hotelDetail,.hotelFood,.hotelFood>ul{width:910px;}
+h3{
+	height:36px;
+	border-bottom:2px solid black;
+	font-size:18px;
+	font-weight:600;
+}
+.mainDiv{
+	width:1200px;
+	height:1800px;
+	margin:0 auto;
+}
+/*
+  酒店图片、价格样式开始
+*/
+.hotelBig{
+	width:1200px;
+	height:400px;
+	margin-bottom:20px;
+}
+.hotelBig h2{
+	width:1200px;
+	height:45px;
+	padding-top:5px;
+	font-size:25px;
+	font-weight:500;
+}
+.hotelBig h4{
+	color:#9b9b9b;
+}
+.hotelBig>img{
+	width:570px;
+	height:310px;
+	float:left;
+	margin-top:18px;
+}
+.hotelBig .hotelBasic,.hotelPrice,.hotelBasic>ul{
+	width:600px;
+	float:left;
+}
+.hotelBig .hotelBasic{
+	float:left;
+	height:310px;
+	margin-left:30px;
+	margin-top:18px;
+}
+.hotelBig .hotelBasic .hotelPrice{
+	height:75px;
+	background-color:#fafafa;
+}
+.hotelBig .hotelBasic .hotelPrice>a{font-size:30px;margin-left:15px;}
+.hotelBig .hotelBasic .hotelPrice>strong{font-size:60px;}
+.hotelBig .hotelBasic .hotelPrice>span,.hotelPrice>del,.hotelPrice>div{
+	float:right;
+	font-size:20px;
+	text-align:center;
+	margin-top:17px;
+	color:#909090;
+}
+.hotelBig .hotelBasic .hotelPrice>div{
+	width:20px;
+	height:52px;
+	border-left:1px solid #dddddd;
+}
+.hotelBig .hotelBasic .hotelPrice>span{
+	margin-right:20px;
+}
+.hotelBig .hotelBasic .hotelPrice>del{
+	margin-right:23px;
+}
+.hotelBig .hotelBasic .hotelPrice>strong,.hotelPrice>a{
+	color:#EDB057;
+}
+.hotelBig .hotelBasic>ul{
+	height:90px;
+	border-top:1px dotted #c0c0c0;
+	border-bottom:1px dotted #c0c0c0;
+}
+.hotelBig .hotelBasic>ul li{
+	height:45px;
+	width:198px;
+	float:left;
+	color:#909090;
+	text-align:center;
+	margin-top:10px;
+	padding-top:25px;
+	border-right:1px solid #e0e0e0;
+}
+.hotelBig .hotelBasic>span{
+	color:#909090;
+	float:left;
+	width:600px;
+	margin-top:25px;
+}
+.hotelBig .hotelBasic>a{
+	width:110px;
+	height:40px;
+	color:white;
+	float:left;
+	text-align:center;
+	display:inline-block;
+	background-color:#EDB057;
+	margin-top:25px;
+	padding-top:10px;
+	font-size:20px;
+	border-radius:5px;
+}
+/*
+  酒店图片、价格样式结束
+*/
+
+/*
+  酒店选项栏样式开始
+*/
+.options,.options>li,.hotelLocation>h4,.hotelLocation,#hotelMap,.na,.Con,.hotelDetail,.hotelFood,.hotelFood>ul li{float:left;}
+.options{border:1px solid #cccccc;height:38px;background-color:white;}
+.options>li{
+	width:226px;
+	height:30px;
+	font-size:15px;
+	text-align:center;
+	padding-top:8px;
+	cursor:pointer;
+	background-color:white;
+	border-right:1px solid #cccccc;
+}
+.shadow{
+	box-shadow:2px 2px 3px #aaaaaa;
+}
+/*
+  酒店选项栏样式结束
+*/
+
+/*
+  酒店交通位置样式开始
+*/
+.hotelLocation{height:400px;margin-top:10px;}
+.hotelLocation #hotelMap{
+	width:580px;
+	height:340px;
+	margin-top:10px;
+	margin-right:30px;
+}
+.hotelLocation>h4{
+	font-size:20px;	
+	width:300px;
+	margin-top:20px;
+}
+.hotelLocation .na,.Con{
+	margin-top:10px;
+	color:#666666;
+}
+.hotelLocation .Con{width:230px;}
+/*
+  酒店交通位置样式结束
+*/
+
+/*
+  酒店详情样式开始
+*/
+.hotelDetail{
+	height:380px;
+}
+.hotelDetail>table{
+	width:810px;
+	height:310px;
+	margin-left:50px;
+	margin-top:20px;
+}
+.hotelDetail>table td{
+	text-align:center;
+}
+.hotelDetail>table th{
+	font-weight:600;
+	width:100px;
+}
+/*
+  酒店详情样式结束
+*/
+
+/*
+  酒店周边景点推荐样式开始
+*/
+.recommendSpot{
+	float:right;
+	width:260px;
+	border:1px solid #cccccc;
+}
+.recommendSpot>h3,.recommendSpot>ul{
+	width:240px;
+	margin-left:10px;
+}
+.recommendSpot>ul{height:1000px;}
+.recommendSpot>ul li{
+	height:225px;
+	width:240px;
+	margin-top:20px;
+	border-bottom:1px solid #cccccc;
+}
+.recommendSpot>ul li>img{
+	height:132px;
+	width:240px;
+}
+.recommendSpot>ul li>h5{
+	margin-top:10px;
+	margin-bottom:10px;
+	width:240px;
+}
+.recommendSpot>ul li>a{
+	margin-top:10px;
+	font-size:20px;
+	display:inline-block;
+}
+.recommendSpot>ul li>strong{font-size:35px;}
+.recommendSpot>ul li>p{display:inline-block;margin-left:32px;}
+.recommendSpot>ul li mark{color:red;background-color:white;}
+/*
+  酒店周边景点推荐样式结束
+*/
+
+/*
+  酒店美食展示样式开始
+*/
+.hotelFood{
+	height:240px;
+}
+.hotelFood>ul{
+	margin-top:20px;
+}
+.hotelFood>ul li{
+	width:190px;
+	height:167px;
+	margin-left:30px;
+	border-bottom:1px solid #cccccc;
+}
+.hotelFood>ul li img{
+	width:190px;
+	height:120px;
+}
+.hotelFood>ul li h5{
+	margin-top:10px;
+}
+/*
+  酒店美食展示样式结束
+*/

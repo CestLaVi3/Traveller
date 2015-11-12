@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+body{ height:500px;}
+.container{ margin:auto; width:1200px; margin-top:20px;}
+input[type=submit]{width:100px; height:50px; background-color:#FFF; border:#FF8040 2px solid; font-size:16px; margin-left:70px;  margin-top:10px;}
+.time{ font-size:14px;background-color:#F96; color:white; font-weight:600; height:25px; line-height:25px; margin-bottom:30px;}
+/*作品介绍*/
+.intro{ float:left;width:350px;}
+.imgContainer{width:180px; height:130px; text-align:center; font-size:14px; border:#e2e2e2 1px solid; margin-bottom:10px; margin-left:70px;}
+.imgContainer>p{height:30px; line-height:30px; margin-top:50px;color:#FC9; font-size:16px;}
+.imgContainer>img{width:200px; height:150px; }
+.div1{float:left; width:350px; margin-top:20px; position:relative;}
+.div1>input{ margin-bottom:10px;}
+.div1_p1{ position:absolute;left:208px; top:120px;}
+.tit{ width:180px; height:20px;font-size:14px;}
+.descrip{width:180px; height:100px; font-size:14px; white-space:pre-line; }
+
+/*奖品*/
+.reward_container{ float:left; width:420px; height:450px;}
+.reward_container>p{font-size:16px; width:410px;height:30px; line-height:30px; font-weight:600; border-bottom:#e2e2e2 1px solid;}
+.reward{width:400px; height:400px;position:relative;}
+.reward .img{ left:40px;position:absolute; top:220px; z-index:-2;}
+.reward .img1{ float:left; top:98px; position:absolute; left:0px;z-index:-1; width:160px;height:194px;  background-image:url(../../../../upload/activity/images/photoPK/imagesBorder3.gif);}
+.reward .img3{ float:right;top:90px; position:absolute; left:235px;z-index:-1;width:160px;height:194px;background-image:url(../../../../upload/activity/images/photoPK/imagesBorder2.gif); }
+.reward .img2{ position:absolute; top:10px; left:115px; z-index:1;width:160px;height:194px; background-image:url(../../../../upload/activity/images/photoPK/imagesBorder.gif);}
+
+.img1 img{ margin-left:23px; margin-top:15px;height:128px;}
+.img2 img{ margin-left:35px; margin-top:15px;height:128px;}
+.img3 img{  margin-top:15px; margin-left:15px; width:130px; height:128px;}
+.reward p{width:160px; text-align:center; height:40px; line-height:40px; color:white;}
+/*作品*/
+.thing_container{width:350px; height:400px;float:left; margin-left:60px;overflow:hidden;}
+.title{font-size:16px; width:350px;height:30px; line-height:30px; font-weight:600; border-bottom:#e2e2e2 1px solid; float:left;}
+.thing{ float:left;width:350px; margin-top:10px; }
+.thing>li{ font-size:14px;width:320px; line-height:25px; list-style-type:decimal;margin-left:30px; }
+.thing>li>span{color:#F69;}
+
+.manypic{width: 180px;height: 130px;opacity: 0.9; margin-left: 50px; margin-top: 0px;;padding-top: 30px; }
+.manypic ul li{ position:relative; display: inline-block; width: 100px; height: 70px; border: 3px solid #D3EDFC; margin-left: 20px; list-style-type: none; float: left; padding-bottom: 30px; background-color: #DCDCDC; }
+.manypic ul li .label{ display: inline-block; text-align:center; line-height:100px; font-size:20px; width: 100px; height: 70px; }
+.manypic ul li .lbl{ position:absolute; left:0px; top:0px; display:none;}
+.manypic ul li label img{width: 100px;height:100px;position:absolute;left:0px; top:0px; display:none;}
+

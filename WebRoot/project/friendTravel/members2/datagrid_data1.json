@@ -1,0 +1,37 @@
+{
+	"total": 28,
+	"rows": [
+		{
+			"productid": "1",
+			"productname": "业余游者",
+			"userName": "a271642183",
+			"passWord": "123456",
+			"PeopleName": "于鸿儒",
+			"memberID": "1",
+			"memberName": "<a href='members_home.html'>夜</a>",
+			"status": "正常",
+			"renzheng":"yes",
+			"email": "271642183@qq.com",
+			"tel":"15776866772",
+			"IDcard":"230303XXXXXXXXXXXX",
+			"address":"黑龙江省XXX市XXX区",
+			"headImg":"<a href='members_home.html'><img src='img/tx.png' style='width:50px;height:50px;'/></a>"
+		},
+		{
+			"productid": "1",
+			"productname": "业余游者",
+			"userName": "a271642183",
+			"passWord": "123456",
+			"PeopleName": "于鸿儒",
+			"memberID": "1",
+			"memberName": "<a href='members_home.html'>夜</a>",
+			"status": "正常",
+			"renzheng":"yes",
+			"email": "271642183@qq.com",
+			"tel":"15776866772",
+			"IDcard":"230303XXXXXXXXXXXX",
+			"address":"黑龙江省XXX市XXX区",
+			"headImg":"<a href='members_home.html'><img src='img/tx.png' style='width:50px;height:50px;'/></a>"
+		}
+	]
+}

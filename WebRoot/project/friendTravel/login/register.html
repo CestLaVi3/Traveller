@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../../base/css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<script type="text/javascript" src="js/register.js">
+</script>
+<script type="text/javascript" src="../../base/js/validate.js">
+</script>
+<script type="text/javascript" src="../../base/js/easyUI/jquery.min.js">
+</script>
+</head>
+
+<body>
+<div class="login_head">
+</div>	
+<div class="login_middle">
+<div>
+<div class="main">
+<div class="login_top">
+	<div class="login_logo">
+        <span>会员账户注册</span>
+    </div>
+    <div class="login_topRight">
+    	<ul>
+        	<li>
+            	<a href="../index/index.html" onclick="changeLogin(1)">登录</a>
+            </li>
+            <div class="smallSx"></div>
+            <li>
+            	<a href="register.html">注册</a>
+            </li>
+             <div class="smallSx"></div>
+            <li>
+          	  <a href="../index/index.html">返回主页</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="cf"></div>
+<div class="login_main">
+	<img src="../../../servlet/verifyCodeServlet" alt="" class="code_img1" id="code_img"/>
+	<div class="register_mainLeft">   	
+    	<form>
+        	<span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</span><input type="text" placeholder="请输入邮箱作为你的用户名" id="username"/><label id="usernamelab"></label><br/><br/>
+            <span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" placeholder="请输入密码" id="password"/><label id="passwordlab"></label><br/><br/>
+            <span>确认密码：</span><input type="password" placeholder="请再次输入密码" id="password2"/><label id="password2lab"></label><br/><br/>
+             <span>验&nbsp;证&nbsp;码&nbsp;：</span><input type="text" id="yzm"/><input type="text" class="code_img" readonly="readonly"/><input type="button" id="login_refresh" readonly="readonly" onclick="changeImg()"/><label id="yzmlab"></label> <br/>
+           	<input type="checkbox" id="check"/><a href="#">阅读并接受《侣游记用户注册协议》</a><br/><br/></span>
+            <input type="button" value="注册" id="login_submit" onclick="register()"/><br/><br/>
+            <span id="register_sp2">已经注册?<a href="../index/index.html" id="register_a" onclick="changeLogin(1)">现在登录</a></span>
+        </form>
+    </div>
+    <div class="sx"></div>
+    <div class="register_mainRight">
+       <p>你也可以通过以下方式登录</p>
+       <ul>
+       	<li>
+        	<a href="#">
+            	<img src="images/login_xinlang.gif"/>
+                <p>新浪微博</p>
+            </a>
+        </li>
+        <div class="cf"></div>
+        	<li>
+        	<a href="#">
+            	<img src="images/login_qq.gif"/>
+                <p>QQ登录</p>
+            </a>
+        </li>
+         <div class="cf"></div>
+        	<li>
+        	<a href="#">
+            	<img src="images/login_tenxun.gif"/>
+                <p>腾讯微博</p>
+            </a>
+        </li>
+         <div class="cf"></div>
+        	<li>
+        	<a href="#">
+            	<img src="images/login_renren.gif"/>
+                <p>人人网</p>
+            </a>
+        </li>
+         <div class="cf"></div>
+       </ul>
+       <p>授权后表明你已同意<a href="#">《旅游家用户注册协议》</a></p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="login_footer">
+	<div class="index_footerMain">
+	<br/>
+	<p>© 2015 Mafengwo.cn 京ICP备11015476号 京公网安备110105013401号 京ICP证110318号 新出网证(京)字242号</p><br/>
+	<p>旅游家客服 400 166 6866   工作时间 10:00-18:30   网站地图</p>
+</div>
+</div>
+</body>
+</html>

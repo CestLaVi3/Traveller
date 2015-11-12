@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>游记</title>
+<link href="css/travel.css" type="text/css" rel="stylesheet" />
+<link href="../../base/css/base.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="../../base/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/travel.js"></script>
+</head>
+
+<body onload="init()">
+
+	<div class="beijing">
+		<img class="shadowimg" id="bgImg" />
+		<div class="home">
+			<div class="picture" id="picture"></div>
+			<div class="header" id="header">
+				<div class="header_left" id="header_left">
+					<span class="icon_container">
+						<div class="biaoqian1">精华</div>
+						<div class="biaoqian2"></div> </span>
+
+				</div>
+				<div class="header_right" id="header_right"></div>
+			</div>
+			<!--左侧-->
+
+			<div class="left">
+				<ul class="left_ul1" id="left_ul1">
+					<li>作者的足迹：</li>
+					<li>西安&nbsp;&nbsp;></li>
+					<li>九寨沟&nbsp;&nbsp;></li>
+					<li>长白山&nbsp;&nbsp;></li>
+					<li>西藏</li>
+					<span class="left_icon" id="left_icon"> </span>
+				</ul>
+
+				<div class="left_travel">
+					<span class="travel_span" id="travel_span"> </span>
+
+				</div>
+				<h3 class="talktitle">发表评论:</h3>
+				<div class="saveComment_div">
+					<textarea class="talk" id="talk" onkeyup="checkLength()"></textarea>
+					<span class="wordNumber" id="wordNumber">100/100</span>
+				</div>
+				<input type="button" value="发表评论" class="submitTalk"
+					onclick="saveComment()" />
+
+				<div class="answers">
+					<h1 class="answers1">全部评论</h1>
+					<p class="allAnswers" id="allAnswers"></p>
+					<ul class="answers_ul" id="answers_ul">
+
+					</ul>
+				</div>
+				<!--分页-->
+				<div class="fengye">
+					<a onclick="firstPage()">首页</a> <a onclick="pastPage()">上一页</a> <a
+						onclick="nextPage()">下一页</a> <a onclick="lastPage()">末页</a> <span>第<input
+						type="text" value="0" class="pageNum" id="pageNum" />页</span> <a
+						onclick="redirect()">跳转</a> <span>共<input type="text"
+						value="7" readonly="readonly" class="sumNum" id="sumNum" />页</span>
+				</div>
+			</div>
+			<!--右侧-->
+			<div class="right">
+				<!--目的地-->
+				<!--推荐景区-->
+				<div class="recommend_scenic" id="recommend_scenic"></div>
+
+				<!--游记-->
+				<div class="travels1" id="travels1"></div>
+			</div>
+
+
+
+		</div>
+</body>
+</html>
