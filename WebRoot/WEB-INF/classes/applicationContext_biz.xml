@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	
+	<bean id="userService"
+		class="com.chinasoft.service.user.UserServiceImpl"
+		autowire="byName">
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+	</bean>
+	<bean id="mainService"
+		class="com.chinasoft.service.main.MainServiceImpl"
+		autowire="byName">
+		<property name="mainDao">
+			<ref bean="mainDao" />
+		</property>
+	</bean>
+	<bean id="scienceSpotService"
+		class="com.chinasoft.service.scienceSpot.ScienceSpotServiceImpl"
+		autowire="byName">
+		<property name="scienceSpotDao">
+			<ref bean="scienceSpotDao" />
+		</property>
+	</bean>
+	<bean id="stagtegyService"
+		class="com.chinasoft.service.stagtegy.StagtegyServiceImpl"
+		autowire="byName">
+		<property name="stagtegyDao">
+			<ref bean="stagtegyDao" />
+		</property>
+	</bean>
+	<bean id="activityService"
+		class="com.chinasoft.service.activity.ActivityServiceImpl"
+		autowire="byName">
+		<property name="activityDao">
+			<ref bean="activityDao" />
+		</property>
+	</bean>
+	<bean id="travelDescService"
+		class="com.chinasoft.service.travelDesc.TravelDescServiceImpl"
+		autowire="byName">
+		<property name="travelDescDao">
+			<ref bean="travelDescDao" />
+		</property>
+	</bean>
+	<bean id="commentServive"
+		class="com.chinasoft.service.comments.CommentsServiceImpl"
+		autowire="byName">
+		<property name="commentDao">
+			<ref bean="commentDao" />
+		</property>
+	</bean>
+	<bean id="spotService"
+		class="com.chinasoft.service.spot.SpotServiceImpl"
+		autowire="byName">
+		<property name="spotDao">
+			<ref bean="spotDao" />
+		</property>
+	</bean>
+	
+	<bean id="provinceService"
+		class="com.chinasoft.service.province.ProvinceServiceImpl"
+		autowire="byName">
+		<property name="provinceDao">
+			<ref bean="provinceDao" />
+		</property>
+	</bean>
+</beans>
